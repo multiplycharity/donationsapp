@@ -1,0 +1,10 @@
+{
+  "name": "donationsapp",
+  "description": "Abundance Donations App",
+  "repository": "https://github.com/abundance-stack/donationsapp",
+  "keywords": ["svelte", "sapper", "express"],
+  "addons": ["mongolab"],
+  "scripts": {
+    "postdeploy": "yarn global add pm2"
+  }
+}
