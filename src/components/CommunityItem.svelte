@@ -5,9 +5,14 @@
   export let imageUrl = "";
   export let alt = "";
   export let disabled = false;
+
+  import { fade } from "svelte/transition";
 </script>
 
-<div class="lg:w-1/3 px-4 my-8 lg:mb-0" class:opacity-50={disabled}>
+<div
+  transition:fade
+  class="lg:w-1/3 px-4 my-8 lg:mb-0"
+  class:opacity-50={disabled}>
   <div class="h-full shadow-xl rounded-lg overflow-hidden">
     <a href={url}>
       <img class="mb-4" src={imageUrl} {alt} />

@@ -9,7 +9,7 @@
   </h2>
   <div class="flex flex-wrap -mx-4">
 
-    {#each communities as community}
+    {#each communities as community (community.name)}
       <CommunityItem {...community} />
     {/each}
 
