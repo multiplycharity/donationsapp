@@ -1,5 +1,6 @@
 const communities = [
   {
+    id: '1',
     name: 'The Kenian Sarafu',
     description: 'Description',
     imageUrl: 'images/Frame_45.jpg',
@@ -7,6 +8,7 @@ const communities = [
     alt: ''
   },
   {
+    id: '2',
     name: 'The Zataari Refugee Camp',
     description: 'Description',
     imageUrl: 'images/Frame_47.jpg',
@@ -15,6 +17,7 @@ const communities = [
     disabled: true
   },
   {
+    id: '3',
     name: 'The Sahara Wildlife Reserve',
     description: 'Description',
     imageUrl: 'images/Frame_48.jpg',

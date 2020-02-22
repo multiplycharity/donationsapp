@@ -1,5 +1,5 @@
 <script>
-  import CommunityItem from "../components/CommunityItem.svelte";
+  import CommunityGridItem from "../components/CommunityGridItem.svelte";
   import communities from "./communities";
   import { fade } from "svelte/transition";
 </script>
@@ -10,8 +10,8 @@
   </h2>
   <div class="flex flex-wrap -mx-4">
 
-    {#each communities as community (community.name)}
-      <CommunityItem {...community} />
+    {#each communities as community (community.id)}
+      <CommunityGridItem {...community} />
     {/each}
 
   </div>
