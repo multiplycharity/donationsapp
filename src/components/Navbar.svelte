@@ -6,12 +6,21 @@
   function toggleMenu() {
     isMenuHidden = !isMenuHidden;
   }
+
+  function hideMenu() {
+    isMenuHidden = true;
+  }
 </script>
 
 <nav class="flex flex-wrap items-center justify-between p-4">
 
   <div class="flex flex-shrink-0 mr-6">
-    <a class="text-xl text-indigo-500 font-semibold" href="/">Abundance</a>
+    <a
+      class="text-xl text-indigo-500 font-semibold"
+      href="/"
+      on:click={hideMenu}>
+      Abundance
+    </a>
   </div>
 
   <div class="block lg:hidden">
@@ -35,19 +44,22 @@
       <a
         class="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900
         hover:text-blue-700"
-        href="/">
+        href="/"
+        on:click={hideMenu}>
         How it works
       </a>
       <a
         class="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900
         hover:text-blue-700"
-        href="about">
+        href="about"
+        on:click={hideMenu}>
         About us
       </a>
       <a
         class="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900
         hover:text-blue-700"
-        href="success-stories">
+        href="success-stories"
+        on:click={hideMenu}>
         Success stories
       </a>
     </div>
@@ -56,13 +68,15 @@
       <a
         class="inline-block py-3 px-5 mr-4 leading-none text-center
         text-blue-700 bg-indigo-100 hover:bg-indigo-200 rounded shadow"
-        href="/">
+        href="/"
+        on:click={hideMenu}>
         Sign in
       </a>
       <a
         class="inline-block py-3 px-6 mt-4 lg:mt-0 leading-none text-white
         bg-indigo-500 hover:bg-indigo-600 rounded shadow"
-        href="/">
+        href="/"
+        on:click={hideMenu}>
         Sign up
       </a>
     </div>
