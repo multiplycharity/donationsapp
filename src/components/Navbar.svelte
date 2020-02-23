@@ -74,7 +74,7 @@
       </a>
       <a
         class="inline-block py-3 px-6 mt-4 lg:mt-0 leading-none text-white
-        bg-indigo-500 hover:bg-indigo-600 rounded shadow"
+        bg-indigo-500 hover:bg-indigo-600 rounded shadow-xl"
         href="/"
         on:click={hideMenu}>
         Sign up

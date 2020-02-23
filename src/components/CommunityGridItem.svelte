@@ -7,8 +7,8 @@
   export let disabled = false;
 </script>
 
-<div class="lg:w-1/3 px-4 my-8 lg:mb-0" class:opacity-50={disabled}>
-  <div class="h-full shadow-xl rounded-lg overflow-hidden">
+<div class="zoom lg:w-1/3 px-4 my-8 lg:mb-0" class:opacity-50={disabled}>
+  <div class="h-full shadow-xl rounded-lg overflow-hidden hover:shadow-2xl">
     <a href={disabled ? '' : `/communities/${id}`}>
       <img class="mb-4" src={imageUrl} {alt} />
       <div class="mx-4 my-6">

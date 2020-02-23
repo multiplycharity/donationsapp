@@ -3,7 +3,7 @@
 </script>
 
 <section
-  class="text-center bg-cover h-full shadow-2xl rounded-lg overflow-hidden"
+  class="text-center bg-cover h-full shadow-2xl rounded-lg overflow-hidden "
   style="background-image: url({community.imageUrl})">
   <div class="relative flex items-center py-32">
     <div class="absolute bg-black opacity-50 inset-0" />

@@ -1,8 +1,4 @@
-<script>
-  import { fade } from "svelte/transition";
-</script>
-
-<section transition:fade class="py-12 px-4">
+<section class="py-12 px-4">
   <div class="w-full max-w-2xl mx-auto text-center">
 
     <h2 class="text-5xl mt-4 mb-8 leading-tight font-heading">

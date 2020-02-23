@@ -5,11 +5,24 @@
 </script>
 
 <script>
+  import { onMount, onDestroy } from "svelte";
+  import communityStore from "../../stores/communities.js";
   import Community from "../../components/Community.svelte";
   import ProjectGrid from "../../components/ProjectGrid.svelte";
-  import communities from "../../components/communities";
   export let id;
-  let community = communities.find(c => c.id === id);
+
+  let community;
+  let projects = [];
+  const unsubscribe = communityStore.subscribe(communities => {
+    community = communities.find(c => c.id === id);
+    Object.entries(community.projects).forEach(([key, value]) => {
+      projects.push({ ...value, id: key });
+    });
+  });
+
+  onDestroy(() => {
+    unsubscribe();
+  });
 </script>
 
 <svelte:head>
@@ -18,6 +31,6 @@
 
 <div class="items-center justify-between p-4">
   <Community {community} />
-  <ProjectGrid />
+  <ProjectGrid {projects} />
 
 </div>
