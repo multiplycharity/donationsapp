@@ -1,14 +1,12 @@
 <script>
-  import { fade, fly, slide } from "svelte/transition";
+  import { slide } from "svelte/transition";
   import { quintOut } from "svelte/easing";
-  import { crossfade } from "svelte/transition";
-
   export let hidden;
 </script>
 
 {#if !hidden}
   <div
-    transition:slide
+    transition:slide={{ duration: 250, easing: quintOut }}
     class="navbar-menu lg:flex lg:flex-grow lg:items-center w-full lg:w-auto ">
     <slot />
   </div>
