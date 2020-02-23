@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://donationsapp.herokuapp.com/static/sitemap.xml

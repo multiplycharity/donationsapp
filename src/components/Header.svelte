@@ -6,12 +6,11 @@
   <div class="w-full max-w-2xl mx-auto text-center">
 
     <h2 class="text-5xl mt-4 mb-8 leading-tight font-heading">
-      Donations with leverage
+      Donations With Leverage
     </h2>
 
     <p class="mb-8 text-gray-500 leading-relaxed" data-config-id="description">
-      Donate, grant, invest in social projects and communities & track what is
-      achieved with your money
+      Send money directly to people living in extreme poverty, and track your impact on local economic growth.
     </p>
     <form class="w-full max-w-xl mx-auto">
       <div class="flex flex-wrap mb-4">
@@ -33,7 +32,7 @@
         </div>
       </div>
       <p class="text-sm text-gray-500 leading-relaxed">
-        Subscribe to our newsletter to follow community updates
+        Follow our community updates
       </p>
     </form>
 
