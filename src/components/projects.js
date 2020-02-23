@@ -6,7 +6,8 @@ const projects = [
       'Support the local education in this village, which is center of the region',
     imageUrl: 'images/Frame_47.jpg',
     url: '/',
-    alt: ''
+    alt: '',
+    label: 'kids, education'
   },
   {
     id: '2',
@@ -15,7 +16,8 @@ const projects = [
       'Support the local farm in this Accra, which is in need of food',
     imageUrl: 'images/Frame_51.jpg',
     url: '/',
-    alt: ''
+    alt: '',
+    label: 'farming, food, infrastructure'
   },
   {
     id: '3',
@@ -24,16 +26,18 @@ const projects = [
     imageUrl: 'images/Frame_48.jpg',
     url: '/',
     alt: '',
+    label: 'animals, sustainability',
     disabled: true
   },
   {
     id: '4',
-    name: 'The local bank',
+    name: 'The local lending circle',
     description:
-      "A bank gives out loans to local businesses. Together with you, we set golas for the bank. And if they don't reach those goals, we take back their reserves",
+      "A lending circle gives out loans to local businesses. Together with you, we set golas for the bank. And if they don't reach those goals, we take back their reserves",
     imageUrl: 'images/Frame_50.jpg',
     url: '/',
     alt: '',
+    label: 'infrastructure, finance',
     disabled: true
   }
 ]
