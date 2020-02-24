@@ -30,7 +30,7 @@
   <title>{community.name}</title>
 </svelte:head>
 
-<div class="items-center justify-between py-4">
+<div class="items-center justify-between ">
 
   <Community {community} />
 
