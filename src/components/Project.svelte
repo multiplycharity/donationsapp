@@ -2,22 +2,26 @@
   class="text-center bg-cover h-full"
   style="background-image: url('images/frame_47.jpg'">
 
-  <div class="relative flex items-center py-12 md:py-16 lg:py-24">
+  <div class="relative flex items-center py-8 md:py-12 lg:py-20">
     <div class="absolute bg-black opacity-50 inset-0" />
     <div class="z-10 max-w-2xl mx-auto">
       <h2
         class="text-3xl md:text-5xl mb-2 leading-tight font-heading text-white">
         The Lagos School
       </h2>
-      <p class="px-4 mb-6 text-gray-400 leading-relaxed">
+      <p class="px-4 mb-4 text-gray-400 font-light eading-relaxed">
         Fund the next year of teaching kids the basics of adult life
       </p>
-      <a
+      <button
         class="w-auto inline-block px-6 py-3 mt-auto leading-none text-white
-        text-center bg-green-500 hover:bg-green-600 rounded shadow"
-        href="#">
-        Fund
-      </a>
+        text-center bg-teal-500 hover:bg-teal-600 rounded shadow">
+        Fund with crypto
+      </button>
+      <button
+        class="w-auto inline-block px-6 py-3 mt-auto leading-none text-white
+        text-center bg-purple-500 hover:bg-purple-600 rounded shadow ml-2">
+        Fund with debit card
+      </button>
     </div>
   </div>
 
