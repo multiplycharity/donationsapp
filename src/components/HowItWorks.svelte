@@ -1,6 +1,6 @@
 <section id="how-it-works" class="py-12 px-4 text-center">
 
-  <h2 class="text-4xl mb-2 leading-tight font-heading">
+  <h2 class="md:text-3xl text-4xl mb-2 leading-tight font-heading">
     Donate and track the impact
   </h2>
 
