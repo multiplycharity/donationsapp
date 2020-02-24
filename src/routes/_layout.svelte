@@ -35,6 +35,11 @@
   .zoom:hover {
     transform: scale(1.06);
   }
+
+  .bn-onboard-modal {
+    position: fixed !important;
+    position: absolute; /*ie6 */
+  }
 </style>
 
 <Tailwindcss />

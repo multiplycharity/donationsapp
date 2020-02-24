@@ -1,38 +1,75 @@
 <script>
+  import Onboard from "bnc-onboard";
+  import Web3 from "web3";
 
+  const INFURA_KEY = "16dfd66c4a1a4a9da5724254c97c93e6";
+  const BLOCKNATIVE_KEY = "ac2e16a1-29ee-4bd1-be1e-9f2ecf668c24";
+  const NETWORK_ID = 4;
+
+  const wallets = [
+    { walletName: "metamask", preferred: true },
+    {
+      walletName: "walletConnect",
+      infuraKey: INFURA_KEY,
+      preferred: true
+    },
+    { walletName: "authereum", preferred: true, disableNotifications: true },
+    { walletName: "torus", preferred: true },
+    { walletName: "trust", preferred: true }
+  ];
+
+  const walletChecks = [
+    { checkName: "connect" },
+    { checkName: "accounts" },
+    { checkName: "network" },
+    { checkName: "balance", minimumBalance: "1000000" }
+  ];
+
+  const onboard = Onboard({
+    dappId: BLOCKNATIVE_KEY,
+    networkId: NETWORK_ID,
+    subscriptions: {
+      wallet: wallet => {
+        console.log({ wallet });
+        web3 = new Web3(wallet.provider);
+      },
+      address: address => console.log({ address }),
+      balance: balance => console.log({ balance }),
+      network: network => console.log({ network })
+    },
+    walletSelect: { wallets: wallets },
+    walletCheck: walletChecks
+  });
+
+  const fundWithCrypto = async () => {
+    console.log("Funding with crypto..");
+    await onboard.walletSelect();
+    await onboard.walletCheck();
+  };
 </script>
 
 <section
   class="text-center bg-cover h-full"
   style="background-image: url('images/frame_47.jpg'">
 
-  <div class="relative flex items-center py-8 md:py-12 lg:py-20">
+  <div class="relative flex items-center py-12 md:py-24 lg:py-32">
     <div class="absolute bg-black opacity-50 inset-0" />
     <div class="z-10 max-w-2xl mx-auto">
       <h2
         class="text-3xl md:text-5xl mb-2 leading-tight font-heading text-white">
         The Lagos School
       </h2>
-      <p class="px-4 mb-4 text-gray-400 font-light eading-relaxed">
+      <p class="px-4 mb-2 text-gray-400 font-light eading-relaxed">
         Fund the next year of teaching kids the basics of adult life
       </p>
-      <button
-        class="w-auto inline-block px-6 py-3 mt-auto leading-none text-white
-        text-center bg-teal-500 hover:bg-teal-600 rounded shadow-xl">
-        Fund with crypto
-      </button>
-      <button
-        class="w-auto inline-block px-6 py-3 mt-auto leading-none text-white
-        text-center bg-purple-500 hover:bg-purple-600 rounded shadow-xl ml-2">
-        Fund with debit card
-      </button>
     </div>
   </div>
 
 </section>
 
 <div class="container mx-auto px-4">
-  <section class="p-4 my-12">
+
+  <section class="p-8 lg:p-16">
     <div class="flex flex-wrap -mx-4">
       <div class="md:w-1/4 p-4 mb-4 md:mb-0">
 
@@ -67,14 +104,28 @@
     </div>
   </section>
 
-  <article class="py-12 px-4">
+  <div class="max-w-3xl mx-auto text-center">
+    <button
+      class="h-full w-5/12 inline-block p-4 mx-2 text-white bg-teal-500
+      hover:bg-teal-600 rounded shadow-xl hover:shadow-2xl"
+      on:click={fundWithCrypto}>
+      Fund with crypto
+    </button>
+    <button
+      class="h-full w-5/12 inline-block p-4 mx-2 text-white bg-purple-500
+      hover:bg-purple-600 rounded shadow-xl hover:shadow-2xl">
+      Fund with card
+    </button>
+  </div>
 
-    <h1 class="mb-12 text-4xl text-center font-heading font-semibold">
+  <article class="mb-12 p-4">
+
+    <h1 class="my-12 text-4xl text-center font-heading font-semibold">
       About the School
     </h1>
 
     <div class="max-w-3xl mx-auto">
-      <p class="mb-4">
+      <p class="">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -101,20 +152,4 @@
     </div>
   </article>
 
-  <section class="py-12 px-4">
-    <div class="max-w-3xl mx-auto text-center">
-      <h2 class="text-3xl mb-8">So how does it work?</h2>
-
-      <div class="relative" style="padding-bottom: 56.25%">
-        <iframe
-          src="https://www.youtube-nocookie.com/embed/8Z0chJBibhY"
-          frameborder="0"
-          class="absolute w-full h-full"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope;
-          picture-in-picture"
-          allowfullscreen
-          title="" />
-      </div>
-    </div>
-  </section>
 </div>

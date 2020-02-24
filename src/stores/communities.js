@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store'
 
-const store = writable([])
+const communities = writable([])
 
-export default store
+export default communities

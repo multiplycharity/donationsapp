@@ -40,26 +40,26 @@
   <div class="flex flex-wrap -mx-4 text-center">
 
     <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading">
-      <h3>
+      <h3 class="md:text-3xl text-2xl">
         <span class="md:text-4xl text-3xl font-medium">8500+</span>
         <br />
-        <span class="md:text-3xl text-2xl">people trading</span>
+        people trading
       </h3>
     </div>
 
     <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading md:border-l">
-      <h3>
-        <span class="md:text-4xl text-3xl font-medium">$7,444</span>
+      <h3 class="md:text-3xl text-2xl">
+        <span class="md:text-4xl text-3xl font-medium">>$7,500</span>
         <br />
-        <span class="md:text-3xl text-2xl">donated</span>
+        donated
       </h3>
     </div>
 
     <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading md:border-l">
-      <h3>
-        <span class="md:text-4xl text-3xl font-medium">$66,888</span>
+      <h3 class="md:text-3xl text-2xl">
+        <span class="md:text-4xl text-3xl font-medium">>$67,000</span>
         <br />
-        <span class="md:text-3xl text-2xl">verified impact</span>
+        verified impact
       </h3>
     </div>
 
