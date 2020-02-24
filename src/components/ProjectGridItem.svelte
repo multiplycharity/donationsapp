@@ -17,11 +17,15 @@
     <a
       href={disabled ? null : `/projects/${id}`}
       class:cursor-not-allowed={disabled}>
+
       <img class="mb-4" src={imageUrl} {alt} />
+
       <div class="mx-4 my-6">
+
         <h3 href="#" class="text-2xl my-2 font-medium">{name}</h3>
         <p class="text-gray-600">{description}</p>
       </div>
+
     </a>
   </div>
 </div>

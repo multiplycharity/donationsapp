@@ -35,3 +35,33 @@
 
   </div>
 </section>
+
+<section class="py-8 px-4">
+  <div class="flex flex-wrap -mx-4 text-center">
+
+    <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading">
+      <h3>
+        <span class="text-4xl font-medium">8490</span>
+        <br />
+        <span class="text-3xl">people trading</span>
+      </h3>
+    </div>
+
+    <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading md:border-l">
+      <h3>
+        <span class="text-4xl font-medium">$7.444</span>
+        <br />
+        <span class="text-3xl">donated</span>
+      </h3>
+    </div>
+
+    <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading md:border-l">
+      <h3>
+        <span class="text-4xl font-medium">$66.999</span>
+        <br />
+        <span class="text-3xl">verified impact</span>
+      </h3>
+    </div>
+
+  </div>
+</section>

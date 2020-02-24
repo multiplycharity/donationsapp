@@ -9,6 +9,7 @@
   import communityStore from "../../stores/communities.js";
   import Community from "../../components/Community.svelte";
   import ProjectGrid from "../../components/ProjectGrid.svelte";
+
   export let id;
 
   let community;
@@ -29,8 +30,12 @@
   <title>{community.name}</title>
 </svelte:head>
 
-<div class="items-center justify-between p-4">
+<div class="items-center justify-between py-4">
+
   <Community {community} />
-  <ProjectGrid {projects} />
+
+  <div class="container mx-auto px-4">
+    <ProjectGrid {projects} />
+  </div>
 
 </div>

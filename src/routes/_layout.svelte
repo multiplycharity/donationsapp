@@ -38,15 +38,15 @@
 <Tailwindcss />
 
 <div class="container mx-auto px-4">
-
   <Navbar />
+</div>
 
-  <main>
-    <section transition:fade>
-      <slot />
-    </section>
-  </main>
+<main>
+  <section transition:fade>
+    <slot />
+  </section>
+</main>
 
+<div class="container mx-auto px-4">
   <Footer />
-
 </div>
