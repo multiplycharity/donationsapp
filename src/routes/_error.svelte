@@ -24,7 +24,7 @@
       </p>
       <a
         class="text-lg text-blue-700 hover:underline"
-        href="#"
+        href="/"
         data-config-id="primary-action">
         Go to the homepage »
       </a>

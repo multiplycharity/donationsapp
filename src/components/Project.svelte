@@ -1,3 +1,7 @@
+<script>
+
+</script>
+
 <section
   class="text-center bg-cover h-full"
   style="background-image: url('images/frame_47.jpg'">
@@ -14,12 +18,12 @@
       </p>
       <button
         class="w-auto inline-block px-6 py-3 mt-auto leading-none text-white
-        text-center bg-teal-500 hover:bg-teal-600 rounded shadow">
+        text-center bg-teal-500 hover:bg-teal-600 rounded shadow-xl">
         Fund with crypto
       </button>
       <button
         class="w-auto inline-block px-6 py-3 mt-auto leading-none text-white
-        text-center bg-purple-500 hover:bg-purple-600 rounded shadow ml-2">
+        text-center bg-purple-500 hover:bg-purple-600 rounded shadow-xl ml-2">
         Fund with debit card
       </button>
     </div>

@@ -44,7 +44,7 @@
 </div>
 
 <main>
-  <section transition:fade>
+  <section>
     <slot />
   </section>
 </main>
