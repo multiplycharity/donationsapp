@@ -57,7 +57,7 @@
   <!--<p class="text-center"><span>October 22, by</span><a class="ml-1 text-blue-700 hover:underline" href="#">Michael Scott</a></p>-->
   <div class="my-10"><img src="placeholders/pictures/work.jpg" alt="" class="hidden"></div>
   <div class="max-w-3xl mx-auto">
-    <p class="mb-4">We offer a dependable and quick supply of copy paper suited to all kinds of printers. Each of our various products is designed to provide the finest performance and meet international standards.</p>
+    <p class="mb-4">Ndegwa supports his family of seven by selling peas and chicken to the community in Miyani. He has gained more customers since he started using the Sarafu service and expects that by charging Sarfu users only half of the amount in Kenyan Shillings (and the other half in Sarafu) he can provide greater access to his products. Sarafu, he says, assists him in saving Keyan Shillings for other investments beyond his daily consumption.</p>
     <p class="mb-4">We&rsquo;re dedicated to ensure the highest level of customer satisfaction based on long-term professional relationships. By creating the positive working environment we&rsquo;re enabling our employees to significantly improve not only their productivity, but what&rsquo;s more important &ndash; job satisfaction.</p>
     <ul class="mb-4 list-inside list-disc"><li>High durability</li>
       <li>Value-based price</li>

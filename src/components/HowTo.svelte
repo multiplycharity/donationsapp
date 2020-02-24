@@ -26,7 +26,8 @@
       <span class="text-sm font-semibold">02</span>
       <!--<div class="md:w-1/2 px-8 md:text-right"><span class="text-6xl">02</span>-->
         <h3 class="text-3xl mb-3 font-heading">Converting the Currencies</h3>
-        <p class="text-gray-500 leading-relaxed">We add the donation to the currency reserve, and issue an equivalent worth of community currency to the local project.</p>
+        <p class="text-gray-500 leading-relaxed">We add the donation to the currency reserve, and issue an equivalent worth of community currency to the local project. we convert your donation in national currency (read EUROS) into local currency. which can only be spent locally.
+</p>
       </div>
     </div>
     <div class="flex flex-wrap items-center -mx-8">
