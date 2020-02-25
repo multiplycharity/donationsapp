@@ -1,7 +1,8 @@
 <script>
+  import communitiesStore from "../stores/communities.js";
   import Header from "../components/Header.svelte";
   import CommunityGrid from "../components/CommunityGrid.svelte";
-  import HowTo from "../components/HowTo.svelte";
+  import HowItWorks from "../components/HowItWorks.svelte";
 </script>
 
 <svelte:head>
@@ -31,6 +32,7 @@
   <meta
     name="viewport"
     content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
   <link rel="stylesheet" href="css/tailwind/tailwind.min.css" />
   <link rel='icon' type='image/ico' href='/favicon.ico'>
   <link rel="apple-touch-icon" href="/logo-192.png">
@@ -41,4 +43,4 @@
 
 <CommunityGrid />
 
-<HowTo />
+<HowItWorks />

@@ -1,79 +1,150 @@
 <script>
-  export let project;
+  import Onboard from "bnc-onboard";
+  import Web3 from "web3";
+  const INFURA_KEY = "16dfd66c4a1a4a9da5724254c97c93e6";
+  const BLOCKNATIVE_KEY = "ac2e16a1-29ee-4bd1-be1e-9f2ecf668c24";
+  const NETWORK_ID = 4;
+  const wallets = [
+    { walletName: "metamask", preferred: true },
+    {
+      walletName: "walletConnect",
+      infuraKey: INFURA_KEY,
+      preferred: true
+    },
+    { walletName: "authereum", preferred: true, disableNotifications: true },
+    { walletName: "torus", preferred: true },
+    { walletName: "trust", preferred: true }
+  ];
+  const walletChecks = [
+    { checkName: "connect" },
+    { checkName: "accounts" },
+    { checkName: "network" },
+    { checkName: "balance", minimumBalance: "1000000" }
+  ];
+  const onboard = Onboard({
+    dappId: BLOCKNATIVE_KEY,
+    networkId: NETWORK_ID,
+    subscriptions: {
+      wallet: wallet => {
+        console.log({ wallet });
+        web3 = new Web3(wallet.provider);
+      },
+      address: address => console.log({ address }),
+      balance: balance => console.log({ balance }),
+      network: network => console.log({ network })
+    },
+    walletSelect: { wallets: wallets },
+    walletCheck: walletChecks
+  });
+  const fundWithCrypto = async () => {
+    console.log("Funding with crypto..");
+    await onboard.walletSelect();
+    await onboard.walletCheck();
+  };
 </script>
 
-<!-- first header option -->
 <section
-  class="text-center bg-cover h-full shadow-2xl rounded-lg overflow-hidden"
-  style="background-image: url({project.imageUrl})">
-  <div class="relative flex items-center py-32">
+  class="text-center bg-cover h-full"
+  style="background-image: url('images/frame_47.jpg'">
+
+  <div class="relative flex items-center py-12 md:py-24 lg:py-32">
     <div class="absolute bg-black opacity-50 inset-0" />
     <div class="z-10 max-w-2xl mx-auto">
       <h2
-        class="text-5xl mb-8 leading-tight font-heading text-white"
-        data-config-id="header">
-        {project.name}
+        class="text-3xl md:text-5xl mb-2 leading-tight font-heading text-white">
+        The Lagos School
       </h2>
+      <p class="px-4 mb-2 text-gray-400 font-light eading-relaxed">
+        Fund the next year of teaching kids the basics of adult life
+      </p>
     </div>
   </div>
+
 </section>
 
-<!-- second header option -->
-<section class="py-12 px-4"><div class="flex flex-wrap -mx-4">
-    <div class="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
-      <div class="flex flex-col h-full p-8 bg-gray-200 rounded">
-        <h2 class="text-3xl font-heading">The Lagos School</h2>
-        <p class="max-w-sm mt-auto mb-8 text-gray-500 leading-relaxed">Fund the next year of teaching kids the basics of adult life. Thanks</p><a class="text-right text-blue-700 hover:underline" href="#">Donate</a>
+<div class="container mx-auto px-4">
+
+  <section class="p-8 lg:p-16">
+    <div class="flex flex-wrap -mx-4">
+      <div class="md:w-1/4 p-4 mb-4 md:mb-0">
+
+        <h3 class="text-xl my-2 font-heading">33 kids financed</h3>
+        <p class="text-gray-500 leading-relaxed">
+          Forget about paper jams with our increased stability product.
+        </p>
+      </div>
+      <div class="md:w-1/4 p-4 mb-4 md:mb-0">
+
+        <h3 class="text-xl my-2 font-heading">
+          12 teachers yearly salary paid
+        </h3>
+        <p class="text-gray-500 leading-relaxed">
+          Multi-functional paper for various office needs.
+        </p>
+      </div>
+      <div class="md:w-1/4 p-4 mb-4 md:mb-0">
+
+        <h3 class="text-xl my-2 font-heading">2 repaired buildings</h3>
+        <p class="text-gray-500 leading-relaxed">
+          The best combination of quality and economy comes with our paper.
+        </p>
+      </div>
+      <div class="md:w-1/4 p-4 mb-4 md:mb-0">
+
+        <h3 class="text-xl my-2 font-heading">23 happy parents</h3>
+        <p class="text-gray-500 leading-relaxed">
+          The offer includes paper in wide range of density and sizes.
+        </p>
       </div>
     </div>
-    <div class="lg:w-1/2 px-4">
-      <div class="flex flex-wrap -m-2">
-        <div class="w-1/2 p-2"><img class="rounded shadow-md" src="images/Frame_47.jpg" alt=""></div>
-        <div class="w-1/2 p-2"><img class="rounded shadow-md" src="images/Frame_47.jpg" alt=""></div>
-        <div class="w-1/2 p-2"><img class="rounded shadow-md" src="images/Frame_43.jpg" alt=""></div>
-        <div class="w-1/2 p-2"><img class="rounded shadow-md" src="images/Frame_47.jpg" alt=""></div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="p-4"><div class="flex flex-wrap -mx-4">
-    <div class="md:w-1/4 p-4 mb-4 md:mb-0"><img src="icons/shield.svg" alt=""><h3 class="text-xl my-2 font-heading">33 kids financed</h3>
-      <!--<p class="text-gray-500 leading-relaxed">Forget about paper jams with our increased stability product.</p>-->
-    </div>
-    <div class="md:w-1/4 p-4 mb-4 md:mb-0"><img src="icons/cloud-tools.svg" alt=""><h3 class="text-xl my-2 font-heading">12 teachers yearly salary paid</h3>
-      <!--<p class="text-gray-500 leading-relaxed">Multi-functional paper for various office needs.</p>-->
-    </div>
-    <div class="md:w-1/4 p-4 mb-4 md:mb-0"><img src="icons/cart.svg" alt=""><h3 class="text-xl my-2 font-heading">2 repaired buildings</h3>
-      <!--<p class="text-gray-500 leading-relaxed">The best combination of quality and economy comes with our paper.</p>-->
-    </div>
-    <div class="md:w-1/4 p-4 mb-4 md:mb-0"><img src="icons/server.svg" alt=""><h3 class="text-xl my-2 font-heading">23 happy parents</h3>
-      <!--<p class="text-gray-500 leading-relaxed">The offer includes paper in wide range of density and sizes.</p>-->
-    </div>
+  <div class="max-w-3xl mx-auto text-center">
+    <button
+      class="h-full w-5/12 inline-block p-4 mx-2 text-white bg-teal-500
+      hover:bg-teal-600 rounded shadow-xl hover:shadow-2xl"
+      on:click={fundWithCrypto}>
+      Fund with crypto
+    </button>
+    <button
+      class="h-full w-5/12 inline-block p-4 mx-2 text-white bg-purple-500
+      hover:bg-purple-600 rounded shadow-xl hover:shadow-2xl">
+      Fund with card
+    </button>
   </div>
-</section>
 
-<article class="py-12 px-4"><h1 class="text-4xl text-center font-heading font-semibold">About the School</h1>
-  <!--<p class="text-center"><span>October 22, by</span><a class="ml-1 text-blue-700 hover:underline" href="#">Michael Scott</a></p>-->
-  <div class="my-10"><img src="placeholders/pictures/work.jpg" alt="" class="hidden"></div>
-  <div class="max-w-3xl mx-auto">
-    <p class="mb-4">Ndegwa supports his family of seven by selling peas and chicken to the community in Miyani. He has gained more customers since he started using the Sarafu service and expects that by charging Sarfu users only half of the amount in Kenyan Shillings (and the other half in Sarafu) he can provide greater access to his products. Sarafu, he says, assists him in saving Keyan Shillings for other investments beyond his daily consumption.</p>
-    <p class="mb-4">We&rsquo;re dedicated to ensure the highest level of customer satisfaction based on long-term professional relationships. By creating the positive working environment we&rsquo;re enabling our employees to significantly improve not only their productivity, but what&rsquo;s more important &ndash; job satisfaction.</p>
-    <ul class="mb-4 list-inside list-disc"><li>High durability</li>
-      <li>Value-based price</li>
-      <li>Perfect performance on copy machines</li>
-      <li>Long lasting whiteness</li>
-    </ul><p class="mb-10">We deliver our services with passion and dedication unmatched by other so called &ldquo;big players&rdquo;. We create a friendly environment for our workers and that&rsquo;s what makes their dedication soar to the maximum. You are getting not only the best possible product, but also our love for paper (completely free of charge).</p>
-    <blockquote class="text-center mb-10">
-      <p class="text-lg font-semibold mb-2">"I would say I kind of have an unfair advantage, because I watch reality dating shows like a hawk, and I learn. I absorb information from the strategies of the winners and the losers. Actually, I probably learn more from the losers."</p>
-      <footer class="text-gray-500">Michael Scott</footer></blockquote>
-    <p>Because the real business is done on paper.</p>
-  </div>
-</article>
+  <article class="mb-12 p-4">
 
-<section class="py-12 px-4"><div class="max-w-3xl mx-auto text-center">
-    <h2 class="text-3xl mb-1">So how does it work?</h2>
-    <p class="mb-8 text-gray-500">Donating to the school</p>
-    <div class="relative" style="padding-bottom: 56.25%"><iframe src="https://www.youtube-nocookie.com/embed/8Z0chJBibhY" frameborder="0" class="absolute w-full h-full" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
-  </div>
-</section>
+    <h1 class="my-12 text-4xl text-center font-heading font-semibold">
+      About the School
+    </h1>
+
+    <div class="max-w-3xl mx-auto">
+      <p class="">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+        mollit anim id est laborum.
+        <br />
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+        accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+        illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+        explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
+        voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum
+        quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam
+        eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat
+        voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam
+        corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?
+        Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
+        quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo
+        voluptas nulla pariatur?
+      </p>
+
+    </div>
+  </article>
+
+</div>

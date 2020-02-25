@@ -10,9 +10,16 @@
   export let disabled = false;
 </script>
 
-<div class="lg:w-1/3 px-4 my-8 lg:mb-0" class:opacity-50={disabled}>
-  <div class="h-full shadow-xl rounded-lg overflow-hidden">
-    <a href={disabled ? '' : `/communities/${id}`}>
+<div
+  class="md:w-1/2 lg:w-1/3 px-4 my-8 md:mb-2"
+  class:opacity-50={disabled}
+  class:zoom={!disabled}>
+  <div
+    class="h-full shadow-xl rounded-lg overflow-hidden"
+    class:hover:shadow-2xl={!disabled}>
+    <a
+      href={disabled ? null : `/communities/${id}`}
+      class:cursor-not-allowed={disabled}>
       <img class="mb-4" src={imageUrl} {alt} />
       <div class="mx-4 my-6">
 

@@ -46,15 +46,32 @@
   </div>
 </section>
 
-<section class="py-8 px-4"><div class="flex flex-wrap -mx-4 -mb-6">
-    <div class="lg:w-1/3 px-4 mb-6"><img src="/icons/shield.svg" alt=""><h3 class="text-xl my-2 font-heading">8490 people trading</h3>
-      <!--<p class="text-gray-500 leading-relaxed">text here.</p>-->
+<section class="py-8 px-4">
+  <div class="flex flex-wrap -mx-4 text-center">
+
+    <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading">
+      <h3 class="md:text-3xl text-2xl">
+        <span class="md:text-4xl text-3xl font-medium">8500+</span>
+        <br />
+        people trading
+      </h3>
     </div>
-    <div class="lg:w-1/3 px-4 mb-6"><img src="/icons/cloud-tools.svg" alt=""><h3 class="text-xl my-2 font-heading">$3254 donated</h3>
-      <!--<p class="text-gray-500 leading-relaxed">text here.</p>-->
+
+    <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading md:border-l">
+      <h3 class="md:text-3xl text-2xl">
+        <span class="md:text-4xl text-3xl font-medium">>$7,500</span>
+        <br />
+        donated
+      </h3>
     </div>
-    <div class="lg:w-1/3 px-4 mb-6"><img src="/icons/cart.svg" alt=""><h3 class="text-xl my-2 font-heading">$89769 verified impact</h3>
-      <!--<p class="text-gray-500 leading-relaxed">text here.</p>-->
+
+    <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading md:border-l">
+      <h3 class="md:text-3xl text-2xl">
+        <span class="md:text-4xl text-3xl font-medium">>$67,000</span>
+        <br />
+        verified impact
+      </h3>
     </div>
+
   </div>
 </section>
