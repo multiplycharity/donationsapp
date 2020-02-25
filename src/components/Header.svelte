@@ -1,8 +1,5 @@
-<script>
-  import { fade } from "svelte/transition";
-</script>
 
-<section transition:fade class="py-12 px-4">
+<section class="py-12 px-4">
   <div class="flex flex-wrap items-center text-center lg:text-left -mx-2">
 
     <div class="lg:w-1/2 px-2">
@@ -45,6 +42,7 @@
 
   </div>
 </section>
+
 
 <section class="py-8 px-4">
   <div class="flex flex-wrap -mx-4 text-center">

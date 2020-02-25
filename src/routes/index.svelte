@@ -34,13 +34,13 @@
     content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
   <link rel="stylesheet" href="css/tailwind/tailwind.min.css" />
-  <link rel='icon' type='image/ico' href='/favicon.ico'>
-  <link rel="apple-touch-icon" href="/logo-192.png">
+  <link rel='icon' type='image/ico' href='/favicon.ico' />
+  <link rel="apple-touch-icon" href="/logo-192.png" />
 
 </svelte:head>
 
-<Header />
-
-<CommunityGrid />
-
-<HowItWorks />
+<div class="container mx-auto px-4">
+  <Header />
+  <CommunityGrid />
+  <HowItWorks />
+</div>
