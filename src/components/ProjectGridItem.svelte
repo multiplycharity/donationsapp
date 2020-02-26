@@ -23,7 +23,9 @@
       <div class="mx-4 my-6">
 
         <h3 href="#" class="text-2xl my-2 font-medium">{name}</h3>
-        <p class="text-gray-600">{description}</p>
+        <p class="text-gray-600">
+          {description.length <= 180 ? description : `${description.substr(0, 180)}...`}
+        </p>
       </div>
 
     </a>

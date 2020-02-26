@@ -1,51 +1,6 @@
 <script>
-  import Onboard from "bnc-onboard";
-  import Web3 from "web3";
-
-  const INFURA_KEY = "16dfd66c4a1a4a9da5724254c97c93e6";
-  const BLOCKNATIVE_KEY = "ac2e16a1-29ee-4bd1-be1e-9f2ecf668c24";
-  const NETWORK_ID = 4;
-
-  const wallets = [
-    { walletName: "metamask", preferred: true },
-    {
-      walletName: "walletConnect",
-      infuraKey: INFURA_KEY,
-      preferred: true
-    },
-    { walletName: "authereum", preferred: true, disableNotifications: true },
-    { walletName: "torus", preferred: true },
-    { walletName: "trust", preferred: true }
-  ];
-
-  const walletChecks = [
-    { checkName: "connect" },
-    { checkName: "accounts" },
-    { checkName: "network" },
-    { checkName: "balance", minimumBalance: "1000000" }
-  ];
-
-  const onboard = Onboard({
-    dappId: BLOCKNATIVE_KEY,
-    networkId: NETWORK_ID,
-    subscriptions: {
-      wallet: wallet => {
-        console.log({ wallet });
-        web3 = new Web3(wallet.provider);
-      },
-      address: address => console.log({ address }),
-      balance: balance => console.log({ balance }),
-      network: network => console.log({ network })
-    },
-    walletSelect: { wallets: wallets },
-    walletCheck: walletChecks
-  });
-
-  const fundWithCrypto = async () => {
-    console.log("Funding with crypto..");
-    await onboard.walletSelect();
-    await onboard.walletCheck();
-  };
+  import { createEventDispatcher } from "svelte";
+  const dispatch = createEventDispatcher();
 </script>
 
 <section
@@ -108,12 +63,13 @@
     <button
       class="h-full w-5/12 inline-block p-4 mx-2 text-white bg-teal-500
       hover:bg-teal-600 rounded shadow-xl hover:shadow-2xl"
-      on:click={fundWithCrypto}>
+      on:click={() => dispatch('fundwithcrypto')}>
       Fund with crypto
     </button>
     <button
       class="h-full w-5/12 inline-block p-4 mx-2 text-white bg-purple-500
-      hover:bg-purple-600 rounded shadow-xl hover:shadow-2xl">
+      hover:bg-purple-600 rounded shadow-xl hover:shadow-2xl"
+      on:click={() => dispatch('fundwithcard')}>
       Fund with card
     </button>
   </div>
