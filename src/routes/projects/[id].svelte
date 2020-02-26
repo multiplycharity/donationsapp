@@ -140,7 +140,7 @@
 
 <Modal
   isActive={isActiveModal}
-  title={`Enter amount of ${tokenSymbol} amount to donate`}
+  title={`Enter amount of ${tokenSymbol} to donate`}
   on:hidemodal={hideModal}>
 
   <form class="w-full max-w-lg mx-auto lg:mx-0 mb-2">
