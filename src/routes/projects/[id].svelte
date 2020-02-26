@@ -91,7 +91,7 @@
       type: "pending",
       message: `Trying to send ${amount} ${tokenSymbol} to
       ${(to || "").slice(0, 9)}...${(to || "").slice(-8)}`,
-      autoDismiss: 10000
+      autoDismiss: 4000
     };
 
     const { update, dismiss } = $notify.notification(notificationObject);
