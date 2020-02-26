@@ -46,7 +46,7 @@ const projects = [
     imageUrl: 'images/people/Mary.jpg',
     url: '/',
     alt: '',
-    label: 'Mpesa agent',
+    label: 'Mpesa agent, Gender equality',
     disabled: false
   },
   {
@@ -81,6 +81,19 @@ const projects = [
     location: 'Nakuru',
     description:
       "A lending circle gives out loans to local businesses. Your donation will result in loans for local businesses and families in need.",
+    imageUrl: 'images/Frame_50.jpg',
+    url: '/',
+    alt: '',
+    label: 'infrastructure, finance',
+    disabled: true
+  },
+  {
+    id: '8',
+    name: 'Building a chicken farm',
+    organization: 'Run by Ndegwa',
+    location: 'Chacra',
+    description:
+      "Most of the local currency community builds around food. While we see food vendors accept CC and families paying in CC, still overregional suppliers drain the community by taking currency out of the local economy. We want to build a chicken farm, to meet demand for a local food supplier.",
     imageUrl: 'images/Frame_50.jpg',
     url: '/',
     alt: '',
