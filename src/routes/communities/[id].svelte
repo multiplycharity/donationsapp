@@ -9,9 +9,7 @@
   import communityStore from "../../stores/communities.js";
   import Community from "../../components/Community.svelte";
   import ProjectGrid from "../../components/ProjectGrid.svelte";
-
   export let id;
-
   let community;
   let projects = [];
   const unsubscribe = communityStore.subscribe(communities => {
@@ -20,7 +18,6 @@
       projects.push({ ...value, id: key });
     });
   });
-
   onDestroy(() => {
     unsubscribe();
   });
