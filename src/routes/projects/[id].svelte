@@ -6,6 +6,7 @@
   import { initOnboard, initNotify } from "../../services";
   import getSigner from "../../services/signer.js";
   import confetti from "../../services/confetti.js";
+  import { goto } from "@sapper/app";
 
   let isActiveModal = false;
   let amount = 0;
@@ -13,7 +14,9 @@
 
   $: isValidAmount = !isNaN(amount);
 
-  let address = writable(null);
+  // let address = writable(null);
+  import address from "../../stores/address.js";
+
   let wallet = writable(null);
   let signer = writable(null);
   let balance = writable(null);
@@ -65,19 +68,19 @@
   const fundWithCrypto = async () => {
     console.log("Funding with crypto..");
 
-    // const previouslySelectedWallet = window.localStorage.getItem(
-    //   "selectedWallet"
-    // );
-    // if (previouslySelectedWallet && onboard) {
-    //   await onboard.walletSelect(previouslySelectedWallet);
-    // } else
-
     if ($wallet && $wallet.name && $onboard) {
       await $onboard.walletSelect($wallet.name);
     } else await $onboard.walletSelect();
 
     const isWalletCheckPassed = await $onboard.walletCheck();
     if (isWalletCheckPassed) isActiveModal = true;
+  };
+
+  const fundWithCard = async () => {
+    console.log("Funding with card...");
+    await goto(
+      `/onramp?receiveAddressEth=0x9b5FEeE3B220eEdd3f678efa115d9a4D91D5cf0A` // hardcoded now
+    );
   };
 
   const handlePaymentWithCrypto = async () => {
@@ -126,8 +129,7 @@
       amount = 0;
     }
 
-    isActiveModal = false;
-    amount = 0;
+    hideModal();
   };
 
   const hideModal = () => {
@@ -136,7 +138,7 @@
   };
 </script>
 
-<Project on:fundwithcrypto={fundWithCrypto} />
+<Project on:fundwithcrypto={fundWithCrypto} on:fundwithcard={fundWithCard} />
 
 <Modal
   isActive={isActiveModal}
