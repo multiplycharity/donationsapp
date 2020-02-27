@@ -64,6 +64,7 @@
         </div>
 
         <!-- Content -->
+
         <slot />
 
         <!--Footer-->
