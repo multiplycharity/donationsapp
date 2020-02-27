@@ -1,6 +1,6 @@
 import confetti from 'canvas-confetti'
 
-var count = 200
+var count = 240
 var defaults = {
   origin: { y: 0.7 },
   ticks: 250
