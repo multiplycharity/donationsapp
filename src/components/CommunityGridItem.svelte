@@ -2,7 +2,7 @@
   export let id = 0;
   export let name = "";
   export let description = "";
-  export let description2 = "";
+  export let descriptiontwo = "";
   export let organization = "";
   export let location = "";
   export let imageUrl = "";
@@ -22,16 +22,16 @@
       class:cursor-not-allowed={disabled}>
       <img class="mb-4" src={imageUrl} {alt} />
       <div class="mx-4 my-6">
-        <h3 href="#" class="text-2xl my-2 font-medium">{name}</h3>
+        <h3 href="google.com" class="text-2xl my-2 font-medium">{name}</h3>
         <div class="mx-auto mb-8 lg:mx-0 lg:ml-auto">
-          <a class="inline-block mt-0 text-blue-900 hover:text-blue-700 text-sm" href="#">{organization}</a>
+          <a class="inline-block mt-0 text-blue-900 hover:text-blue-700 text-sm" href="google.com">{organization}</a>
           <img class="inline-block mt-0 ml-8 text-blue-900 hover:text-blue-700 text-sm" src="/icons/maps_pin.svg" alt="location">
-          <a class="inline-block mt-0 text-blue-900 hover:text-blue-700 text-sm" href="#">{location}</a>
+          <a class="inline-block mt-0 text-blue-900 hover:text-blue-700 text-sm" href="google.com">{location}</a>
         </div>
         <p class="text-gray-600">
           {description.length <= 180 ? description : `${description.substr(0, 180)}...`}
         </p>
-        <!--<p class="text-gray-600">{description2}</p>-->
+        <!--<p class="text-gray-600">{descriptiontwo}</p>-->
       </div>
     </a>
   </div>
