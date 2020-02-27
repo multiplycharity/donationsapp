@@ -44,8 +44,7 @@ export function initOnboard (subscriptions) {
     walletSelect: {
       wallets: wallets
     },
-    walletCheck: walletChecks,
-    darkMode: true
+    walletCheck: walletChecks
   })
 }
 
@@ -53,7 +52,6 @@ export function initNotify () {
   return notify({
     dappId: BLOCKNATIVE_KEY,
     networkId: NETWORK_ID,
-    darkMode: true,
     desktopPosition: 'topRight'
   })
 }
