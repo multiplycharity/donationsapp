@@ -28,8 +28,10 @@
           <img class="inline-block mt-0 ml-8 text-blue-900 hover:text-blue-700 text-sm" src="/icons/maps_pin.svg" alt="location">
           <a class="inline-block mt-0 text-blue-900 hover:text-blue-700 text-sm" href="#">{location}</a>
         </div>
-        <p class="text-gray-600 mb-4">{description}</p>
-        <p class="text-gray-600">{description2}</p>
+        <p class="text-gray-600">
+          {description.length <= 180 ? description : `${description.substr(0, 180)}...`}
+        </p>
+        <!--<p class="text-gray-600">{description2}</p>-->
       </div>
     </a>
   </div>
