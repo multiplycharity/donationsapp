@@ -1,9 +1,9 @@
 import confetti from 'canvas-confetti'
 
-var count = 240
+var count = 200
 var defaults = {
   origin: { y: 0.7 },
-  ticks: 300
+  ticks: 250
 }
 
 function fire (particleRatio, opts) {
