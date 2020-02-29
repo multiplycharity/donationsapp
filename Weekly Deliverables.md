@@ -4,19 +4,11 @@
 
 ### Local communities
 
-- The Bangla area of Nairobi, Kenya, is an example of a socially challenged community where there is not a consistent access to conventional money.
-- As Bangla does not have a competitive industry the trade-balance remains negative, so for all money flowing into the community their fast flow back out again
-- Which means, they need to start demanded businesses / competitive industry and having access to a resilient currency, which does not directly has to compete with a national currency
-- lack of access to a medium of exchange prohibits an efficient trade system to foster economic growth in the local economy
-- Dependency on national currency makes community exposed to currency fluctuations, even if their own small economy is thriving
-- They need money, infrastructure, stable governance
+The Bangla area of Nairobi, Kenya, is an example of a socially challenged community where there is not a consistent access to conventional money. As Bangla does not have a competitive industry the trade-balance remains negative, so for all money flowing into the community they fast flow back out again. Bangla needs to have start demanded businesses / competitive industry and having access to a resilient currency, which does not directly has to compete with a national currency lack of access to a medium of exchange prohibits an efficient trade system to foster economic growth in the local economy. Dependency on national currency makes community exposed to currency fluctuations, even if their own small economy is thriving.
 
 ### End-users
 
-
-It’s not easy to improve your future as the lack of money makes the demand side very limited and does not allow for a lot of jobs to be created
-With a limited amount of money present the economic activity takes form in an informal and barter type of way utilizing your reputation in the community
-Existing payments systems such as M-Pesa or used cryptocurrencies only works if the users already has conventional money or IT and skills to mine or complete bounties
+It’s not easy to improve your future as the lack of money makes the demand side very limited and does not allow for a lot of jobs to be created. With a limited amount of money present the economic activity takes form in an informal and barter type of way utilizing your reputation in the community. Existing payments systems such as M-Pesa or used cryptocurrencies only works if the users already has conventional money or IT and skills to mine or complete bounties
 
 ### Grassroot organizations
 
@@ -25,10 +17,8 @@ Organizations such as Grassroots Economics that are working on the ground in the
 
 ### Charity organizations
 
-When Charities such as Unicef and Red Cross operating in the area send external conventional money they pay a lot of fees to banks and money providers such as Western Union or local mobile money agents 
-The cash injection only has a short-term limited effect as the end-users mostly purchase goods produced outside the community, resulting in yet another lack of money.
-High administration costs
-Top down approach to donating retards local economy
+When Charities such as Unicef and Red Cross operating in the area send external conventional money they pay a lot of fees to banks and money providers such as Western Union or local mobile money agents. The cash injection only has a short-term limited effect as the end-users mostly purchase goods produced outside the community, resulting in yet another lack of money.
+High administration costs.
 
 ### Philanthropic Donors 
 
