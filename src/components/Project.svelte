@@ -62,13 +62,13 @@
   <div class="max-w-3xl mx-auto text-center">
     <button
       class="h-full w-5/12 inline-block p-4 mx-2 text-white bg-teal-500
-      hover:bg-teal-600 rounded shadow-xl hover:shadow-2xl"
+      hover:bg-teal-600 rounded shadow-xl hover:shadow-2xl focus:outline-none"
       on:click={() => dispatch('fundwithcrypto')}>
       Fund with crypto
     </button>
     <button
       class="h-full w-5/12 inline-block p-4 mx-2 text-white bg-purple-500
-      hover:bg-purple-600 rounded shadow-xl hover:shadow-2xl"
+      hover:bg-purple-600 rounded shadow-xl hover:shadow-2xl focus:outline-none"
       on:click={() => dispatch('fundwithcard')}>
       Fund with card
     </button>

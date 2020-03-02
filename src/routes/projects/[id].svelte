@@ -84,6 +84,7 @@
   const fundWithCard = async () => {
     console.log("Funding with card...");
     chosenType = "card";
+    window.open("/buy-crypto", "_blank");
   };
 
   const handlePaymentWithCrypto = async () => {
@@ -141,8 +142,6 @@
 </script>
 
 <Project on:fundwithcrypto={fundWithCrypto} on:fundwithcard={fundWithCard} />
-
-<CarbonWidget isActive={chosenType === 'card'} on:hidemodal={hideModal} />
 
 <Modal
   isActive={chosenType === 'crypto'}

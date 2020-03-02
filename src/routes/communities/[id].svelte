@@ -21,7 +21,11 @@
   community = $communities.find(c => c.id === id);
   projects = getCommunityProjects(community);
 
+  let chosenFilter = "all";
+
   function applyFilter(e) {
+    chosenFilter = e.detail;
+
     projects = getCommunityProjects(community);
 
     if (e.detail === "all") {
@@ -70,9 +74,15 @@
     <div class="bg-gray-100 rounded-lg px-12 py-8 mt-12 shadow-lg">
       <h3 class="font-medium text-2xl my-4">Filter by</h3>
       <div class="inline-flex flex-wrap w-full">
-        <FilterTag label={'all'} on:choosefilter={applyFilter} />
+        <FilterTag
+          label={'all'}
+          isChosen={chosenFilter === 'all'}
+          on:choosefilter={applyFilter} />
         {#each $tags as tag}
-          <FilterTag label={tag} on:choosefilter={applyFilter} />
+          <FilterTag
+            label={tag}
+            isChosen={chosenFilter === tag}
+            on:choosefilter={applyFilter} />
         {/each}
 
       </div>

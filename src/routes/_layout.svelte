@@ -42,13 +42,13 @@
     position: absolute; /*ie6 */
   }
 
-  h2.transaction-flow__title {
+  /* h2.transaction-flow__title {
     visibility: hidden;
   }
 
   h1.initial-load--logo {
     visibility: hidden;
-  }
+  } */
 </style>
 
 <Tailwindcss />

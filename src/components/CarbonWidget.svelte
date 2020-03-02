@@ -2,7 +2,7 @@
   import { createEventDispatcher } from "svelte";
   const dispatch = createEventDispatcher();
 
-  export let isActive = false;
+  export let isActive = true;
   let carbonWidget = null;
 
   function onCarbonWidgetLoaded() {
@@ -17,6 +17,9 @@
 
   function hideModal() {
     dispatch("hidemodal");
+    // console.log("close");
+    // window.open("", "_self", "");
+    // window.close();
   }
 </script>
 
@@ -40,7 +43,7 @@
   </script>
 </svelte:head>
 
-<svelte:window on:keydown={handleKeyDown} }} />
+<svelte:window on:keydown={handleKeyDown} />
 
 <section class="modal-active">
 
@@ -52,35 +55,9 @@
 
     <div class="absolute w-full h-full bg-gray-100" on:click={hideModal} />
 
-    <div class="text-left">
-
-      <div
-        class="absolute flex justify-center items-center m-4 px-4 py-5 bg-white
-        z-40 rounded-full">
-        <!-- logo-->
-
-        <div class="absolute cursor-pointer" on:click={hideModal}>
-          <svg
-            class="h-6 w-6 text-black"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18L18 6M6 6l12 12" />
-          </svg>
-
-        </div>
-
-      </div>
-
-      <div
-        class="carbonfiber rounded-lg overflow-hidden shadow-2xl"
-        id="carbonfiber" />
-    </div>
-
+    <div
+      class="carbonfiber rounded-lg overflow-hidden shadow-2xl"
+      id="carbonfiber" />
   </div>
 
 </section>
