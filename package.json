@@ -12,6 +12,7 @@
     "test": "run-p --race dev cy:run"
   },
   "dependencies": {
+    "axios": "^0.19.2",
     "bnc-notify": "^1.0.12",
     "bnc-onboard": "^1.3.0",
     "canvas-confetti": "^1.1.0",

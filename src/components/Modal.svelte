@@ -33,7 +33,7 @@
 
   <div
     class="modal fixed w-full h-full top-0 left-0 flex items-center
-    justify-center"
+    justify-center z-40"
     class:opacity-0={!isActive}
     class:pointer-events-none={!isActive}>
     <div
@@ -64,7 +64,7 @@
         </div>
 
         <!-- Content -->
-
+        <div class="carbonfiber" id="carbonfiber" />
         <slot />
 
         <!--Footer-->

@@ -8,12 +8,12 @@
     }
     const data = await res.json();
 
-    let communities = [];
+    let communitiesArray = [];
     for (const key in data) {
-      communities.push({ ...data[key], id: key });
+      communitiesArray.push({ ...data[key], id: key });
     }
 
-    return { communities };
+    return { communitiesArray };
   }
 </script>
 
@@ -21,11 +21,12 @@
   import Tailwindcss from "../components/Tailwindcss.svelte";
   import Navbar from "../components/Navbar.svelte";
   import Footer from "../components/Footer.svelte";
-  import communitiesStore from "../stores/communities.js";
 
-  export let communities;
+  import { communities } from "../stores/communities.js";
 
-  communitiesStore.set(communities);
+  export let communitiesArray;
+
+  communities.set(communitiesArray);
 </script>
 
 <style global>
@@ -39,6 +40,14 @@
   .bn-onboard-modal {
     position: fixed !important;
     position: absolute; /*ie6 */
+  }
+
+  h2.transaction-flow__title {
+    visibility: hidden;
+  }
+
+  h1.initial-load--logo {
+    visibility: hidden;
   }
 </style>
 

@@ -16,7 +16,7 @@
 
   <div class="flex flex-shrink-0 mr-6">
     <a
-      class="text-xl text-indigo-500 font-semibold"
+      class="text-xl text-indigo-600 font-semibold"
       href="/"
       on:click={hideMenu}>
       Abundance
@@ -25,16 +25,22 @@
 
   <div class="block lg:hidden">
     <button
-      class="navbar-burger flex items-center py-2 px-3 text-indigo-500 rounded
-      border border-indigo-500"
+      class="navbar-burger flex items-center py-2 px-3 text-indigo-500"
       on:click={toggleMenu}>
+
       <svg
-        class="fill-current h-3 w-3"
-        viewbox="0 0 20 20"
-        xmlns="http://www.w3.org/2000/svg">
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        class="fill-current w-5 h-5">
         <title>Menu</title>
-        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h8m-8 6h16" />
       </svg>
+
     </button>
   </div>
 
@@ -42,22 +48,22 @@
 
     <div class="lg:ml-auto">
       <a
-        class="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900
-        hover:text-blue-700"
+        class="block lg:inline-block mt-4 lg:mt-0 mr-10 text-indigo-900
+        hover:text-indigo-700"
         href="#how-it-works"
         on:click={hideMenu}>
         How it works
       </a>
       <a
-        class="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900
-        hover:text-blue-700"
+        class="block lg:inline-block mt-4 lg:mt-0 mr-10 text-indigo-900
+        hover:text-indigo-700"
         href="about"
         on:click={hideMenu}>
         About us
       </a>
       <a
-        class="block lg:inline-block mt-4 lg:mt-0 mr-10 text-blue-900
-        hover:text-blue-700"
+        class="block lg:inline-block mt-4 lg:mt-0 mr-10 text-indigo-900
+        hover:text-indigo-700"
         href="success-stories"
         on:click={hideMenu}>
         Success stories
@@ -67,7 +73,8 @@
     <div>
       <a
         class="inline-block py-3 px-5 mr-4 leading-none text-center
-        text-blue-700 bg-indigo-100 hover:bg-indigo-200 rounded shadow"
+        text-indigo-700 hover:text-indigo-800 bg-indigo-200 hover:bg-indigo-300
+        rounded shadow"
         href="/"
         on:click={hideMenu}>
         Sign in

@@ -23,7 +23,7 @@
         {error.message}
       </p>
       <a
-        class="text-lg text-blue-700 hover:underline"
+        class="text-lg text-indigo-700 hover:underline"
         href="/"
         data-config-id="primary-action">
         Go to the homepage »

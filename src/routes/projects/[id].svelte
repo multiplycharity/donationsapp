@@ -1,14 +1,14 @@
 <script>
   import Project from "../../components/Project.svelte";
   import Modal from "../../components/Modal.svelte";
+  import CarbonWidget from "../../components/CarbonWidget.svelte";
   import { ethers } from "ethers";
   import { writable } from "svelte/store";
   import { initOnboard, initNotify } from "../../services";
   import getSigner from "../../services/signer.js";
   import confetti from "../../services/confetti.js";
-  import { goto } from "@sapper/app";
+  import axios from "axios";
 
-  let isActiveModal = false;
   let amount = 0;
   let touched = false;
 
@@ -28,6 +28,11 @@
   let tokenContract;
   let tokenSymbol;
   let notificationObject;
+  let chosenType = "";
+
+  $: {
+    console.log({ chosenType });
+  }
 
   onboard.set(
     initOnboard({
@@ -73,14 +78,12 @@
     } else await $onboard.walletSelect();
 
     const isWalletCheckPassed = await $onboard.walletCheck();
-    if (isWalletCheckPassed) isActiveModal = true;
+    if (isWalletCheckPassed) chosenType = "crypto";
   };
 
   const fundWithCard = async () => {
     console.log("Funding with card...");
-    await goto(
-      `/onramp?receiveAddressEth=0x9b5FEeE3B220eEdd3f678efa115d9a4D91D5cf0A` // hardcoded now
-    );
+    chosenType = "card";
   };
 
   const handlePaymentWithCrypto = async () => {
@@ -125,23 +128,24 @@
         message: err.message
       });
       console.error(err);
-      isActiveModal = false;
-      amount = 0;
+      hideModal();
     }
 
     hideModal();
   };
 
   const hideModal = () => {
-    isActiveModal = false;
+    chosenType = "";
     amount = 0;
   };
 </script>
 
 <Project on:fundwithcrypto={fundWithCrypto} on:fundwithcard={fundWithCard} />
 
+<CarbonWidget isActive={chosenType === 'card'} on:hidemodal={hideModal} />
+
 <Modal
-  isActive={isActiveModal}
+  isActive={chosenType === 'crypto'}
   title={`Enter amount of ${tokenSymbol} to donate`}
   on:hidemodal={hideModal}>
 
@@ -181,5 +185,4 @@
     </div>
 
   </form>
-
 </Modal>

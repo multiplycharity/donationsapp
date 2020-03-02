@@ -1,5 +1,20 @@
-import { writable } from 'svelte/store'
+import { writable, derived } from 'svelte/store'
 
-const communities = writable([])
+export const communities = writable([])
 
-export default communities
+export const tags = derived(communities, $communities => {
+  let tagsSet = new Set()
+
+  for (let community of $communities) {
+    if (community.projects) {
+      for (let project of Object.values(community.projects)) {
+        if (project.tags) {
+          for (let tag of project.tags) {
+            tagsSet.add(tag)
+          }
+        }
+      }
+    }
+  }
+  return Array.from(tagsSet)
+})

@@ -1,7 +1,6 @@
 <script>
   import CommunityGridItem from "../components/CommunityGridItem.svelte";
-  import communityStore from "../stores/communities.js";
-  // import { fade } from "svelte/transition";
+  import { communities as communityStore } from "../stores/communities.js";
   import { onDestroy } from "svelte";
 
   let communities;

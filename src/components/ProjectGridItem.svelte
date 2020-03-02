@@ -6,35 +6,67 @@
   export let location = "";
   export let imageUrl = "";
   export let alt = "";
+  export let tags = [];
   export let disabled = false;
+
+  import { goto } from "@sapper/app";
+
+  import FilterTag from "./FilterTag.svelte";
+
+  if (tags) {
+    const tagsSet = new Set();
+    for (let tag of tags) {
+      tagsSet.add(tag);
+    }
+    tags = Array.from(tagsSet);
+  }
 </script>
 
 <div
   class="md:w-1/2 lg:w-1/3 px-4 my-8 md:mb-2"
   class:opacity-50={disabled}
   class:zoom={!disabled}>
-  <div
-    class="h-full shadow-xl rounded-lg overflow-hidden "
-    class:hover:shadow-2xl={!disabled}>
+  <div class="h-full shadow-xl rounded-lg overflow-hidden">
     <a
+      class="relative"
       href={disabled ? null : `/projects/${id}`}
       class:cursor-not-allowed={disabled}>
-      <!--<span class="absolute text-sm py-1 px-3 m-2 text-white font-normal bg-indigo-500 rounded-full">{label}</span>-->
+
       <img class="mb-4" src={imageUrl} {alt} />
 
-      <div class="mx-4 my-6">
+      <div class="mx-4 mb-6">
 
-        <h3 href="google.com" class="text-2xl my-2 font-medium">{name}</h3>
-        <div class="mx-auto mb-8 lg:mx-0 lg:ml-auto">
-          <a class="inline-block mt-0 text-blue-900 hover:text-blue-700 text-sm" href="google.com">{organization}</a>
-          <img class="inline-block mt-0 ml-8 text-blue-900 hover:text-blue-700 text-sm" src="/icons/maps_pin.svg" alt="location">
-          <a class="inline-block mt-0 text-blue-900 hover:text-blue-700 text-sm" href="google.com">{location}</a>
+        <div class="mb-4 lg:mx-0 lg:ml-auto items-center">
+          <h4
+            class="inline-block mt-0 text-gray-500 text-xs font-semibold
+            uppercase">
+            {organization}
+          </h4>
+          <span class="text-gray-500 mx-1">•</span>
+          <h4
+            class="inline-block mt-0 text-gray-500 text-xs font-semibold
+            uppercase">
+            {location}
+          </h4>
+
+          <h3 class="text-2xl my-2 font-medium text-gray-800">{name}</h3>
+
+          {#if tags}
+            <div class="inline-flex flex-wrap">
+              {#each tags as tag}
+                <div on:click|stopPropagation>
+                  <FilterTag label={tag} class="absolute" on:choosefilter />
+                </div>
+              {/each}
+            </div>
+          {/if}
         </div>
+
         <p class="text-gray-600">
           {description.length <= 180 ? description : `${description.substr(0, 180)}...`}
         </p>
       </div>
-
     </a>
+
   </div>
 </div>
