@@ -21,19 +21,17 @@
       <img class="mb-4" src={imageUrl} {alt} />
       <div class="mx-4 my-6">
         <div class="mb-4 lg:mx-0 lg:ml-auto items-center">
-          <a
-            class="inline-block mt-0 text-gray-500 hover:text-gray-400 text-xs
-            font-semibold uppercase"
-            href="/">
+          <h4
+            class="inline-block mt-0 text-gray-500 text-xs font-semibold
+            uppercase">
             {organization}
-          </a>
+          </h4>
           <span class="text-gray-500 mx-1">•</span>
-          <a
-            class="inline-block mt-0 text-gray-500 hover:text-gray-400 text-xs
-            font-semibold uppercase"
-            href="/">
+          <h4
+            class="inline-block mt-0 text-gray-500 text-xs font-semibold
+            uppercase">
             {location}
-          </a>
+          </h4>
 
           <h3 href="/" class="text-2xl mt-2 mb-4 font-medium text-gray-800">
             {name}

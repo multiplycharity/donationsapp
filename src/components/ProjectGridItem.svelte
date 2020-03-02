@@ -27,10 +27,15 @@
   class:opacity-50={disabled}
   class:zoom={!disabled}>
   <div class="h-full shadow-xl rounded-lg overflow-hidden">
-    <a
-      class="relative"
+    <div
+      class="relative cursor-pointer"
       href={disabled ? null : `/projects/${id}`}
-      class:cursor-not-allowed={disabled}>
+      class:cursor-not-allowed={disabled}
+      on:click={async () => {
+        if (!disabled) {
+          await goto(`/projects/${id}`);
+        }
+      }}>
 
       <img class="mb-4" src={imageUrl} {alt} />
 
@@ -54,9 +59,9 @@
           {#if tags}
             <div class="inline-flex flex-wrap">
               {#each tags as tag}
-                <div on:click|stopPropagation>
+                <span on:click|stopPropagation>
                   <FilterTag label={tag} class="absolute" on:choosefilter />
-                </div>
+                </span>
               {/each}
             </div>
           {/if}
@@ -66,7 +71,7 @@
           {description.length <= 180 ? description : `${description.substr(0, 180)}...`}
         </p>
       </div>
-    </a>
+    </div>
 
   </div>
 </div>
