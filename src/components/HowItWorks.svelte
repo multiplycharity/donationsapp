@@ -1,12 +1,11 @@
 <section id="how-it-works" class="py-12 px-4 text-center">
 
   <h2 class="md:text-3xl text-4xl mb-2 leading-tight font-heading">
-    Donate and track the impact
+    Creating Community Currency
   </h2>
 
   <p class="text-gray-500">
-    Converting your donations into community currencies, enables us to boost and
-    protect the local economy
+    Donating into community currencies creates sustainable, resilient local economies
   </p>
 
   <div class="flex flex-wrap items-center -mx-8 mt-12 mb-2">
@@ -19,11 +18,10 @@
           rounded-full">
           1
         </span>
-        <span>Donate</span>
+        <span>Donate to a Campaign</span>
       </h3>
       <p class="text-gray-500">
-        You choose a project and donate. We add the donation to the currency
-        reserve
+        Browse our communities and choose a campaign to donate to. You can donate in US Dollars, Euro or cryptocurrency like Ether or DAI.
         <br />
       </p>
     </div>
@@ -36,11 +34,10 @@
           rounded-full">
           2
         </span>
-        <span>Convert currencies</span>
+        <span>Convert the Currencies</span>
       </h3>
       <p class="text-gray-500">
-        We issue an equivalent of community currency worth your donation amount
-        to the local project
+        Your donation triggers the issuance of local currency tokens on the Ethereum blockchain, instantly accessible on the receivers phone.
       </p>
     </div>
 
@@ -52,11 +49,10 @@
           rounded-full">
           3
         </span>
-        <span>Track the impact</span>
+        <span>Track the Impact</span>
       </h3>
       <p class="text-gray-500">
-        Check the impact of your donation in our dashboard. Stay in contact with
-        your donees
+      Check the impact of your donation in our dashboard. Stay in contact with your donees, and track the impact on your dashboard.
       </p>
     </div>
 

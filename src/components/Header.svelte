@@ -6,11 +6,10 @@
     <div class="lg:w-1/2 px-2 lg:pl-16 mt-4 lg:mt-0">
 
       <h2 class="text-4xl md:text-5xl mt-4 lg:mt-0 leading-tight font-heading">
-        Donations with leverage
+        Leverage your Impact
       </h2>
       <p class="my-4 text-gray-500 leading-relaxed">
-        Send money directly to people living in extreme poverty, and track your
-        impact on local economic growth.
+        Donate directly to people living in poverty, and track your impact on local economic growth.
       </p>
       <form class="w-full max-w-lg mx-auto lg:mx-0">
         <div class="flex flex-wrap mb-6 md:mb-0">
@@ -32,7 +31,7 @@
           </div>
         </div>
         <p class="text-sm text-gray-500 mt-2 leading-relaxed">
-          Subscribe to follow community updates
+          Follow our updates
         </p>
       </form>
     </div>
@@ -43,24 +42,24 @@
   <div class="flex flex-wrap -mx-4 text-center">
 
     <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading">
-      <h3 class="md:text-3xl text-2xl">
-        <span class="md:text-4xl text-3xl font-medium">8500+</span>
+      <h3 class="md:text-lg text-lg">
+        <span class="md:text-xl text-xl font-medium">8500+</span>
         <br />
         people trading
       </h3>
     </div>
 
     <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading md:border-l">
-      <h3 class="md:text-3xl text-2xl">
-        <span class="md:text-4xl text-3xl font-medium">>$7,500</span>
+      <h3 class="md:text-lg text-lg">
+        <span class="md:text-xl text-xl font-medium">>$7,500</span>
         <br />
         donated
       </h3>
     </div>
 
     <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading md:border-l">
-      <h3 class="md:text-3xl text-2xl">
-        <span class="md:text-4xl text-3xl font-medium">>$67,000</span>
+      <h3 class="md:text-lg text-lg">
+        <span class="md:text-xl text-xl font-medium">>$67,000</span>
         <br />
         verified impact
       </h3>

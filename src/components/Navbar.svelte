@@ -64,7 +64,7 @@
       </a>
     </div>
 
-    <div>
+    <!--<div>
       <a
         class="inline-block py-3 px-5 mr-4 leading-none text-center text-white
         bg-blue-500 hover:bg-blue-600 rounded shadow"
@@ -79,7 +79,7 @@
         on:click={hideMenu}>
         Sign up
       </a>
-    </div>
+    </div>-->
 
   </Menu>
 
