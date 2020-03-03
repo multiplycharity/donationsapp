@@ -15,17 +15,14 @@
 <nav class="flex flex-wrap items-center justify-between p-4">
 
   <div class="flex flex-shrink-0 mr-6">
-    <a
-      class="text-xl text-indigo-600 font-semibold"
-      href="/"
-      on:click={hideMenu}>
+    <a class="text-xl font-semibold text-blue-600" href="/" on:click={hideMenu}>
       Abundance
     </a>
   </div>
 
   <div class="block lg:hidden">
     <button
-      class="navbar-burger flex items-center py-2 px-3 text-indigo-500"
+      class="navbar-burger flex items-center py-2 px-3 text-blue-600"
       on:click={toggleMenu}>
 
       <svg
@@ -48,22 +45,19 @@
 
     <div class="lg:ml-auto">
       <a
-        class="block lg:inline-block mt-4 lg:mt-0 mr-10 text-indigo-900
-        hover:text-indigo-700"
+        class="block lg:inline-block mt-4 lg:mt-0 mr-10 hover:text-gray-600"
         href="#how-it-works"
         on:click={hideMenu}>
         How it works
       </a>
       <a
-        class="block lg:inline-block mt-4 lg:mt-0 mr-10 text-indigo-900
-        hover:text-indigo-700"
+        class="block lg:inline-block mt-4 lg:mt-0 mr-10 hover:text-gray-600"
         href="about"
         on:click={hideMenu}>
         About us
       </a>
       <a
-        class="block lg:inline-block mt-4 lg:mt-0 mr-10 text-indigo-900
-        hover:text-indigo-700"
+        class="block lg:inline-block mt-4 lg:mt-0 mr-10 hover:text-gray-600"
         href="success-stories"
         on:click={hideMenu}>
         Success stories
@@ -72,16 +66,15 @@
 
     <div>
       <a
-        class="inline-block py-3 px-5 mr-4 leading-none text-center
-        text-indigo-700 hover:text-indigo-800 bg-indigo-200 hover:bg-indigo-300
-        rounded shadow"
+        class="inline-block py-3 px-5 mr-4 leading-none text-center text-white
+        bg-blue-500 hover:bg-blue-600 rounded shadow"
         href="/"
         on:click={hideMenu}>
         Sign in
       </a>
       <a
         class="inline-block py-3 px-6 mt-4 lg:mt-0 leading-none text-white
-        bg-indigo-500 hover:bg-indigo-600 rounded shadow-xl"
+        bg-blue-500 hover:bg-blue-600 rounded shadow-xl"
         href="/"
         on:click={hideMenu}>
         Sign up

@@ -26,7 +26,7 @@
           <div class="w-full md:w-1/3">
             <button
               class="inline-block w-full py-4 px-8 leading-none text-white
-              bg-indigo-500 hover:bg-indigo-600 rounded md:rounded-l-none">
+              bg-blue-500 hover:bg-blue-600 rounded md:rounded-l-none">
               Subscribe
             </button>
           </div>
