@@ -71,8 +71,10 @@
 
   <div class="container mx-auto px-4">
 
+  <h2 class="text-3xl text-center pt-12 font-heading">Campaigns you can fund</h2>
+
     <div class="bg-gray-100 rounded-lg px-12 py-8 mt-12 shadow-lg">
-      <h3 class="font-medium text-2xl my-4">Filter by</h3>
+      <h3 class="font-medium text-2xl my-4">Filter by impact category</h3>
       <div class="inline-flex flex-wrap w-full">
         <FilterTag
           label={'all'}
