@@ -8,7 +8,8 @@
 {#if isChosen}
   <button
     class="zoom mr-2 my-1 rounded-full py-1 px-3 text-xs font-light
-    hover:text-white focus:outline-none text-white bg-blue-500 hover:bg-blue-500"
+    hover:text-white focus:outline-none text-white bg-lightblue-500
+    hover:bg-lightblue-500"
     class:style={true}
     on:click={() => {
       dispatch('choosefilter', label);
@@ -18,8 +19,8 @@
 {:else}
   <button
     class="zoom mr-2 my-1 rounded-full py-1 px-3 text-xs font-light
-    hover:text-white focus:outline-none text-blue-700 bg-blue-200
-    hover:bg-blue-300"
+    hover:text-white focus:outline-none text-lightblue-700 bg-lightblue-200
+    hover:bg-lightblue-300"
     class:style={true}
     on:click={() => {
       dispatch('choosefilter', label);

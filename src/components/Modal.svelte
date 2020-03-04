@@ -41,14 +41,14 @@
       on:click={hideModal} />
 
     <div
-      class="modal-container bg-white w-11/12 md:max-w-md mx-auto rounded
-      shadow-lg z-50 overflow-y-auto">
+      class="modal-container bg-white w-11/12 max-w-md mx-auto rounded shadow-lg
+      z-50 overflow-y-auto">
 
       <!-- Add margin if you want to see some of the overlay behind the modal-->
-      <div class="modal-content py-4 md:py-8 text-left px-6">
+      <div class="modal-content py-4 text-left px-6">
         <!--Title-->
-        <div class="flex justify-between items-center pb-3 md:pb-6">
-          <p class="text-lg font-semibold sm:text-2xl sm:font-bold">{title}</p>
+        <div class="flex justify-between items-center mt-4 pb-4 md:pb-6">
+          <p class="text-2xl font-bold">{title}</p>
           <div class="modal-close cursor-pointer z-50" on:click={hideModal}>
             <svg
               class="fill-current text-black"
@@ -64,7 +64,7 @@
         </div>
 
         <!-- Content -->
-        <div class="carbonfiber" id="carbonfiber" />
+
         <slot />
 
         <!--Footer-->

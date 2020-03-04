@@ -8,11 +8,23 @@
   import getSigner from "../../services/signer.js";
   import confetti from "../../services/confetti.js";
   import axios from "axios";
+  import { goto } from "@sapper/app";
 
-  let amount = 0;
+  let amount = 20;
   let touched = false;
+  let email = "";
 
-  $: isValidAmount = !isNaN(amount);
+  $: isValidAmount =
+    chosenType === "card" ? !isNaN(amount) && amount >= 20 : !isNaN(amount);
+
+  function validateEmail(email) {
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+  }
+
+  $: isValidEmail = validateEmail($emailStore) || validateEmail(email);
+
+  $: isValidForm = isValidAmount && isValidEmail;
 
   // let address = writable(null);
   import address from "../../stores/address.js";
@@ -24,22 +36,22 @@
   let provider = writable(null);
   let onboard = writable(null);
   let notify = writable(null);
+  let emailStore = writable("");
+
+  let previouslyChosenEmail = window.localStorage.getItem("email");
+  if (previouslyChosenEmail) emailStore.set(previouslyChosenEmail);
 
   let tokenContract;
   let tokenSymbol;
   let notificationObject;
   let chosenType = "";
 
-  $: {
-    console.log({ chosenType });
-  }
-
   onboard.set(
     initOnboard({
       wallet: async w => {
         provider.set(new ethers.providers.Web3Provider(w.provider));
         wallet.set(w);
-        window.localStorage.setItem("selectedWallet", w.name);
+        window.localStorage.setItem("selectedWallet", $wallet.name);
         signer.set(getSigner($provider));
 
         tokenContract = new ethers.Contract(
@@ -73,8 +85,12 @@
   const fundWithCrypto = async () => {
     console.log("Funding with crypto..");
 
-    if ($wallet && $wallet.name && $onboard) {
-      await $onboard.walletSelect($wallet.name);
+    const previouslySelectedWallet = window.localStorage.getItem(
+      "selectedWallet"
+    );
+
+    if (previouslySelectedWallet && $onboard) {
+      await $onboard.walletSelect(previouslySelectedWallet);
     } else await $onboard.walletSelect();
 
     const isWalletCheckPassed = await $onboard.walletCheck();
@@ -84,7 +100,23 @@
   const fundWithCard = async () => {
     console.log("Funding with card...");
     chosenType = "card";
-    window.open("/buy-crypto", "_blank");
+  };
+
+  function setEmail() {
+    if (!previouslyChosenEmail && !$emailStore) {
+      window.localStorage.setItem("email", email);
+      emailStore.set(email);
+    }
+  }
+
+  const handlePaymentWithCard = async () => {
+    console.log("Handling payment with card...");
+
+    setEmail();
+
+    await goto(
+      `https://buy-staging.moonpay.io/?currencyCode=DAI&baseCurrencyCode=USD&walletAddress=0x9b5FEeE3B220eEdd3f678efa115d9a4D91D5cf0A&email=${$emailStore}&externalCustomerId=${$emailStore}&baseCurrencyAmount=${amount}&redirectURL=${window.location.href}`
+    );
   };
 
   const handlePaymentWithCrypto = async () => {
@@ -122,6 +154,8 @@
       emitter.on("txSpeedUp", console.log);
       emitter.on("txCancel", console.log);
       emitter.on("txFailed", console.log);
+
+      setEmail();
     } catch (err) {
       update({
         eventCode: "txFailed",
@@ -138,6 +172,7 @@
   const hideModal = () => {
     chosenType = "";
     amount = 0;
+    email = "";
   };
 </script>
 
@@ -145,20 +180,19 @@
 
 <Modal
   isActive={chosenType === 'crypto'}
-  title={`Enter amount of ${tokenSymbol} to donate`}
+  title={`Donate in crypto`}
   on:hidemodal={hideModal}>
 
   <form class="w-full max-w-lg mx-auto lg:mx-0 mb-2">
     <div class="flex flex-wrap">
-      <div class="w-full md:w-2/3">
-
+      <div class="w-full">
+        <p class="font-semibold text-sm my-2">{`${tokenSymbol} amount`}</p>
         <input
           class="appearance-none block w-full py-3 px-4 leading-snug
-          text-gray-700 bg-gray-200 focus:bg-white border border-gray-200
-          focus:border-gray-500 rounded rounded-b-none md:rounded
-          md:rounded-r-none focus:outline-none"
+          text-gray-700 bg-gray-100 focus:bg-white border border-gray-200
+          focus:border-gray-500 rounded focus:outline-none"
           type="number"
-          placeholder={tokenSymbol}
+          placeholder="Amount"
           bind:value={amount}
           on:blur={() => (touched = true)}
           on:focus={() => {
@@ -170,13 +204,32 @@
           Please enter a positive number
         </p>
 
+        {#if !window.localStorage.getItem('email') && !$emailStore}
+          <p class="font-semibold text-sm mb-2 mt-4">Email</p>
+          <input
+            class="appearance-none block w-full py-3 px-4 leading-snug
+            text-gray-700 bg-gray-100 focus:bg-white border border-gray-200
+            focus:border-gray-500 rounded focus:outline-none"
+            type="email"
+            placeholder="Email"
+            bind:value={email}
+            on:blur={() => (touched = true)}
+            on:focus={() => {
+              email = '';
+            }} />
+          <p
+            class="text-red-500 text-xs italic mt-1"
+            class:hidden={isValidEmail || !touched}>
+            Please enter a valid email
+          </p>
+        {/if}
+
       </div>
 
-      <div class="w-full md:w-1/3">
+      <div class="w-full">
         <button
           class="inline-block w-full py-4 px-8 leading-none text-white
-          bg-indigo-500 hover:bg-indigo-600 rounded rounded-t-none md:rounded
-          md:rounded-l-none"
+          bg-blue-500 hover:bg-blue-600 rounded mt-48"
           on:click|preventDefault={handlePaymentWithCrypto}>
           Send
         </button>
@@ -185,3 +238,69 @@
 
   </form>
 </Modal>
+
+<Modal
+  isActive={chosenType === 'card'}
+  title={`Donate in fiat`}
+  on:hidemodal={hideModal}>
+
+  <form class="w-full max-w-lg mx-auto lg:mx-0 mb-2">
+    <div class="flex flex-wrap">
+      <div class="w-full">
+        <p class="font-semibold text-sm my-2">USD amount</p>
+        <input
+          class="appearance-none block w-full py-3 px-4 leading-snug
+          text-gray-700 bg-gray-100 focus:bg-white border border-gray-200
+          focus:border-gray-500 rounded focus:outline-none"
+          type="number"
+          placeholder="20"
+          bind:value={amount}
+          on:blur={() => (touched = true)}
+          on:focus={() => {
+            amount = null;
+          }} />
+        <p
+          class="text-red-500 text-xs italic mt-1"
+          class:hidden={isValidAmount || !touched}>
+          The minimum transaction amount is $20.00.
+        </p>
+
+        {#if !window.localStorage.getItem('email') && !$emailStore}
+          <p class="font-semibold text-sm mb-2 mt-4">Email</p>
+          <input
+            class="appearance-none block w-full py-3 px-4 leading-snug
+            text-gray-700 bg-gray-100 focus:bg-white border border-gray-200
+            focus:border-gray-500 rounded focus:outline-none"
+            type="email"
+            placeholder="Email"
+            bind:value={email}
+            on:blur={() => (touched = true)}
+            on:focus={() => {
+              email = '';
+            }} />
+          <p
+            class="text-red-500 text-xs italic mt-1"
+            class:hidden={isValidEmail || !touched}>
+            Please enter a valid email
+          </p>
+        {/if}
+
+      </div>
+
+      <div class="w-full">
+        <button
+          class="inline-block w-full py-4 px-8 leading-none text-white
+          bg-blue-500 hover:bg-blue-600 rounded mt-48 disabled"
+          class:opacity-50={!isValidForm}
+          class:cursor-not-allowed={!isValidForm}
+          disabled={!isValidForm}
+          on:click|preventDefault={handlePaymentWithCard}>
+          Send
+        </button>
+      </div>
+    </div>
+
+  </form>
+</Modal>
+
+<!-- window.history.back(); -->
