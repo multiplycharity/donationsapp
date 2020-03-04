@@ -10,7 +10,7 @@
     style="background-image: url(images/Frame_55.jpg)">
 
 
-  <div class="relative items-center py-10 md:py-24 lg:py-32 container mx-auto px-4">
+  <div class="relative items-center py-10 md:py-12 lg:py-14 container mx-auto px-4">
 
     <!--<h2 class="text-4xl lg:w-1/2 mb-10" data-config-id="header">{community.name}</h2>-->
 
