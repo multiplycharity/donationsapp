@@ -11,7 +11,7 @@
   <div class="max-w-3xl mx-auto">
     <h2 class="md:text-3xl text-4xl mb-2 leading-tight font-heading text-center">Frequently Asked Questions</h2>
     <div class="p-4 mb-2 border-b">
-      <button class="flex items-center w-full text-left"><span class="text-2xl mr-4">{plusOrMinus}</span>
+      <button class="flex items-center w-full text-left focus:outline-none"><span class="text-2xl mr-4">{plusOrMinus}</span>
         <span class="flex-grow font-semibold" on:click="{switchVisibility}">Where does my donation go?</span>
       </button>
       {#if visible}
@@ -19,7 +19,7 @@
       {/if}
     </div>
     <div class="p-4 mb-2 border-b">
-      <button class="flex items-center w-full text-left"><span class="text-2xl mr-4">{plusOrMinus}</span>
+      <button class="flex items-center w-full text-left focus:outline-none"><span class="text-2xl mr-4">{plusOrMinus}</span>
         <span class="flex-grow font-semibold" on:click={switchVisibility}>So I give $1, how much community currency does a donee receive?</span>
       </button>
       {#if visible}

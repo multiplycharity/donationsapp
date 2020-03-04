@@ -55,8 +55,9 @@
 
 </svelte:head>
 
-<div class="container mx-auto px-4">
+
   <Header />
+<div class="container mx-auto px-4">
   <CommunityGrid />
   <HowItWorks />
   <FAQ />
