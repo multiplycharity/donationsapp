@@ -41,29 +41,29 @@
 <section class="py-8 px-4">
   <div class="flex flex-wrap -mx-4 text-center">
 
-    <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading">
-      <h3 class="md:text-lg text-lg">
-        <span class="md:text-xl text-xl font-medium">8500+</span>
-        <br />
-        people trading
-      </h3>
-    </div>
+  <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading">
+        <h3 class="md:text-lg text-lg">
+          <span class="md:text-4xl text-3xl font-medium">8500+</span>
+          <br />
+          people trading
+        </h3>
+      </div>
 
-    <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading md:border-l">
-      <h3 class="md:text-lg text-lg">
-        <span class="md:text-xl text-xl font-medium">>$7,500</span>
-        <br />
-        donated
-      </h3>
-    </div>
+      <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading md:border-l">
+        <h3 class="md:text-lg text-lg">
+          <span class="md:text-4xl text-3xl font-medium">>$7,500</span>
+          <br />
+          donated
+        </h3>
+      </div>
 
-    <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading md:border-l">
-      <h3 class="md:text-lg text-lg">
-        <span class="md:text-xl text-xl font-medium">>$67,000</span>
-        <br />
-        verified impact
-      </h3>
-    </div>
+      <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading md:border-l">
+        <h3 class="md:text-lg text-lg">
+          <span class="md:text-4xl text-3xl font-medium">>$67,000</span>
+          <br />
+          verified impact
+        </h3>
+      </div>
 
   </div>
 </section>
