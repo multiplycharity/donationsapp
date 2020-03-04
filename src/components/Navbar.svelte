@@ -15,27 +15,27 @@
 <nav class="flex flex-wrap items-center justify-between p-4">
 
   <div class="flex flex-shrink-0 mr-6">
-    <a class="text-xl font-semibold text-blue-600" href="/" on:click={hideMenu}>
+    <a class="text-xl font-semibold text-blue-500" href="/" on:click={hideMenu}>
       Abundance
     </a>
   </div>
 
   <div class="block lg:hidden">
     <button
-      class="navbar-burger flex items-center py-2 px-3 text-blue-600"
+      class="navbar-burger flex items-center py-2 px-3 text-blue-500"
       on:click={toggleMenu}>
 
       <svg
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
-        class="fill-current w-5 h-5">
+        class="fill-current w-6 h-6">
         <title>Menu</title>
         <path
           stroke-linecap="round"
           stroke-linejoin="round"
           stroke-width="2"
-          d="M4 6h16M4 12h8m-8 6h16" />
+          d="M4 6h16M4 12h16m-7 6h7" />
       </svg>
 
     </button>
@@ -64,7 +64,7 @@
       </a>
     </div>
 
-    <div>
+    <!-- <div>
       <a
         class="inline-block py-3 px-5 mr-4 leading-none text-center text-white
         bg-blue-500 hover:bg-blue-600 rounded shadow"
@@ -79,7 +79,7 @@
         on:click={hideMenu}>
         Sign up
       </a>
-    </div>
+    </div> -->
 
   </Menu>
 
