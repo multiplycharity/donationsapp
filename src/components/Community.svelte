@@ -31,25 +31,25 @@
 
             <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading">
               <h3 class="md:text-lg text-lg">
-                <span class="md:text-xl text-xl font-medium">8500+</span>
+                <span class="md:text-xl text-xl font-medium">$23.000</span>
                 <br />
-                people trading
+                goods & services bought
               </h3>
             </div>
 
             <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading md:border-l">
               <h3 class="md:text-lg text-lg">
-                <span class="md:text-xl text-xl font-medium">>$7,500</span>
+                <span class="md:text-xl text-xl font-medium">3x velocity</span>
                 <br />
-                donated
+                compared to USD
               </h3>
             </div>
 
             <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading md:border-l">
               <h3 class="md:text-lg text-lg">
-                <span class="md:text-xl text-xl font-medium">>$67,000</span>
+                <span class="md:text-xl text-xl font-medium">6x impact</span>
                 <br />
-                verified impact
+                compared to GiveDirectly
               </h3>
             </div>
 
