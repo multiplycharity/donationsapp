@@ -1,9 +1,9 @@
-require('dotenv').config()
+import config from '../../config.json'
 
 const saveToMailchimp = async email => {
   try {
     const response = await axios.post(
-      `https://us19.api.mailchimp.com/3.0/lists/${process.env.MAILCHIMP_LIST_ID}/members`,
+      `https://us19.api.mailchimp.com/3.0/lists/${config.MAILCHIMP_LIST_ID}/members`,
       {
         email_address: $emailStore,
         status: 'subscribed'
@@ -14,10 +14,9 @@ const saveToMailchimp = async email => {
           'Content-Type': 'application/json',
           Authorization:
             'Basic ' +
-            Buffer.from(
-              `user:${process.env.MAILCHIMP_API_KEY}`,
-              'utf8'
-            ).toString('base64')
+            Buffer.from(`user:${config.MAILCHIMP_API_KEY}`, 'utf8').toString(
+              'base64'
+            )
         }
       }
     )

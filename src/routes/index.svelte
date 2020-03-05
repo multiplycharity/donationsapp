@@ -3,6 +3,7 @@
   import Header from "../components/Header.svelte";
   import CommunityGrid from "../components/CommunityGrid.svelte";
   import HowItWorks from "../components/HowItWorks.svelte";
+  import FAQ from "../components/FAQ.svelte";
 </script>
 
 <svelte:head>
@@ -58,4 +59,5 @@
 <div class="container mx-auto px-4">
   <CommunityGrid />
   <HowItWorks />
+  <FAQ />
 </div>
