@@ -1,2 +1,4 @@
 import { writable } from 'svelte/store'
-export default writable(null)
+import axios from 'axios'
+const emailStore = writable(null)
+export default emailStore

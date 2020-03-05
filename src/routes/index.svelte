@@ -54,8 +54,8 @@
 
 </svelte:head>
 
+<Header />
 <div class="container mx-auto px-4">
-  <Header />
   <CommunityGrid />
   <HowItWorks />
 </div>

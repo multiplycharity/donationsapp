@@ -9,8 +9,9 @@
   import confetti from "../../services/confetti.js";
   import axios from "axios";
   import { goto } from "@sapper/app";
+  import saveToMailchimp from "../../services/mailchimp.js";
 
-  let amount = null;
+  let amount = 20;
   let touched = { amount: false, email: false };
   let email = "";
 
@@ -102,10 +103,16 @@
     chosenType = "card";
   };
 
-  function setEmail() {
+  async function setEmail() {
     if (!previouslyChosenEmail && !$emailStore) {
       window.localStorage.setItem("email", email);
       emailStore.set(email);
+    }
+
+    const { success, response, error } = await saveToMailchimp(email);
+
+    if (!success && error) {
+      this.error(error);
     }
   }
 
@@ -173,7 +180,7 @@
 
   const hideModal = () => {
     chosenType = "";
-    amount = null;
+    amount = 20;
     email = "";
     touched.amount = false;
     touched.email = false;
@@ -187,7 +194,10 @@
   title={`Donate in crypto`}
   on:hidemodal={hideModal}>
 
-  <form class="w-full max-w-lg mx-auto lg:mx-0 mb-2">
+  <form
+    action="/signup"
+    method="POST"
+    class="w-full max-w-lg mx-auto lg:mx-0 mb-2">
     <div class="flex flex-wrap">
       <div class="w-full">
         <p class="font-semibold text-sm my-2">{`${tokenSymbol} amount`}</p>
@@ -212,6 +222,7 @@
             text-gray-700 bg-gray-100 focus:bg-white border border-gray-200
             focus:border-gray-500 rounded focus:outline-none"
             type="email"
+            name="email"
             placeholder="Email"
             bind:value={email}
             on:blur={() => (touched.email = true)} />
@@ -228,6 +239,8 @@
         <button
           class="inline-block w-full py-4 px-8 leading-none text-white
           bg-blue-500 hover:bg-blue-600 rounded mt-48"
+          class:opacity-50={!isValidForm}
+          class:cursor-not-allowed={!isValidForm}
           on:click|preventDefault={handlePaymentWithCrypto}>
           Send
         </button>
