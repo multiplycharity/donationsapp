@@ -10,8 +10,8 @@
   import axios from "axios";
   import { goto } from "@sapper/app";
 
-  let amount = 20;
-  let touched = false;
+  let amount = null;
+  let touched = { amount: false, email: false };
   let email = "";
 
   $: isValidAmount =
@@ -112,10 +112,12 @@
   const handlePaymentWithCard = async () => {
     console.log("Handling payment with card...");
 
-    setEmail();
+    if (!previouslyChosenEmail) {
+      window.localStorage.setItem("email", email);
+    }
 
     await goto(
-      `https://buy-staging.moonpay.io/?currencyCode=DAI&baseCurrencyCode=USD&walletAddress=0x9b5FEeE3B220eEdd3f678efa115d9a4D91D5cf0A&email=${$emailStore}&externalCustomerId=${$emailStore}&baseCurrencyAmount=${amount}&redirectURL=${window.location.href}`
+      `https://buy-staging.moonpay.io/?apiKey=pk_test_M98jboYNkUu7vni3bm1cSgHSYmc6&currencyCode=DAI&baseCurrencyCode=USD&walletAddress=0x9b5FEeE3B220eEdd3f678efa115d9a4D91D5cf0A&email=${$emailStore}&externalCustomerId=${$emailStore}&baseCurrencyAmount=${amount}&redirectURL=${window.location.href}`
     );
   };
 
@@ -171,8 +173,10 @@
 
   const hideModal = () => {
     chosenType = "";
-    amount = 0;
+    amount = null;
     email = "";
+    touched.amount = false;
+    touched.email = false;
   };
 </script>
 
@@ -194,13 +198,10 @@
           type="number"
           placeholder="Amount"
           bind:value={amount}
-          on:blur={() => (touched = true)}
-          on:focus={() => {
-            amount = null;
-          }} />
+          on:blur={() => (touched.amount = true)} />
         <p
           class="text-red-500 text-xs italic mt-1"
-          class:hidden={isValidAmount || !touched}>
+          class:hidden={isValidAmount || !touched.amount}>
           Please enter a positive number
         </p>
 
@@ -213,13 +214,10 @@
             type="email"
             placeholder="Email"
             bind:value={email}
-            on:blur={() => (touched = true)}
-            on:focus={() => {
-              email = '';
-            }} />
+            on:blur={() => (touched.email = true)} />
           <p
             class="text-red-500 text-xs italic mt-1"
-            class:hidden={isValidEmail || !touched}>
+            class:hidden={isValidEmail || !touched.email}>
             Please enter a valid email
           </p>
         {/if}
@@ -255,13 +253,10 @@
           type="number"
           placeholder="20"
           bind:value={amount}
-          on:blur={() => (touched = true)}
-          on:focus={() => {
-            amount = null;
-          }} />
+          on:blur={() => (touched.amount = true)} />
         <p
           class="text-red-500 text-xs italic mt-1"
-          class:hidden={isValidAmount || !touched}>
+          class:hidden={isValidAmount || !touched.amount}>
           The minimum transaction amount is $20.00.
         </p>
 
@@ -274,13 +269,10 @@
             type="email"
             placeholder="Email"
             bind:value={email}
-            on:blur={() => (touched = true)}
-            on:focus={() => {
-              email = '';
-            }} />
+            on:blur={() => (touched.email = true)} />
           <p
             class="text-red-500 text-xs italic mt-1"
-            class:hidden={isValidEmail || !touched}>
+            class:hidden={isValidEmail || !touched.email}>
             Please enter a valid email
           </p>
         {/if}
