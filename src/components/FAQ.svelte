@@ -1,6 +1,6 @@
 <script>
-
-const questions = [
+  import { fly } from "svelte/transition";
+  let faq = [
     {
       id: 1,
       question: "Where does my donation go?",

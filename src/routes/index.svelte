@@ -3,10 +3,7 @@
   import Header from "../components/Header.svelte";
   import CommunityGrid from "../components/CommunityGrid.svelte";
   import HowItWorks from "../components/HowItWorks.svelte";
-<<<<<<< HEAD
   import HowToLeverage from "../components/HowToLeverage.svelte";
-=======
->>>>>>> 534eb009c52fac8c1d0dc8477d881049342a2cc4
   import FAQ from "../components/FAQ.svelte";
 </script>
 
@@ -59,18 +56,10 @@
 
 </svelte:head>
 
-<<<<<<< HEAD
-
   <Header />
 <div class="container mx-auto px-4">
   <CommunityGrid />
   <HowItWorks />
   <HowToLeverage />
-=======
-<Header />
-<div class="container mx-auto px-4">
-  <CommunityGrid />
-  <HowItWorks />
->>>>>>> 534eb009c52fac8c1d0dc8477d881049342a2cc4
   <FAQ />
 </div>
