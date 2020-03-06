@@ -34,39 +34,33 @@ const questions = [
     }
   ];
 
-	function switchOpened(id) {
-	    console.log("here");
-	    const question = questions.find(q => q.id === id);
-	    question.isOpened = !question.isOpened;
-	    question = question;
-	    console.log("isOpened: ", question.isOpened);
-	  }
-
-/*
-	import { fade } from 'svelte/transition';
-	let visible = false;
-  let plusOrMinus = "+";
-  function switchVisibility() {
-		visible =! visible;
-	}*/
+  function toggleFaq(id) {
+    let question = faq.find(q => q.id === id);
+    question.isOpened = !question.isOpened;
+    const index = faq.findIndex(q => q.id === id);
+    faq[index] = question;
+  }
 </script>
 
-<section id="frequently-asked-questions" class="py-12 px-4">
+<section class="py-8 px-4">
   <div class="max-w-3xl mx-auto">
     <h2
-      class="md:text-3xl text-4xl mb-2 leading-tight font-heading text-center">
+      class="md:text-3xl text-4xl mb-4 leading-tight font-heading text-center">
       Frequently Asked Questions
     </h2>
-		{#each questions as question}
+
+    {#each faq as question}
       <div class="p-4 mb-2 border-b">
-        <button
+        <div
           class="flex items-center w-full text-left focus:outline-none"
-          on:click={() => switchOpened(question.id)}>
-          <span class="text-2xl mr-4">+</span>
+          on:click={() => toggleFaq(question.id)}>
+          <span class="text-2xl mr-4">{question.isOpened ? '-' : '+'}</span>
           <span class="flex-grow font-semibold">{question.question}</span>
-        </button>
+        </div>
         {#if question.isOpened}
-          <p class="mt-2">{question.answer}</p>
+          <p class="mt-2" transition:fly={{ y: -20, delay: 60, duration: 240 }}>
+            {question.answer}
+          </p>
         {/if}
       </div>
     {/each}

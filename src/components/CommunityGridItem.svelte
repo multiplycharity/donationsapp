@@ -2,7 +2,6 @@
   export let id = 0;
   export let name = "";
   export let description = "";
-  // export let descriptiontwo = "";
   export let organization = "";
   export let location = "";
   export let imageUrl = "";

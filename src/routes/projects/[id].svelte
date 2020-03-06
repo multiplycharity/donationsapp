@@ -11,7 +11,7 @@
   import { goto } from "@sapper/app";
 
   let amount = 20;
-  let touched = false;
+  let touched = { amount: false, email: false };
   let email = "";
 
   $: isValidAmount =
@@ -26,7 +26,6 @@
 
   $: isValidForm = isValidAmount && isValidEmail;
 
-  // let address = writable(null);
   import address from "../../stores/address.js";
 
   let wallet = writable(null);
@@ -102,20 +101,32 @@
     chosenType = "card";
   };
 
-  function setEmail() {
-    if (!previouslyChosenEmail && !$emailStore) {
-      window.localStorage.setItem("email", email);
-      emailStore.set(email);
-    }
+  async function setEmail() {
+    fetch(`api/add-user/?email=${email}`)
+      .then(res => res.json())
+      .then(res => {
+        if (res.success) {
+          if (!previouslyChosenEmail && !$emailStore) {
+            window.localStorage.setItem("email", email);
+            emailStore.set(email);
+          }
+          console.log(`Subscribed user ${email} to mailchimp`);
+        } else if (!res.success && res.error) console.error(res);
+      })
+      .catch(err => {
+        console.error(err);
+      });
   }
 
   const handlePaymentWithCard = async () => {
     console.log("Handling payment with card...");
 
-    setEmail();
+    if (!previouslyChosenEmail) {
+      window.localStorage.setItem("email", email);
+    }
 
     await goto(
-      `https://buy-staging.moonpay.io/?currencyCode=DAI&baseCurrencyCode=USD&walletAddress=0x9b5FEeE3B220eEdd3f678efa115d9a4D91D5cf0A&email=${$emailStore}&externalCustomerId=${$emailStore}&baseCurrencyAmount=${amount}&redirectURL=${window.location.href}`
+      `https://buy-staging.moonpay.io/?apiKey=pk_test_M98jboYNkUu7vni3bm1cSgHSYmc6&currencyCode=DAI&baseCurrencyCode=USD&walletAddress=0x9b5FEeE3B220eEdd3f678efa115d9a4D91D5cf0A&email=${$emailStore}&externalCustomerId=${$emailStore}&baseCurrencyAmount=${amount}&redirectURL=${window.location.href}`
     );
   };
 
@@ -171,8 +182,10 @@
 
   const hideModal = () => {
     chosenType = "";
-    amount = 0;
+    amount = 20;
     email = "";
+    touched.amount = false;
+    touched.email = false;
   };
 </script>
 
@@ -183,7 +196,10 @@
   title={`Donate in crypto`}
   on:hidemodal={hideModal}>
 
-  <form class="w-full max-w-lg mx-auto lg:mx-0 mb-2">
+  <form
+    action="/signup"
+    method="POST"
+    class="w-full max-w-lg mx-auto lg:mx-0 mb-2">
     <div class="flex flex-wrap">
       <div class="w-full">
         <p class="font-semibold text-sm my-2">{`${tokenSymbol} amount`}</p>
@@ -194,13 +210,10 @@
           type="number"
           placeholder="Amount"
           bind:value={amount}
-          on:blur={() => (touched = true)}
-          on:focus={() => {
-            amount = null;
-          }} />
+          on:blur={() => (touched.amount = true)} />
         <p
           class="text-red-500 text-xs italic mt-1"
-          class:hidden={isValidAmount || !touched}>
+          class:hidden={isValidAmount || !touched.amount}>
           Please enter a positive number
         </p>
 
@@ -211,15 +224,13 @@
             text-gray-700 bg-gray-100 focus:bg-white border border-gray-200
             focus:border-gray-500 rounded focus:outline-none"
             type="email"
+            name="email"
             placeholder="Email"
             bind:value={email}
-            on:blur={() => (touched = true)}
-            on:focus={() => {
-              email = '';
-            }} />
+            on:blur={() => (touched.email = true)} />
           <p
             class="text-red-500 text-xs italic mt-1"
-            class:hidden={isValidEmail || !touched}>
+            class:hidden={isValidEmail || !touched.email}>
             Please enter a valid email
           </p>
         {/if}
@@ -230,6 +241,8 @@
         <button
           class="inline-block w-full py-4 px-8 leading-none text-white
           bg-blue-500 hover:bg-blue-600 rounded mt-48"
+          class:opacity-50={!isValidForm}
+          class:cursor-not-allowed={!isValidForm}
           on:click|preventDefault={handlePaymentWithCrypto}>
           Send
         </button>
@@ -255,13 +268,10 @@
           type="number"
           placeholder="20"
           bind:value={amount}
-          on:blur={() => (touched = true)}
-          on:focus={() => {
-            amount = null;
-          }} />
+          on:blur={() => (touched.amount = true)} />
         <p
           class="text-red-500 text-xs italic mt-1"
-          class:hidden={isValidAmount || !touched}>
+          class:hidden={isValidAmount || !touched.amount}>
           The minimum transaction amount is $20.00.
         </p>
 
@@ -274,13 +284,10 @@
             type="email"
             placeholder="Email"
             bind:value={email}
-            on:blur={() => (touched = true)}
-            on:focus={() => {
-              email = '';
-            }} />
+            on:blur={() => (touched.email = true)} />
           <p
             class="text-red-500 text-xs italic mt-1"
-            class:hidden={isValidEmail || !touched}>
+            class:hidden={isValidEmail || !touched.email}>
             Please enter a valid email
           </p>
         {/if}
