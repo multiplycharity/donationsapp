@@ -1,24 +1,17 @@
 <script>
   import emailStore from "../stores/email";
   import { fade } from "svelte/transition";
-
   let previouslyChosenEmail = window.localStorage.getItem("email");
   if (previouslyChosenEmail) emailStore.set(previouslyChosenEmail);
-
   let subscribed = false;
-
   let isValidEmail = false;
   let email = "";
-
   let touched = { email: false };
-
   function validateEmail(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
   }
-
   $: isValidEmail = validateEmail($emailStore) || validateEmail(email);
-
   async function setEmail() {
     fetch(`api/add-user/?email=${email}`)
       .then(res => res.json())
@@ -37,6 +30,8 @@
       });
   }
 </script>
+
+
 
 <section
   class="text-center bg-cover h-full"
@@ -109,39 +104,29 @@
     </div>
   </div>
 
-</section>
+  <div class="flex flex-wrap pt-8 px-4 -mx-4 text-center text-orange-100">
+    <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading">
+      <h3 class="md:text-lg text-lg">
+        <span class="md:text-4xl text-3xl font-medium">8500</span>
+        <br />
+        registered users
+      </h3>
+    </div>
 
-<section class="py-8 px-4">
+    <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading md:border-l">
+      <h3 class="md:text-lg text-lg">
+        <span class="md:text-4xl text-3xl font-medium">$7,500</span>
+        <br />
+        traded
+      </h3>
+    </div>
 
-  <div class="container mx-auto px-4">
-    <div class="flex flex-wrap -mx-4 text-center">
-
-      <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading">
-        <h3 class="md:text-3xl text-2xl">
-          <span class="md:text-4xl text-3xl font-medium">8500+</span>
-          <br />
-          people trading
-        </h3>
-      </div>
-
-      <div
-        class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading md:border-l">
-        <h3 class="md:text-3xl text-2xl">
-          <span class="md:text-4xl text-3xl font-medium">>$7,500</span>
-          <br />
-          donated
-        </h3>
-      </div>
-
-      <div
-        class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading md:border-l">
-        <h3 class="md:text-3xl text-2xl">
-          <span class="md:text-4xl text-3xl font-medium">>$67,000</span>
-          <br />
-          verified impact
-        </h3>
-      </div>
-
+    <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading md:border-l">
+      <h3 class="md:text-lg text-lg">
+        <span class="md:text-4xl text-3xl font-medium">$45,000</span>
+        <br />
+        leveraged impact
+      </h3>
     </div>
   </div>
 

@@ -1,0 +1,60 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Bofu",
+        "description": "A northside park that is home to the Lincoln Park Zoo"
+      },
+      "geometry": {
+        "coordinates": [36.739670, -1.357190],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Chidzini",
+        "description": "A lakefront park on Chicago's south side"
+      },
+      "geometry": {
+        "coordinates": [36.820030, -1.285790],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Chigato",
+        "description": "A downtown park known for its art installations and unique architecture"
+      },
+      "geometry": {
+        "coordinates": [36.820030, -1.285790],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Chikole",
+        "description": "A downtown park that is the site of many of Chicago's favorite festivals and events"
+      },
+      "geometry": {
+        "coordinates": [36.820030, -1.285790],
+        "type": "Point"
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "title": "Congo",
+        "description": "A large park on Chicago's northwest side"
+      },
+      "geometry": {
+        "coordinates": [39.4666, -4.0333],
+        "type": "Point"
+      }
+    }
+  ],
+  "type": "FeatureCollection"
+}

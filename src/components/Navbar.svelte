@@ -1,12 +1,9 @@
 <script>
   import Menu from "../components/Menu.svelte";
-
   let isMenuHidden = true;
-
   function toggleMenu() {
     isMenuHidden = !isMenuHidden;
   }
-
   function hideMenu() {
     isMenuHidden = true;
   }
