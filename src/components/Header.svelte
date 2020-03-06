@@ -1,9 +1,11 @@
 <script>
   import emailStore from "../stores/email";
-  import saveToMailchimp from "../services/mailchimp.js";
+  import { fade } from "svelte/transition";
 
   let previouslyChosenEmail = window.localStorage.getItem("email");
   if (previouslyChosenEmail) emailStore.set(previouslyChosenEmail);
+
+  let subscribed = false;
 
   let isValidEmail = false;
   let email = "";
@@ -18,16 +20,21 @@
   $: isValidEmail = validateEmail($emailStore) || validateEmail(email);
 
   async function setEmail() {
-    if (!previouslyChosenEmail && !$emailStore) {
-      window.localStorage.setItem("email", email);
-      emailStore.set(email);
-    }
-
-    const { success, response, error } = await saveToMailchimp(email);
-
-    if (!success && error) {
-      console.error(error);
-    }
+    fetch(`api/add-user/?email=${email}`)
+      .then(res => res.json())
+      .then(res => {
+        if (res.success) {
+          if (!previouslyChosenEmail && !$emailStore) {
+            window.localStorage.setItem("email", email);
+            emailStore.set(email);
+          }
+          subscribed = true;
+          console.log(`Subscribed user ${email} to mailchimp`);
+        } else if (!res.success && res.error) console.error(res);
+      })
+      .catch(err => {
+        console.error(err);
+      });
   }
 </script>
 
@@ -53,7 +60,7 @@
         </p>
 
         {#if !previouslyChosenEmail && !$emailStore}
-          <div class="flex flex-wrap justify-center">
+          <div class="flex flex-wrap justify-center" transition:fade>
 
             <form class="w-full max-w-lg mx-auto lg:mx-0 text-center">
               <div class="flex flex-wrap mb-6 md:mb-0">
@@ -63,7 +70,7 @@
                     leading-snug text-gray-700 bg-gray-200 focus:bg-white border
                     border-gray-200 focus:border-gray-500 rounded
                     md:rounded-r-none focus:outline-none"
-                    type="text"
+                    type="email"
                     placeholder="Email"
                     bind:value={email}
                     on:blur={() => (touched.email = true)} />
@@ -74,13 +81,13 @@
                     bg-blue-500 hover:bg-blue-600 rounded md:rounded-l-none"
                     class:cursor-not-allowed={!isValidEmail}
                     disabled={!isValidEmail}
-                    on:click={setEmail}>
+                    on:click|preventDefault={setEmail}>
                     Subscribe
                   </button>
                 </div>
 
                 <p
-                  class="text-red-500 text-xs italic mt-1"
+                  class="text-red-500 text-sm italic mt-1"
                   class:hidden={isValidEmail || !touched.email}>
                   Please enter a valid email
                 </p>
@@ -90,6 +97,12 @@
               </p> -->
             </form>
           </div>
+        {/if}
+
+        {#if subscribed}
+          <p class="text-green-500 text-sm italic mt-1" transition:fade>
+            You have successfully subscribed to our newsletter.
+          </p>
         {/if}
 
       </div>

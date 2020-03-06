@@ -9,7 +9,6 @@
   import confetti from "../../services/confetti.js";
   import axios from "axios";
   import { goto } from "@sapper/app";
-  import saveToMailchimp from "../../services/mailchimp.js";
 
   let amount = 20;
   let touched = { amount: false, email: false };
@@ -27,7 +26,6 @@
 
   $: isValidForm = isValidAmount && isValidEmail;
 
-  // let address = writable(null);
   import address from "../../stores/address.js";
 
   let wallet = writable(null);
@@ -104,16 +102,20 @@
   };
 
   async function setEmail() {
-    if (!previouslyChosenEmail && !$emailStore) {
-      window.localStorage.setItem("email", email);
-      emailStore.set(email);
-    }
-
-    const { success, response, error } = await saveToMailchimp(email);
-
-    if (!success && error) {
-      this.error(error);
-    }
+    fetch(`api/add-user/?email=${email}`)
+      .then(res => res.json())
+      .then(res => {
+        if (res.success) {
+          if (!previouslyChosenEmail && !$emailStore) {
+            window.localStorage.setItem("email", email);
+            emailStore.set(email);
+          }
+          console.log(`Subscribed user ${email} to mailchimp`);
+        } else if (!res.success && res.error) console.error(res);
+      })
+      .catch(err => {
+        console.error(err);
+      });
   }
 
   const handlePaymentWithCard = async () => {
