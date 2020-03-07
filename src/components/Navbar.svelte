@@ -49,16 +49,22 @@
       </a>
       <a
         class="block lg:inline-block mt-4 lg:mt-0 mr-10 hover:text-gray-600"
+        href="#faq"
+        on:click={hideMenu}>
+        FAQ
+      </a>
+      <a
+        class="block lg:inline-block mt-4 lg:mt-0 mr-10 hover:text-gray-600"
         href="about"
         on:click={hideMenu}>
         About us
       </a>
-      <a
+      <!--<a
         class="block lg:inline-block mt-4 lg:mt-0 mr-10 hover:text-gray-600"
         href="success-stories"
         on:click={hideMenu}>
         Success stories
-      </a>
+      </a>-->
     </div>
 
     <!-- <div>
