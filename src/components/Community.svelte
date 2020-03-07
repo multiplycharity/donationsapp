@@ -31,9 +31,9 @@
 
             <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading">
               <h3 class="md:text-lg text-lg">
-                <span class="md:text-xl text-xl font-medium">$23.000</span>
+                <span class="md:text-xl text-xl font-medium">$23,000</span>
                 <br />
-                goods & services bought
+                traded
               </h3>
             </div>
 
@@ -41,7 +41,7 @@
               <h3 class="md:text-lg text-lg">
                 <span class="md:text-xl text-xl font-medium">3x velocity</span>
                 <br />
-                compared to USD
+                vs USD
               </h3>
             </div>
 
@@ -49,7 +49,7 @@
               <h3 class="md:text-lg text-lg">
                 <span class="md:text-xl text-xl font-medium">6x impact</span>
                 <br />
-                compared to GiveDirectly
+                vs GiveDirectly
               </h3>
             </div>
 
