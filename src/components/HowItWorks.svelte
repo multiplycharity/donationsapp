@@ -7,7 +7,7 @@
       answer:
         "Choose a campaign you want to support. You can donate in US Dollars, Euro or cryptocurrency like Ether or DAI",
       img:
-        "Frame_44.jpg",
+        "donate.jpg",
       isOpened: true
     },
     {
@@ -17,7 +17,7 @@
       answer:
         "Your donation triggers the issuance of local currency tokens on the Ethereum blockchain, instantly accessible on the receivers phone",
       img:
-        "Frame_48.jpg",
+        "convert.jpg",
       isOpened: false
     },
     {
@@ -27,7 +27,7 @@
       answer:
         "Check the impact of your donation in our dashboard. Stay in contact with your donees, and track the impact on your dashboard",
       img:
-        "Frame_55.jpg",
+        "track.jpg",
       isOpened: false
     }
   ];
@@ -47,7 +47,7 @@
 
     {#each faq as question}
       {#if question.isOpened}
-        <div class="lg:w-1/2 px-2"><img src="images/{question.img}" alt=""></div>
+        <div class="lg:w-1/2 px-2"><img src="images/how-it-works/{question.img}" alt=""></div>
         <!--<div class="lg:w-1/2 px-2" transition:fly={{ y: -20, delay: 60, duration: 240 }}><img src="images/{question.img}" alt=""></div>-->
       {/if}
     {/each}
