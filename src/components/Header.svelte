@@ -103,7 +103,7 @@
     </div>
   </div>
 
-  <div class="flex flex-wrap pt-8 px-4 -mx-4 text-center text-orange-100">
+  <div class="flex flex-wrap pt-8 px-4 text-center text-orange-100">
     <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading">
       <h3 class="md:text-lg text-lg">
         <span class="md:text-4xl text-3xl font-medium">8500</span>
