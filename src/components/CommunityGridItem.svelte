@@ -17,6 +17,9 @@
     <a
       href={disabled ? null : `/communities/${id}`}
       class:cursor-not-allowed={disabled}>
+
+
+
       <img class="mb-4" src={imageUrl} {alt} />
       <div class="mx-4 my-6">
         <div class="mb-4 lg:mx-0 lg:ml-auto items-center">
@@ -42,6 +45,8 @@
           <!--<p class="text-gray-600">{descriptiontwo}</p>-->
         </div>
       </div>
+
+
     </a>
   </div>
 </div>
