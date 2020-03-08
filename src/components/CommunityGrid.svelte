@@ -15,7 +15,18 @@
   });
 </script>
 
-<section class="py-16 px-4" style="background-image: url(images/earth.svg); background-position: center; background-repeat: no-repeat; background-size: 50% 50%;">
+<style>
+@media (min-width: 1024px) {
+  .backgroundImage {
+    background-image: url(images/earth.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+  }
+}
+</style>
+
+<section class="py-16 px-4 backgroundImage">
   <h2 class="text-3xl text-center mb-4 font-heading">
     Explore our communities
   </h2>
