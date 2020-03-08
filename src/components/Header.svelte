@@ -50,8 +50,7 @@
           Leverage your Impact
         </h2>
         <p class="max-w-lg my-4 text-gray-300 text-xl leading-relaxed">
-          Donate directly to people living in poverty, and track your impact on
-          local economic growth.
+          Donate money directly to people living in poverty. Multiply our impact on the local economy and track it on the blockchain.
         </p>
 
         {#if !previouslyChosenEmail && !$emailStore}
@@ -104,7 +103,7 @@
     </div>
   </div>
 
-  <div class="flex flex-wrap pt-8 px-4 -mx-4 text-center text-orange-100">
+  <div class="flex flex-wrap pt-8 px-4 text-center text-orange-100">
     <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading">
       <h3 class="md:text-lg text-lg">
         <span class="md:text-4xl text-3xl font-medium">8500</span>

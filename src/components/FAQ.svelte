@@ -6,7 +6,7 @@
       question: "Where does my donation go?",
       answer:
         "Your donation is converted into cryptocurrency and securely stored in a smart contract on the Ethereum blockchain. This storage is the community currencies reserve, backing the credit tokens created to give to your donee. After a few minutes, your donee receives the currency tokens in their blockchain wallet and is able to spend them. Meanwhile you can track your donation’s impact in your impact dashboard.",
-      isOpened: true
+      isOpened: false
     },
     {
       id: 2,
@@ -74,28 +74,31 @@
   }
 </script>
 
-<section id="faq" class="py-8 px-4">
-  <div class="max-w-3xl mx-auto">
-    <h2
-      class="md:text-3xl text-4xl mb-4 leading-tight font-heading text-center">
-      Frequently Asked Questions
-    </h2>
+<section id="faq" class="py-16 px-4">
+  <div class="flex flex-wrap -mx-2">
+    <div class="lg:w-2/5 px-2 lg:pr-16 mb-6 lg:mb-0">
+      <h2 class="md:text-3xl text-4xl mb-2 leading-tight font-heading">
+        Frequently Asked Questions
+      </h2>
+    </div>
 
-    {#each faq as question}
-      <div class="p-4 mb-2 border-b">
-        <div
-          class="flex items-center w-full text-left focus:outline-none"
-          on:click={() => toggleFaq(question.id)}>
-          <span class="text-2xl mr-4">{question.isOpened ? '-' : '+'}</span>
-          <span class="flex-grow font-semibold">{question.question}</span>
+
+    <div class="lg:w-3/5 px-2">
+      {#each faq as question}
+        <div class="p-4 mb-2 border-b">
+          <div
+            class="flex items-center w-full text-left focus:outline-none"
+            on:click={() => toggleFaq(question.id)}>
+            <span class="text-2xl mr-4">{question.isOpened ? '-' : '+'}</span>
+            <span class="flex-grow font-semibold">{question.question}</span>
+          </div>
+          {#if question.isOpened}
+            <p class="mt-2" transition:fly={{ y: -20, duration: 240 }}>
+              {question.answer}
+            </p>
+          {/if}
         </div>
-        {#if question.isOpened}
-          <p class="mt-2" transition:fly={{ y: -20, delay: 60, duration: 240 }}>
-            {question.answer}
-          </p>
-        {/if}
-      </div>
-    {/each}
-
+      {/each}
+    </div>
   </div>
 </section>
