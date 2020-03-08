@@ -74,7 +74,7 @@
   }
 </script>
 
-<section id="faq" class="py-12 px-4">
+<section id="faq" class="py-16 px-4">
   <div class="flex flex-wrap -mx-2">
     <div class="lg:w-2/5 px-2 lg:pr-16 mb-6 lg:mb-0">
       <h2 class="md:text-3xl text-4xl mb-2 leading-tight font-heading">

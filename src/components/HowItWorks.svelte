@@ -41,7 +41,7 @@
   }
 </script>
 
-<section id="how-it-works" class="py-8 px-4 text-center">
+<section id="how-it-works" class="py-16 px-4 text-center">
 
   <div class="flex flex-wrap items-center text-center lg:text-left -mx-2">
 
