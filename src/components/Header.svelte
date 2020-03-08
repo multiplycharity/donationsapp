@@ -50,7 +50,7 @@
           Leverage your Impact
         </h2>
         <p class="max-w-lg my-4 text-gray-300 text-xl leading-relaxed">
-          Donate money directly to people living in poverty. Multiply our impact on the local economy and track it on the blockchain.
+          Stimulate resilient development, by donating money directly to people in local currency economies.
         </p>
 
         {#if !previouslyChosenEmail && !$emailStore}
