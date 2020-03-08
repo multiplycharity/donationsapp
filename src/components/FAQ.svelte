@@ -6,7 +6,7 @@
       question: "Where does my donation go?",
       answer:
         "Your donation is converted into cryptocurrency and securely stored in a smart contract on the Ethereum blockchain. This storage is the community currencies reserve, backing the credit tokens created to give to your donee. After a few minutes, your donee receives the currency tokens in their blockchain wallet and is able to spend them. Meanwhile you can track your donation’s impact in your impact dashboard.",
-      isOpened: true
+      isOpened: false
     },
     {
       id: 2,
