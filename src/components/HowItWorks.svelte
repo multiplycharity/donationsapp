@@ -43,6 +43,8 @@
 
 <section id="how-it-works" class="py-16 px-4 text-center">
 
+<h2 class="md:text-3xl text-4xl mb-2 leading-tight font-heading text-left">How we leverage your donation</h2>
+
   <div class="flex flex-wrap items-center text-center lg:text-left -mx-2">
 
     {#each faq as question}
@@ -52,7 +54,7 @@
       {/if}
     {/each}
     <div class="lg:w-1/2 px-2 lg:pl-16 mt-10 lg:mt-0">
-      <h2 class="md:text-3xl text-4xl mb-4 leading-tight font-heading">How we leverage your donation</h2>
+      <!--<h2 class="md:text-3xl text-4xl mb-4 leading-tight font-heading">How we leverage your donation</h2>-->
 
       {#each faq as question}
           <div class="p-4 mb-4 rounded hover:shadow-lg" on:click={() => toggleFaq(question.id)}>
