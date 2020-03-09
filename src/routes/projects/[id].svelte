@@ -1,3 +1,9 @@
+<script context="module">
+  export async function preload({ params }) {
+    return { id: params.id };
+  }
+</script>
+
 <script>
   import Project from "../../components/Project.svelte";
   import Modal from "../../components/Modal.svelte";
@@ -8,6 +14,12 @@
   import confetti from "../../services/confetti.js";
   import axios from "axios";
   import { goto } from "@sapper/app";
+
+  export let id;
+
+  import { projects } from "../../stores/communities.js";
+
+  const project = $projects.find(p => p.id === id);
 
   let amount = 20;
   let touched = { amount: false, email: false };
@@ -77,9 +89,9 @@
     );
   }
 
-  let tokenContract;
-  let tokenSymbol;
-  let notificationObject;
+  let tokenContract = null;
+  let tokenSymbol = "";
+  let notificationObject = null;
   let chosenType = "";
 
   notify.set(initNotify());
@@ -192,7 +204,10 @@
   };
 </script>
 
-<Project on:fundwithcrypto={fundWithCrypto} on:fundwithcard={fundWithCard} />
+<Project
+  on:fundwithcrypto={fundWithCrypto}
+  on:fundwithcard={fundWithCard}
+  {project} />
 
 <Modal
   isActive={chosenType === 'crypto'}

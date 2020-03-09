@@ -18,3 +18,16 @@ export const tags = derived(communities, $communities => {
   }
   return Array.from(tagsSet)
 })
+
+export const projects = derived(communities, $communities => {
+  let projectsSet = new Set()
+
+  for (let community of $communities) {
+    if (community.projects) {
+      for (let [id, project] of Object.entries(community.projects)) {
+        projectsSet.add({ ...project, id })
+      }
+    }
+  }
+  return Array.from(projectsSet)
+})
