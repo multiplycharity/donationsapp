@@ -1,4 +1,4 @@
-<section class="py-12 px-4 text-center">
+<section class="pt-32 pb-24 text-center">
 
   <div class="flex flex-row w-full">
     <div class="flex flex-col w-full">

@@ -1,6 +1,6 @@
 <script>
   import Header from "../components/about-us/Header.svelte";
-  import Mission from "../components/about-us/Mission.svelte";
+  import Partners from "../components/about-us/Partners.svelte";
   import Technology from "../components/about-us/Technology.svelte";
   import TheTeam from "../components/about-us/TheTeam.svelte";
   import WriteUs from "../components/about-us/WriteUs.svelte";
@@ -57,8 +57,8 @@
 
   <Header />
 <div class="container mx-auto px-4">
-  <Mission />
-  <Technology />
+  <Partners />
   <TheTeam />
+  <Technology />
   <WriteUs />
 </div>
