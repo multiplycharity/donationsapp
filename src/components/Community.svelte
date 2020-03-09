@@ -13,13 +13,13 @@
   <div class="relative items-center py-10 md:py-12 lg:py-14 container mx-auto px-4">
 
     <!--<h2 class="text-4xl lg:w-1/2 mb-10" data-config-id="header">{community.name}</h2>-->
-
+    <h2 class="md:text-3xl text-4xl px-6 mb-2 leading-tight font-heading text-left">{community.name}</h2>
     <div class="flex flex-wrap">
+
+
       <div class="lg:w-1/2 mb-6 lg:mb-0">
         <div>
-          <div class="text-4xl py-2 px-6 mb-6 lg:mb-0">
-            <h2 class="leading-relaxed">{community.name}</h2>
-          </div>
+
           <div class="py-2 px-6 mb-6 lg:mb-0">
             <p class="leading-relaxed">{community.description}</p>
           </div>
@@ -60,7 +60,7 @@
       <!--<div class="lg:w-1/4 lg:ml-16 text-gray-500">
         <p>[statistics].</p>
       </div>-->
-      <div class="lg:w-1/2 px-2">
+      <div class="lg:w-1/2 px-2 pt-2">
         <img src="images/kenya_mapbox.png" alt="" />
         <!--<Map lat={35} lon={-84} zoom={3.5}>
         	<MapMarker lat={37.8225} lon={-122.0024} label="Svelte Body Shaping"/>

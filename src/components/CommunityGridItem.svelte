@@ -35,7 +35,9 @@
             class="text-blue-700 hover:underline"
             href={disabled ? null : `/communities/${id}`}
             class:cursor-not-allowed={disabled}>
-              View all {name} campaigns
+            <button class="bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+            View all {name} campaigns
+            </button>
             </a>
         </div>
 
