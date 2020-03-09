@@ -1,7 +1,6 @@
 <script>
   import Project from "../../components/Project.svelte";
   import Modal from "../../components/Modal.svelte";
-  import CarbonWidget from "../../components/CarbonWidget.svelte";
   import { ethers } from "ethers";
   import { writable } from "svelte/store";
   import { initOnboard, initNotify } from "../../services";
@@ -37,47 +36,51 @@
   let notify = writable(null);
   let emailStore = writable("");
 
-  let previouslyChosenEmail = window.localStorage.getItem("email");
-  if (previouslyChosenEmail) emailStore.set(previouslyChosenEmail);
+  let previouslyChosenEmail = "";
+
+  if (typeof window !== "undefined") {
+    previouslyChosenEmail = window.localStorage.getItem("email");
+    if (previouslyChosenEmail) emailStore.set(previouslyChosenEmail);
+
+    onboard.set(
+      initOnboard({
+        wallet: async w => {
+          provider.set(new ethers.providers.Web3Provider(w.provider));
+          wallet.set(w);
+          window.localStorage.setItem("selectedWallet", $wallet.name);
+          signer.set(getSigner($provider));
+
+          tokenContract = new ethers.Contract(
+            "0xFab46E002BbF0b4509813474841E0716E6730136",
+            [
+              "function transfer(address recipient, uint256 amount) public returns (bool)",
+              "function symbol() public view returns (string memory)"
+            ],
+            $signer
+          );
+
+          tokenSymbol = await tokenContract.symbol();
+        },
+        address: a => {
+          address.set(a);
+          console.log({ address: a });
+        },
+        balance: b => {
+          balance.set(b);
+          console.log({ balance: b });
+        },
+        network: n => {
+          network.set(n);
+          console.log({ network: n });
+        }
+      })
+    );
+  }
 
   let tokenContract;
   let tokenSymbol;
   let notificationObject;
   let chosenType = "";
-
-  onboard.set(
-    initOnboard({
-      wallet: async w => {
-        provider.set(new ethers.providers.Web3Provider(w.provider));
-        wallet.set(w);
-        window.localStorage.setItem("selectedWallet", $wallet.name);
-        signer.set(getSigner($provider));
-
-        tokenContract = new ethers.Contract(
-          "0xFab46E002BbF0b4509813474841E0716E6730136",
-          [
-            "function transfer(address recipient, uint256 amount) public returns (bool)",
-            "function symbol() public view returns (string memory)"
-          ],
-          $signer
-        );
-
-        tokenSymbol = await tokenContract.symbol();
-      },
-      address: a => {
-        address.set(a);
-        console.log({ address: a });
-      },
-      balance: b => {
-        balance.set(b);
-        console.log({ balance: b });
-      },
-      network: n => {
-        network.set(n);
-        console.log({ network: n });
-      }
-    })
-  );
 
   notify.set(initNotify());
 
