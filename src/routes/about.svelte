@@ -1,11 +1,64 @@
+<script>
+  import Header from "../components/about-us/Header.svelte";
+  import Mission from "../components/about-us/Mission.svelte";
+  import Technology from "../components/about-us/Technology.svelte";
+  import TheTeam from "../components/about-us/TheTeam.svelte";
+  import WriteUs from "../components/about-us/WriteUs.svelte";
+</script>
+
 <svelte:head>
-  <title>About</title>
+
+  <title>Abundance Giving</title>
+  <meta name="short_name" content="Donations with leverage" />
+  <meta name="name" content="Donations with leverage" />
+  <meta
+    name="description"
+    content="Send money directly to people living in extreme poverty, and track
+    your impact on local economic growth." />
+  <meta name="generator" content="Donations with leverage" />
+  <meta
+    name="keywords"
+    content="Blockchain, cryptocurrency, digital assets, Ethereum, Bitcoin,
+    Community Currencies" />
+  <meta name="author" content="Amir, Chris" />
+  <meta name="twitter:card" content="Abundance" />
+  <meta name="twitter:site" content="@hello_amigo" />
+  <meta name="twitter:title" content="Donations with leverage" />
+  <meta
+    name="twitter:description"
+    content="Send money directly to people living in extreme poverty, and track
+    your impact on local economic growth." />
+  <meta name="twitter:creator" content="@chriscyber2000" />
+  <meta
+    name="twitter:image"
+    content="https://donationsapp.herokuapp.com/images/Frame_45.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://donationsapp.herokuapp.com/" />
+  <meta property="og:title" content="Donations with leverage" />
+  <meta
+    property="og:description"
+    content="Send money directly to people living in extreme poverty, and track
+    your impact on local economic growth." />
+  <meta property="og:site_name" content="Abundance" />
+  <meta
+    property="og:image"
+    content="https://donationsapp.herokuapp.com/images/Frame_45.jpg" />
+  <meta name="theme-color" content="#000000" />
+
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <link rel="icon" type="image/ico" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/logo-192.png" />
+
 </svelte:head>
 
+  <Header />
 <div class="container mx-auto px-4">
-  <div class="items-center justify-between p-4">
-    <h1>About this site</h1>
-    <p>This is the 'About' page. There's not much here.</p>
-
-  </div>
+  <Mission />
+  <Technology />
+  <TheTeam />
+  <WriteUs />
 </div>
