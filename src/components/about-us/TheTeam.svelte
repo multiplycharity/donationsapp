@@ -11,7 +11,7 @@
             <a href="https://github.com/amiromayer" target="_blank"><img class="w-6 h-6 mx-3" src="images/icons/github.svg" alt=""></a>
           </div>
         </div>
-        <div class="p-4 w-1/2"><img class="w-1/3 mx-auto mb-4 rounded-full" src="images/team/chris.jpg" alt=""><h3 class="text-xl font-heading font-semibold">Chris</h3><span>Engineer & Market Research</span>
+        <div class="p-4 w-1/2"><img class="w-1/3 mx-auto mb-4 rounded-full" src="images/team/chris.webp" alt=""><h3 class="text-xl font-heading font-semibold">Chris</h3><span>Engineer & Market Research</span>
           <div class="flex justify-center py-3 my-4 mx-12 border-t border-b">
             <a href="https://github.com/seichris" target="_blank"><img class="w-6 h-6 mx-3" src="images/icons/github.svg" alt=""></a>
           </div>
