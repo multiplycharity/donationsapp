@@ -56,7 +56,7 @@
           </div>
 
 
-          <p class="mb-4 text-gray-500 leading-relaxed">{description.length <= 320 ? description : `${description.substr(0, 420)}...`}</p>
+          <p class="mb-4 text-gray-500 leading-relaxed">{description.length <= 360 ? description : `${description.substr(0, 360)}...`}</p>
           <a
             class="text-blue-700 hover:underline"
             href={disabled ? null : `/communities/${id}`}
