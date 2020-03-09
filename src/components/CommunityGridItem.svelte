@@ -11,7 +11,7 @@
 </script>
 
   <div
-    class="flex flex-wrap -mx-4 lg:mb-64 xl:mb-64"
+    class="flex flex-wrap -mx-4 lg:mb-64 xl:mb-64 lg:pb-8 xl:pb-8"
     class:opacity-50={disabled}>
     <div class="w-full lg:w-1/2 px-4 mb-8 lg:mb-0">
 
