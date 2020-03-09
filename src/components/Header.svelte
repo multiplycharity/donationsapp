@@ -1,8 +1,14 @@
 <script>
   import emailStore from "../stores/email";
   import { fade } from "svelte/transition";
-  let previouslyChosenEmail = window.localStorage.getItem("email");
-  if (previouslyChosenEmail) emailStore.set(previouslyChosenEmail);
+
+  let previouslyChosenEmail = "";
+
+  if (typeof window !== "undefined") {
+    previouslyChosenEmail = window.localStorage.getItem("email");
+    if (previouslyChosenEmail) emailStore.set(previouslyChosenEmail);
+  }
+
   let subscribed = false;
   let isValidEmail = false;
   let email = "";
@@ -12,6 +18,7 @@
     return re.test(String(email).toLowerCase());
   }
   $: isValidEmail = validateEmail($emailStore) || validateEmail(email);
+
   async function setEmail() {
     fetch(`api/add-user/?email=${email}`)
       .then(res => res.json())
@@ -31,8 +38,6 @@
   }
 </script>
 
-
-
 <section
   class="text-center bg-cover h-full"
   style="background-image: url(images/tractor_dark.jpg)">
@@ -50,7 +55,8 @@
           Leverage your Impact
         </h2>
         <p class="max-w-lg my-4 text-gray-300 text-xl leading-relaxed">
-          Stimulate resilient development, by donating money directly to people in local currency economies.
+          Stimulate resilient development, by donating money directly to people
+          in local currency economies.
         </p>
 
         {#if !previouslyChosenEmail && !$emailStore}
