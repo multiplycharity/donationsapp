@@ -18,6 +18,20 @@
       <p class="px-4 mb-2 text-gray-400 font-light eading-relaxed">
         {project.shortDescription}
       </p>
+      <div class="max-w-3xl mx-auto my-8 text-center">
+        <button
+          class="h-full w-5/12 inline-block p-4 mx-2 text-white bg-blue-500
+          hover:bg-blue-600 rounded shadow-xl hover:shadow-2xl focus:outline-none"
+          on:click={() => dispatch('fundwithcrypto')}>
+          Fund with crypto
+        </button>
+        <button
+          class="h-full w-5/12 inline-block p-4 mx-2 text-white bg-green-500
+          hover:bg-green-600 rounded shadow-xl hover:shadow-2xl focus:outline-none"
+          on:click={() => dispatch('fundwithcard')}>
+          Fund with card
+        </button>
+      </div>
     </div>
   </div>
 
@@ -26,6 +40,10 @@
 <div class="container mx-auto px-4">
 
   <section class="p-8 lg:p-16">
+  <h1 class="my-12 text-4xl text-center font-heading font-semibold">
+    Impact of this campaign over the last 30 days
+  </h1>
+
     <div class="flex flex-wrap -mx-4 text-center">
       {#each project.stats as stat}
         <div class="md:w-1/4 p-4 mb-4 md:mb-0">
@@ -37,7 +55,7 @@
     </div>
   </section>
 
-  <div class="max-w-3xl mx-auto text-center">
+  <!--<div class="max-w-3xl mx-auto text-center">
     <button
       class="h-full w-5/12 inline-block p-4 mx-2 text-white bg-blue-500
       hover:bg-blue-600 rounded shadow-xl hover:shadow-2xl focus:outline-none"
@@ -50,7 +68,7 @@
       on:click={() => dispatch('fundwithcard')}>
       Fund with card
     </button>
-  </div>
+  </div>-->
 
   <article class="mb-12 p-4">
 
