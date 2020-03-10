@@ -20,7 +20,7 @@
           <div class="flex flex-row mb-4">
             <div class="flex flex-col">
               <h2 class="text-3xl font-heading mb-2">{name}</h2>
-              <div class="mb-8 items-center">
+              <div class="mb-2 items-center">
                 <!--<h4
                   class="inline-block mt-0 text-gray-500 text-xs font-semibold
                   uppercase">
@@ -37,7 +37,7 @@
 
               </div>
             </div>
-            <div class="ml-auto flex flex-row">
+            <!--<div class="ml-auto flex flex-row">
 
               <span class="px-2 text-gray-500 text-xs font-semibold uppercase bg-white text-center">
                 <a href="https://en.rodekors.dk/" target="_blank" class="cursor-default">
@@ -52,7 +52,7 @@
                 </a>
               </span>
 
-            </div>
+            </div>-->
           </div>
 
 

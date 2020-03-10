@@ -57,7 +57,6 @@
 
   <Header />
 <div class="container mx-auto px-4">
-  <Partners />
   <TheTeam />
   <Technology />
   <WriteUs />
