@@ -9,17 +9,21 @@
   }
 </script>
 
-<nav class="flex flex-wrap items-center justify-between p-4">
+<nav
+  class="flex flex-wrap items-center justify-between px-4 py-6 text-gray-800">
 
   <div class="flex flex-shrink-0 mr-6">
-    <a class="text-xl font-semibold text-blue-500" href="/" on:click={hideMenu}>
-      Abundance
+    <a class="text-xl font-semibold align-middle" href="/" on:click={hideMenu}>
+      <span class="text-blue-600">multiply</span>
+      •
+      <span class="text-green-600">charity</span>
+
     </a>
   </div>
 
   <div class="block lg:hidden">
     <button
-      class="navbar-burger flex items-center py-2 px-3 text-blue-500"
+      class="navbar-burger flex items-center py-2 px-3 text-gray-800"
       on:click={toggleMenu}>
 
       <svg
@@ -40,7 +44,7 @@
 
   <Menu hidden={isMenuHidden}>
 
-    <div class="lg:ml-auto">
+    <div class="lg:ml-auto font-medium tracking-wide">
       <a
         class="block lg:inline-block mt-4 lg:mt-0 mr-10 hover:text-gray-600"
         href="#how-it-works"

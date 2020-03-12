@@ -21,13 +21,15 @@
       <div class="max-w-3xl mx-auto my-8 text-center">
         <button
           class="h-full w-5/12 inline-block p-4 mx-2 text-white bg-blue-500
-          hover:bg-blue-600 rounded shadow-xl hover:shadow-2xl focus:outline-none"
+          hover:bg-blue-600 rounded shadow-xl hover:shadow-2xl
+          focus:outline-none"
           on:click={() => dispatch('fundwithcrypto')}>
           Fund with crypto
         </button>
         <button
           class="h-full w-5/12 inline-block p-4 mx-2 text-white bg-green-500
-          hover:bg-green-600 rounded shadow-xl hover:shadow-2xl focus:outline-none"
+          hover:bg-green-600 rounded shadow-xl hover:shadow-2xl
+          focus:outline-none"
           on:click={() => dispatch('fundwithcard')}>
           Fund with card
         </button>
@@ -40,9 +42,9 @@
 <div class="container mx-auto px-4">
 
   <section class="p-8 lg:p-16">
-  <h1 class="my-12 text-4xl text-center font-heading font-semibold">
-    Impact of this campaign over the last 30 days
-  </h1>
+    <h1 class="my-6 text-4xl text-center font-heading font-semibold">
+      Impact of this campaign over the last 30 days
+    </h1>
 
     <div class="flex flex-wrap -mx-4 text-center">
       {#each project.stats as stat}
@@ -55,24 +57,9 @@
     </div>
   </section>
 
-  <!--<div class="max-w-3xl mx-auto text-center">
-    <button
-      class="h-full w-5/12 inline-block p-4 mx-2 text-white bg-blue-500
-      hover:bg-blue-600 rounded shadow-xl hover:shadow-2xl focus:outline-none"
-      on:click={() => dispatch('fundwithcrypto')}>
-      Fund with crypto
-    </button>
-    <button
-      class="h-full w-5/12 inline-block p-4 mx-2 text-white bg-green-500
-      hover:bg-green-600 rounded shadow-xl hover:shadow-2xl focus:outline-none"
-      on:click={() => dispatch('fundwithcard')}>
-      Fund with card
-    </button>
-  </div>-->
-
   <article class="mb-12 p-4">
 
-    <h1 class="my-12 text-4xl text-center font-heading font-semibold">
+    <h1 class="mb-12 text-4xl text-center font-heading font-semibold">
       About the project
     </h1>
 

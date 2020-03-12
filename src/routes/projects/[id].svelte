@@ -15,6 +15,9 @@
   import axios from "axios";
   import { goto } from "@sapper/app";
 
+  const DONATION_RECEIVER_ADDRESS =
+    "0x1C4B51Bc39D29FAB03838A86c05934ad42c935cE";
+
   export let id;
 
   import { projects } from "../../stores/communities.js";
@@ -141,12 +144,12 @@
     }
 
     await goto(
-      `https://buy-staging.moonpay.io/?apiKey=pk_test_M98jboYNkUu7vni3bm1cSgHSYmc6&currencyCode=DAI&baseCurrencyCode=USD&walletAddress=0x9b5FEeE3B220eEdd3f678efa115d9a4D91D5cf0A&email=${$emailStore}&externalCustomerId=${$emailStore}&baseCurrencyAmount=${amount}&redirectURL=${window.location.href}`
+      `https://buy-staging.moonpay.io/?apiKey=pk_test_M98jboYNkUu7vni3bm1cSgHSYmc6&currencyCode=DAI&baseCurrencyCode=USD&walletAddress=${DONATION_RECEIVER_ADDRESS}&email=${$emailStore}&externalCustomerId=${$emailStore}&baseCurrencyAmount=${amount}&redirectURL=${window.location.href}`
     );
   };
 
   const handlePaymentWithCrypto = async () => {
-    const to = "0x6748e86bC4943ce1E6134F78cb4c9557a71AB4f2";
+    const to = DONATION_RECEIVER_ADDRESS;
 
     let tx;
     console.log(`Sending ${amount} ${tokenSymbol} to ${to}`);
