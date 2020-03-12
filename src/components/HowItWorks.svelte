@@ -6,7 +6,7 @@
       question: "1. You donate to a campaign",
       answer:
         "Choose a campaign you want to support. You can donate in US Dollars, Euro or cryptocurrency like Ether or DAI",
-      img: "donate.jpg",
+      img: "community-currency-reserve.jpg",
       isOpened: true
     },
     {
@@ -14,7 +14,7 @@
       question: "2. We convert the currencies",
       answer:
         "Your donation triggers the issuance of local currency tokens on the Ethereum blockchain, instantly accessible on the receivers phone",
-      img: "convert.jpg",
+      img: "community-currency-app.jpg",
       isOpened: false
     },
     {
@@ -22,7 +22,7 @@
       question: "3. You track the impact",
       answer:
         "Check the impact of your donation in our dashboard. Stay in contact with your donees, and track the impact on your dashboard",
-      img: "track.jpg",
+      img: "community-currency-network.jpg",
       isOpened: false
     }
   ];

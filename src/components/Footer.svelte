@@ -1,6 +1,9 @@
 <footer class="flex flex-wrap items-center justify-between p-4 mb-8">
   <div class="w-full lg:w-auto lg:mr-6 mb-4 lg:mb-0 text-center">
-    &copy; 2020 Abundance
+    <a href="/">
+      <img class="w-12 pb-2" src="images/logo-192.png" alt="" />
+      <span>&copy; 2020 multiply.charity</span>
+    </a>
   </div>
   <div class="flex flex-col lg:flex-row items-center w-full lg:w-auto">
     <div class="mx-auto lg:mx-0 lg:ml-auto">
