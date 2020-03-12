@@ -8,14 +8,26 @@
     </div>
 
     <div class="lg:w-3/5 px-2">
-      <p class="pb-2">Creating community currencies creates sustainable, resilient local economies. Here is how:</p>
-      <p class="pb-2">Our partner issues credit, similar to a bank giving out loans. The created local currency, though can only be spent within the local economy. This creates a positive feedback loop, of community members creating businesses, selling goods and services, increasing spending. It accelerates the local economy and enriches its members. By keeping liquidity circulating locally, we provably reach higher impact on donations, compared to cash donations eg. via GiveDirectly.
+      <p class="pb-2">
+        Creating community currencies creates sustainable, resilient local
+        economies. Here is how:
       </p>
-      <p class="pb-2">Issuing community currency on the blockchain, keeps donations and transactions transparent and cuts costs by skipping traditional financial intermediaries.</p>
-      <!--<p class="pb-2">Read more...</p>-->
+      <p class="pb-2">
+        Our partner issues credit, similar to a bank giving out loans. The
+        created local currency, though can only be spent within the local
+        economy. This creates a positive feedback loop, of community members
+        creating businesses, selling goods and services, increasing spending. It
+        accelerates the local economy and enriches its members. By keeping
+        liquidity circulating locally, we provably reach higher impact on
+        donations, compared to cash donations eg. via GiveDirectly.
+      </p>
+      <p class="pb-2">
+        Issuing community currency on the blockchain, keeps donations and
+        transactions transparent and cuts costs by skipping traditional
+        financial intermediaries.
+      </p>
+
     </div>
   </div>
-
-
 
 </section>
