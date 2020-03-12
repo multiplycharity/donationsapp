@@ -18,7 +18,7 @@
 
 <div class="px-4">
   <div
-    class="flex flex-wrap rounded-xl overflow-hidden"
+    class="flex flex-wrap -mx-4 lg:mb-64 xl:mb-64 lg:pb-8 xl:pb-8 rounded-xl overflow-hidden"
     class:opacity-50={disabled}>
 
     <div class="w-full lg:w-1/2">

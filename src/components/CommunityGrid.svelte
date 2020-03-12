@@ -26,7 +26,7 @@
   }
 </style>
 
-<section class="py-16 px-4 ">
+<section class="py-16 px-4 backgroundImage">
   <h2 class="text-3xl text-left mb-12 font-heading">Explore our communities</h2>
   <div class="flex flex-wrap -mx-4">
 
