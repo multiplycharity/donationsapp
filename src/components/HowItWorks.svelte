@@ -3,25 +3,23 @@
   let faq = [
     {
       id: 1,
-      question: "1. You donate to a campaign",
+      question: "1. Funding the campaign",
       answer:
-        "Choose a campaign you want to support. You can donate in US Dollars, Euro or cryptocurrency like Ether or DAI",
+        "All donations, in USD and cryptocurrency, are converted into dollar tokens and safely stored in the community reserve on the Ethereum blockchain. Using the reserve as collateral, community currency credit is automatically issued on each donation.",
       img: "community-currency-reserve.jpg",
       isOpened: true
     },
     {
       id: 2,
-      question: "2. We convert the currencies",
-      answer:
-        "Your donation triggers the issuance of local currency tokens on the Ethereum blockchain, instantly accessible on the receivers phone",
+      question: "2. Sustainable donating community credit",
+      answer: "The issued community tokens now are sent to receivers phones, where they can be used to buy goods & services. While cash donations leave the economy to pay foreign development, our credit tokens stay in the local economy, boosting local business sustainably.",
       img: "community-currency-app.jpg",
       isOpened: false
     },
     {
       id: 3,
-      question: "3. You track the impact",
-      answer:
-        "Check the impact of your donation in our dashboard. Stay in contact with your donees, and track the impact on your dashboard",
+      question: "3. Live impact insights",
+      answer: "Leveraging donations into community credit thus result in a larger impact on the causes donated to. And finally we can monitor this impact, thanks to the transparency of blockchain transactions.",
       img: "community-currency-network.jpg",
       isOpened: false
     }
@@ -38,7 +36,7 @@
 
 <section id="how-it-works" class="py-16 px-4 text-center">
 
-  <h2 class="md:text-3xl text-4xl mb-2 leading-tight font-heading text-left">
+  <!--<h2 class="md:text-3xl text-4xl mb-2 leading-tight font-heading text-left">
     How we leverage your donation
   </h2>
 
@@ -66,6 +64,20 @@
 
     </div>
 
+  </div>-->
+
+
+  <h2 class="text-4xl mb-2 leading-tight font-heading">How we leverage your donation</h2>
+  {#each faq as question}
+  <div>
+    <div class="flex flex-wrap items-center text-left -mx-8">
+      <div class="md:w-1/2 px-8 mb-8"><img class="w-4/5 mx-auto" src="images/how-it-works/{question.img}" alt=""></div>
+      <div class="md:w-1/2 px-8 mb-8">
+        <h3 class="text-2xl mb-3 font-heading">{question.question}</h3>
+        <p class="text-gray-500 leading-relaxed">{question.answer}</p>
+      </div>
+    </div>
   </div>
+  {/each}
 
 </section>
