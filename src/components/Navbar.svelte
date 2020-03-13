@@ -15,7 +15,7 @@
   <div class="flex flex-shrink-0 mr-6">
 
     <a class="flex text-xl font-semibold align-middle" href="/" on:click={hideMenu}>
-      <img class="w-10 pr-2" src="images/logo-192.png" alt="" />
+      <img class="w-10 h-auto pr-2" src="images/logo-192.png" alt="" />
       <span class="text-blue-600">multiply</span>
       •
       <span class="text-green-600">charity</span>
