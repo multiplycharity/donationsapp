@@ -247,33 +247,72 @@ As a donation end-user I want to be able to...
 
 - The donor can withdraw the donation back to DAI, according to withdraw restrictions
 
+# Week 3-4: Developing our product
 
-# Week 3-4: User Personas & Pain Points
+## Product Development process overview
+
+Our product development process took part in the following iterative phases:
+
+- Iterate user-stories / assumptions with relevant stakeholders
+- Setup development environement, tooling, get access to on-ramp API
+- Make first versions of mock-ups, and find svelts.js / Tailwind templates to use to implement it
+- Implmeent UI v1
+- Implement crypto on-ramp via onboard.js
+- Implement fiat on-ramp via moonpay
+- Prepare for receiving email analytics
+
+Iterate with Will from Grassroots Economics & Griff / Kris from Commonsstack
+
+- Research further regarding integrations with Grassroots xDAI contracts and Accenture analytics
+- Define general relevant problems of social impact KPIs of bonding-curves relevant for other projects
+
+Initial Call with Josh from Celo to scope out Celo integraiton possibilities including:
+
+- Feedback on general concept, relevance to Celo
+- Availablibility of Celo beta user-groups to partner with like we partnered with Grassroots economics
+- Possibility of using on-ramp on Celo
+- Features of Celo wallet and desired updated from the team
+- Feasibility of Ethereum > Celo bridge
+
+## Iterating user-stories
+
+Before we started doing mock-ups we itereated our user-assumptions and user-stories with the following stakeholders:
+
+- Will Ruddick from Grassroots economics
+- Adam Bornstein from Danish Red Cross
+- Sempo inclusive currency wallet provider
+- Representatives from Mustardseed Trust
+- Members of the Commonsstack collective
+- Developers from Accenture working on a related token-bonding analytics dashboard 
+- Our BSIC mentors
+
+Based on this we provided smaller adjustments to the user-stories and our research and iteraeted the scope of our implementation.
 
 ## Initial iteration of mock-ups
 
-We did mock-ups based on Gofundme / Givedirect UX
-
-Landing page v1
+Our initial mock-ups were inspired by Gofundme "campaign types of UX", allowing users to set up campaigns with a fixed amount of funding needed to receive, and trusted by a validating organization, as known by Alice / Giveth blockchain donations. The difference with these campaigns is to receive the local currency versus receiving DAI / ETH. 
 
 ![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up1.png)
 
-Details page v1
-
 ![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up2.png)
-
-Campaign filtering v1
-
-![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up4.png)
-
-Analytics v1
 
 ![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up3.png)
 
+## Second iteration of mock-ups
+
+In the second iteration we included text, call-to-action buttom, and modified the overview of the campaigns to have less information on them, and expanded the details page with more information on the Safaru campaign. We started to pivot in direction of Givedirect, as it became unclear for us to what extends our initial assumptions regarding identity would not be feasible to preserve the privacy and spending habits of the end-users.
+
+![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up9.png)
+
+![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up10.png)
+
+![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up4.png)
+
+![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up8.png)
 
 ## Implementation of on-ramp
 
-Selected page & start donation flow
+We began early in the process to implement the backbone components we new we needed such as on-ramp, after that we implemented our second iteration of mock-ups.
 
 ![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up5.png)
 
@@ -285,17 +324,38 @@ Donate via FIAT using [Moonpay API](https://www.moonpay.io/)
 
 ![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up7.png)
 
-
-## MVP testing approach
-
+## Next steps
 
 
+### Iterating with stakeholders
 
+We plan to have a second iteration with all the stakeholders we are in contact with representing our "User Personas" including:
 
-## Partners to iterate with:
 - Will Ruddick from Grassroots economics
-- Adam Bornstein representing Red Cross
-- Mustardseed trust as an "institutional donor"
-- Commonsstack as technology providers
-- If possible people representing all remaining stakeholder groups as defined below
-- Great DeFi / Social Impact community
+- Adam Bornstein from Danish Red Cross
+- Sempo inclusive currency wallet provider
+- Representatives from Mustardseed Trust
+- Members of the Commonsstack collective
+
+### Gitcoin Grant
+
+We intend to launch a Gitcoin grant to get feedback on the brief explanation of our concept and userability in terms of the 
+description of the concept, and to learn about:
+
+- The perception of it's relevance from external crypto "lead user" people
+- General crypto userability feedback in terms of UX / UI
+- Signals regarding support from greater DeFi / Commonstack community
+
+### Preliminary user testing
+
+Once our product is in a stable / testable state we will iterate it with:
+
+- The different donor types to learn about their experience
+- The different end-user types to learn about their experience
+- Other NGOs than Grassroots economics to learn about their experience and onboard new partners.
+
+
+
+
+
+
