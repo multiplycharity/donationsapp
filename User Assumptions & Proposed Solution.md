@@ -288,7 +288,7 @@ Before we started doing mock-ups we itereated our user-assumptions and user-stor
 
 Based on this we provided smaller adjustments to the user-stories and our research and iteraeted the scope of our implementation.
 
-## Initial iteration of mock-ups
+## Initial iteration of user interface and experience
 
 Our initial mock-ups were inspired by Gofundme "campaign types of UX", allowing users to set up campaigns with a fixed amount of funding needed to receive, and trusted by a validating organization, as known by Alice / Giveth blockchain donations. The difference with these campaigns is to receive the local currency versus receiving DAI / ETH. 
 
@@ -298,7 +298,7 @@ Our initial mock-ups were inspired by Gofundme "campaign types of UX", allowing 
 
 ![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up3.png)
 
-## Second iteration of mock-ups
+## Second iteration of user interface and experience
 
 In the second iteration we included text, call-to-action buttom, and modified the overview of the campaigns to have less information on them, and expanded the details page with more information on the Safaru campaign. We started to pivot in direction of Givedirect, as it became unclear for us to what extends our initial assumptions regarding identity would not be feasible to preserve the privacy and spending habits of the end-users.
 
