@@ -59,8 +59,8 @@ Other than traditional equity / loan deals with local entrepreneurs, there’s n
 ### Core team:
 @amiromayer @seichris @kisgus
 
-### Mentor:
-Stephen DeMeulenaere @steviedeeee & David Longworth @PeterLongworth
+### Mentors:
+Josh from Celo, Stephen DeMeulenaere, David Longworth & Mary Dwyer 
 
 
 ## Github:
@@ -250,24 +250,40 @@ As a donation end-user I want to be able to...
 
 # Week 3-4: User Personas & Pain Points
 
-## Initial Mock-ups
+## Initial iteration of mock-ups
 
-Landing page v1 inspired by a traditional crowdfunding site
+We did mock-ups based on Gofundme / Givedirect UX
+
+Landing page v1
 
 ![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up1.png)
 
-Details page v1 inspired by a traditional crowdfunding site
+Details page v1
 
 ![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up2.png)
 
-Easy to verify analytics based on average estimate on impact 
+Campaign filtering v1
+
+![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up4.png)
+
+Analytics v1
 
 ![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up3.png)
 
 
-## Implementation
+## Implementation of on-ramp
 
+Selected page & start donation flow
 
+![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up5.png)
+
+Donate via crypto using [onboard.js](https://docs.blocknative.com/onboard)
+
+![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up6.png)
+
+Donate via FIAT using [Moonpay API](https://www.moonpay.io/)
+
+![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up7.png)
 
 
 ## MVP testing approach
