@@ -48,9 +48,9 @@
             <a href="https://en.wikipedia.org/wiki/John_D._Liu" target="_blank"><img class="w-6 h-6 mx-3" src="images/icons/globe.svg" alt=""></a>
           </div>
         </div>
-        <div class="p-4 w-1/2"><img class="w-1/3 mx-auto mb-4 rounded-full" src="images/team/advisor-edgar.webp" alt=""><h3 class="text-xl font-heading font-semibold">Edgar</h3><span>Currency Design</span>
+        <div class="p-4 w-1/2"><img class="w-1/3 mx-auto mb-4 rounded-full" src="images/team/advisor-stephen.jpg" alt=""><h3 class="text-xl font-heading font-semibold">Stephen</h3><span>Currency Design</span>
           <div class="flex justify-center py-3 my-4 mx-12 border-t border-b">
-            <a href="https://www.linkedin.com/in/edgarkampers/?originalSubdomain=nl" target="_blank"><img class="w-6 h-6 mx-3" src="images/icons/linkedin.svg" alt=""></a>
+            <a href="https://www.linkedin.com/in/stephendemeulenaere/" target="_blank"><img class="w-6 h-6 mx-3" src="images/icons/linkedin.svg" alt=""></a>
           </div>
         </div>
       </div>
