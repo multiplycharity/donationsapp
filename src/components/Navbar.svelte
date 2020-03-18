@@ -10,15 +10,19 @@
 </script>
 
 <nav
-  class="flex flex-wrap items-center justify-between px-4 py-2 text-gray-800">
+  class="flex flex-wrap items-center justify-between px-4 py-6 text-gray-800">
 
   <div class="flex flex-shrink-0 mr-6">
+    <a
+      class="flex text-xl font-semibold align-middle"
+      href="/"
+      on:click={hideMenu}>
 
-    <a class="flex text-xl font-semibold align-middle" href="/" on:click={hideMenu}>
-      <img class="w-10 h-auto pr-2" src="images/logo-192.png" alt="" />
+      <img class="w-8 h-8 mx-2" src="images/logo-192.png" alt="" />
       <span class="text-blue-600">multiply</span>
-      •
+      <span class="mx-1">•</span>
       <span class="text-green-600">charity</span>
+
     </a>
   </div>
 
@@ -64,30 +68,8 @@
         on:click={hideMenu}>
         About us
       </a>
-      <!--<a
-        class="block lg:inline-block mt-4 lg:mt-0 mr-10 hover:text-gray-600"
-        href="success-stories"
-        on:click={hideMenu}>
-        Success stories
-      </a>-->
-    </div>
 
-    <!-- <div>
-      <a
-        class="inline-block py-3 px-5 mr-4 leading-none text-center text-white
-        bg-blue-500 hover:bg-blue-600 rounded shadow"
-        href="/"
-        on:click={hideMenu}>
-        Sign in
-      </a>
-      <a
-        class="inline-block py-3 px-6 mt-4 lg:mt-0 leading-none text-white
-        bg-blue-500 hover:bg-blue-600 rounded shadow-xl"
-        href="/"
-        on:click={hideMenu}>
-        Sign up
-      </a>
-    </div> -->
+    </div>
 
   </Menu>
 

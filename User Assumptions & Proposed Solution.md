@@ -7,24 +7,23 @@ Sustainable Cities & Celo Peace & Prosperity Challenge
 
 We plan to build a web-app enabling non-technical end-users & NGOs to contribute to token-bonding curves to support a variety of token incentivization and currency projects first for Sarafu Credit in Kenya led by Grassroots Economics & Red Cross.
 
-
 ## Synthesis of problems and actors involved:
 
 ### Local communities
 
-The Bangla area of Nairobi, Kenya, is an example of a socially challenged community without consistent access to conventional money. As Bangla does not have a competitive industry the trade-balance remains negative, so for all money flowing into the community it quickly flows back out again. Bangla needs demanded businesses, competitive local industry and access to a resilient currency, which does not directly have to compete with a national currency. A lack of access to a medium of exchange prohibits an efficient trade system to foster economic growth in the local economy. Dependency on national currency leaves the community exposed to currency fluctuations, even if their own small economy is thriving.
+The Bangla area of Nairobi, Kenya, is an example of a socially challenged community [without consistent access to conventional money](http://www.unrisd.org/80256B3C005BCCF9/search/99FCA15CAF8E24F4C1257E7E00501101). As Bangla does not have a competitive industry the trade-balance remains negative, so for all money flowing into the community it quickly flows back out again. Bangla needs demanded businesses, competitive local industry and access to a resilient currency, which does not directly have to compete with a national currency. A lack of access to a medium of exchange prohibits an efficient trade system to foster economic growth in the local economy. Dependency on national currency leaves the community exposed to currency fluctuations, even if their own small economy is thriving.
 
 ### End-users
 
-It’s not easy to improve your future as the lack of money makes the demand side very limited and does not allow for a lot of jobs to be created. With a limited amount of money present, the economic activity takes form informally and as barter, utilizing your reputation in the community. Existing payments systems such as M-Pesa or used cryptocurrencies only work if the users already have conventional money or IT skills to mine or complete bounties.
+It’s not easy to improve your future as the lack of money makes the demand side very limited and does not allow for a lot of jobs to be created. With a limited amount of money present, [the economic activity takes form informally and as barter](https://www.givedirectly.org/research-on-cash-transfers/), utilizing your reputation in the community. Existing payments systems such as [M-Pesa or used cryptocurrencies only work if the users already have conventional money](https://ijccr.files.wordpress.com/2018/09/71-84-ijccr-2018-summer-friis-glaser1.pdf) or IT skills to mine or complete bounties.
 
 ### Grassroot organizations
 
-Organizations such as Grassroots Economics, which are working on the ground in the local economy to build up resilient economic infrastructure, are only operating voluntarily or donation-based.
+Organizations such as [Grassroots Economics](https://www.grassrootseconomics.org/), which are working on the ground in the local economy to build up resilient economic infrastructure, are only operating voluntarily or donation-based.
 
 ### Charity organizations
 
-Charities such as Unicef and Red Cross, who operate in a developing area, pay a lot of fees to banks and money providers such as Western Union or local mobile money agents when sending conventional money. Any cash donation only has a short-term limited effect on loca economies, as the end-users mostly purchase goods produced outside the community, resulting in yet further lack of money and high administration costs.
+Charities such as Unicef and Red Cross, who operate in a developing area, pay a lot of fees to banks and money providers such as Western Union or local mobile money agents when sending conventional money. Any cash donation only has a short-term limited effect on local economies, as the end-users mostly purchase goods produced outside the community, resulting in yet further [lack of money and high administration costs](http://www.unrisd.org/80256B3C005BCCF9/search/99FCA15CAF8E24F4C1257E7E00501101).
 
 ### Philanthropic donors
 
@@ -40,7 +39,6 @@ Other than traditional equity / loan deals with local entrepreneurs, there’s n
 - There’s a need for a medium of exchange secured by robust infrastructure without any central points of failure.
 - There’s a need to remove intermediaries from the money transfer process to reduce fees / costs.
 - There’s a need for a transparent trusted way of tracking impact of donations without relying on unnecessary check-ups on the ground.
-- There’s a need for a transparent trusted way to implement monetary policy to derive data to learn about international development economies.
 
 
 ## What demographics do you serve? What is the size of the market?
@@ -61,16 +59,8 @@ Other than traditional equity / loan deals with local entrepreneurs, there’s n
 ### Core team:
 @amiromayer @seichris @kisgus
 
-### Mentor:
-Stephen DeMeulenaere @steviedeeee & David Longworth @PeterLongworth
-
-### Partners to iterate with:
-- Will Ruddick from Grassroots economics
-- Adam Bornstein representing Red Cross
-- Mustardseed trust as an "institutional donor"
-- Commonsstack as technology providers
-- If possible people representing all remaining stakeholder groups as defined below
-- Great DeFi / Social Impact community
+### Mentors:
+Josh from Celo, Stephen DeMeulenaere, David Longworth & Mary Dwyer 
 
 
 ## Github:
@@ -150,7 +140,6 @@ In both cases, Emmy finds it pretty hard to be able to really know if the milest
 - Having been active for years in local politics, and known in his local community for his outspoken chronicles submissions for the local papers, Arnolds decides to write an open letter to Red Cross raising his concern. While Red Cross kindly responded, Arnold is not satisfied with their in his opinion vague answer that the donations are spent in collaborations with well-respected local partners that make sure that they are spent in a way to best possible enabling unfortunate people a better chance for a good life.
 
 - Being a previous hospital director, Arnold is still suspicious about the true impact of the donations, and he does not think that the answer has sufficiently proved his concerns wrong.
-
 
 
 ### Charity Organizations
@@ -257,3 +246,116 @@ As a donation end-user I want to be able to...
 - The xDAI is sent to the individual xDAI addresses, and the end-users get a notification on their feature-phones of the balance update to their address
 
 - The donor can withdraw the donation back to DAI, according to withdraw restrictions
+
+# Week 3-4: Developing our product
+
+## Product Development process overview
+
+Our product development process took part in the following iterative phases:
+
+- Iterate user-stories / assumptions with relevant stakeholders
+- Setup development environement, tooling, get access to on-ramp API
+- Make first versions of mock-ups, and find svelts.js / Tailwind templates to use to implement it
+- Implmeent UI v1
+- Implement crypto on-ramp via onboard.js
+- Implement fiat on-ramp via moonpay
+- Prepare for receiving email analytics
+
+Iterate with Will from Grassroots Economics & Griff / Kris from Commonsstack
+
+- Research further regarding integrations with Grassroots xDAI contracts and Accenture analytics
+- Define general relevant problems of social impact KPIs of bonding-curves relevant for other projects
+
+Initial Call with Josh from Celo to scope out Celo integraiton possibilities including:
+
+- Feedback on general concept, relevance to Celo
+- Availablibility of Celo beta user-groups to partner with like we partnered with Grassroots economics
+- Possibility of using on-ramp on Celo
+- Features of Celo wallet and desired updated from the team
+- Feasibility of Ethereum > Celo bridge
+
+## Iterating user-stories
+
+Before we started doing mock-ups we itereated our user-assumptions and user-stories with the following stakeholders:
+
+- Will Ruddick from Grassroots economics
+- Adam Bornstein from Danish Red Cross
+- Sempo inclusive currency wallet provider
+- Representatives from Mustardseed Trust
+- Members of the Commonsstack collective
+- Developers from Accenture working on a related token-bonding analytics dashboard 
+- Our BSIC mentors
+
+Based on this we provided smaller adjustments to the user-stories and our research and iteraeted the scope of our implementation.
+
+## Initial iteration of user interface and experience
+
+Our initial mock-ups were inspired by Gofundme "campaign types of UX", allowing users to set up campaigns with a fixed amount of funding needed to receive, and trusted by a validating organization, as known by Alice / Giveth blockchain donations. The difference with these campaigns is to receive the local currency versus receiving DAI / ETH. 
+
+![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up1.png)
+
+![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up2.png)
+
+![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up3.png)
+
+## Second iteration of user interface and experience
+
+In the second iteration we included text, call-to-action buttom, and modified the overview of the campaigns to have less information on them, and expanded the details page with more information on the Safaru campaign. We started to pivot in direction of Givedirect, as it became unclear for us to what extends our initial assumptions regarding identity would not be feasible to preserve the privacy and spending habits of the end-users.
+
+![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up9.png)
+
+![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up10.png)
+
+![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up4.png)
+
+![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up8.png)
+
+## Implementation of on-ramp
+
+We began early in the process to implement the backbone components we new we needed such as on-ramp, after that we implemented our second iteration of mock-ups.
+
+![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up5.png)
+
+Donate via crypto using [onboard.js](https://docs.blocknative.com/onboard)
+
+![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up6.png)
+
+Donate via FIAT using [Moonpay API](https://www.moonpay.io/)
+
+![Landing page](https://github.com/abundance-stack/donationsapp/blob/master/Mock-up7.png)
+
+## Next steps
+
+
+### Iterating with stakeholders
+
+We plan to have a second iteration with all the stakeholders we are in contact with representing our "User Personas" including:
+
+- Will Ruddick from Grassroots economics
+- Adam Bornstein from Danish Red Cross
+- Sempo inclusive currency wallet provider
+- Representatives from Mustardseed Trust
+- Members of the Commonsstack collective
+
+### Gitcoin Grant
+
+We intend to launch a Gitcoin grant to get feedback on the brief explanation of our concept and userability in terms of the 
+description of the concept, and to learn about:
+
+- The perception of it's relevance from external crypto "lead user" people
+- General crypto userability feedback in terms of UX / UI
+- Signals regarding support from greater DeFi / Commonstack community
+
+### Preliminary user testing
+
+Once our product is in a stable / testable state we will iterate it with:
+
+- The different donor types to learn about their experience
+- The different end-user types to learn about their experience
+- Other NGOs than Grassroots economics to learn about their experience and onboard new partners.
+
+
+
+
+
+
