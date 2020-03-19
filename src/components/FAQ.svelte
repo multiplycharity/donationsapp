@@ -13,7 +13,7 @@
       question:
         "So I give $1, how much community currency does a donee receive?",
       answer:
-        "Similar to how a central bank aims to keep a steady interest rate, Sarafu targets a reserve ratio of 25% reserve currency / community credit tokens. This means that there is a variable exchange rate between USD and the community currency. You can few the exchange rate in our exchange panel.",
+        "Similar to how a central bank aims to keep a steady interest rate, Sarafu targets a reserve ratio of 25% reserve currency / community credit tokens. This means that there is a variable exchange rate between USD and the community currency. You can view the exchange rate in our exchange panel.",
       isOpened: false
     },
     {
