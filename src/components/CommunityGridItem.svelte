@@ -65,10 +65,10 @@
 
       <div
         class="bg-cover bg-center"
-        style="background-image: url({imageUrl})" />
+        style="background-image: url(images/sarafu-money-changer.jpg)" />
       <div
         class="bg-cover bg-center"
-        style="background-image: url(images/Frame_44.jpg)" />
+        style="background-image: url(images/sarafu-school.jpg)" />
       <div
         class="bg-cover bg-center"
         style="background-image: url(images/SDG/sdg11_small.jpg)" />
