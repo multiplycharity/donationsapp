@@ -7,7 +7,7 @@
   //export let descriptiontwo = "";
   //export let organization = "";
   export let location = "";
-  export let imageUrl = "";
+  //export let imageUrl = "";
   //export let alt = "";
   export let disabled = false;
 

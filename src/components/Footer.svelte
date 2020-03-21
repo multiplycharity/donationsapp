@@ -9,17 +9,17 @@
     <div class="mx-auto lg:mx-0 lg:ml-auto">
       <a
         class="inline-block mt-0 text-indigo-900 hover:text-indigo-700"
-        href="/">
+        href="https://twitter.com/multiply_impact">
         Twitter
       </a>
       <a
         class="inline-block mt-0 ml-8 text-indigo-900 hover:text-indigo-700"
-        href="/">
-        Telegram
+        href="https://discord.gg/MenK7G9">
+        Discord Chat
       </a>
       <a
         class="inline-block mt-0 ml-8 text-indigo-900 hover:text-indigo-700"
-        href="/">
+        href="https://medium.com/multiply-impact">
         Medium
       </a>
     </div>
