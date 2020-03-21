@@ -14,12 +14,12 @@
 
   <div class="flex flex-shrink-0 mr-6">
     <a
-      class="flex text-xl  align-middle"
+      class="flex items-center align-middle"
       href="/"
       on:click={hideMenu}>
 
       <img class="w-8 h-8 mx-4" src="images/logo-192.png" alt="" />
-      <span class="text-blue-600">multiply</span>
+      <span class="text-lg text-blue-600">multiply</span>
       <!--<span class="mx-1">•</span>
       <span class="text-green-600">charity</span>-->
 
