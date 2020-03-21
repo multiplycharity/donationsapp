@@ -9,16 +9,19 @@
     <div class="mx-auto lg:mx-0 lg:ml-auto">
       <a
         class="inline-block mt-0 text-indigo-900 hover:text-indigo-700"
+        target="_blank"
         href="https://twitter.com/multiply_impact">
         🐦 Twitter
       </a>
       <a
         class="inline-block mt-0 ml-8 text-indigo-900 hover:text-indigo-700"
+        target="_blank"
         href="https://discord.gg/MenK7G9">
         💬 Discord Chat
       </a>
       <a
         class="inline-block mt-0 ml-8 text-indigo-900 hover:text-indigo-700"
+        target="_blank"
         href="https://medium.com/multiply-impact">
         📜 Medium Blog
       </a>
