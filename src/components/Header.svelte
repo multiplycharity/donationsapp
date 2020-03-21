@@ -56,7 +56,7 @@
         </h2>
         <p class="max-w-lg my-4 text-gray-300 text-xl leading-relaxed">
           Stimulate resilient development, by donating money directly to people
-          in local currency economies.
+          in local currency economies
         </p>
 
         <!-- {#if !previouslyChosenEmail && !$emailStore} -->
