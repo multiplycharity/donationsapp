@@ -1,7 +1,7 @@
 <footer class="flex flex-wrap items-center justify-between p-4 mb-8">
   <div class="w-full lg:w-auto lg:mr-6 mb-4 lg:mb-0 text-center">
-    <a href="/">
-      <img class="w-12 h-auto pb-2" src="images/logo-192.png" alt="" />
+    <a class="flex flex-wrap items-center" href="/">
+      <img class="w-12 h-auto pb-2 pr-4" src="images/logo-192.png" alt="" />
       <span>&copy; 2020 multiply.charity</span>
     </a>
   </div>
@@ -10,17 +10,17 @@
       <a
         class="inline-block mt-0 text-indigo-900 hover:text-indigo-700"
         href="https://twitter.com/multiply_impact">
-        Twitter
+        🐦 Twitter
       </a>
       <a
         class="inline-block mt-0 ml-8 text-indigo-900 hover:text-indigo-700"
         href="https://discord.gg/MenK7G9">
-        Discord Chat
+        💬 Discord Chat
       </a>
       <a
         class="inline-block mt-0 ml-8 text-indigo-900 hover:text-indigo-700"
         href="https://medium.com/multiply-impact">
-        Medium
+        📜 Medium Blog
       </a>
     </div>
 
