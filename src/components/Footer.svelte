@@ -25,6 +25,12 @@
         href="https://medium.com/multiply-impact">
         📜 Medium Blog
       </a>
+      <a
+        class="inline-block mt-0 ml-8 text-indigo-900 hover:text-indigo-700"
+        target="_blank"
+        href="https://github.com/abundance-stack/donationsapp">
+        🐈 Github Codebase
+      </a>
     </div>
 
   </div>
