@@ -40,7 +40,7 @@
 
 <section
   class="text-center bg-cover h-full items-center"
-  style="background-image: url(images/airdrop.png)">
+  style="background-image: url(images/airdrop.jpg)">
 
   <div class="container mx-auto px-4">
     <div
