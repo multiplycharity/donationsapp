@@ -22,6 +22,19 @@
   import Navbar from "../components/Navbar.svelte";
   import Footer from "../components/Footer.svelte";
 
+
+  import { stores } from '@sapper/app';
+    const { page } = stores();
+    $: {
+      if (typeof gtag !== "undefined"){
+        //console.log($page.path);
+        gtag("config", "UA-158739784-2", {
+          page_path: $page.path
+        });
+      }
+    }
+
+
   import { communities } from "../stores/communities.js";
 
   export let communitiesArray;
