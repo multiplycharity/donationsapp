@@ -27,7 +27,7 @@
     const { page } = stores();
     $: {
       if (typeof gtag !== "undefined"){
-        console.log($page.path);
+        //console.log($page.path);
         gtag("config", "UA-158739784-2", {
           page_path: $page.path
         });
