@@ -18,7 +18,12 @@
       <p class="px-4 mb-2 text-gray-400 font-light eading-relaxed">
         {project.shortDescription}
       </p>
-      <div class="max-w-3xl mx-auto my-8 text-center">
+
+      <div class="max-w-3xl mx-auto text-gray-400 mt-16 text-center">
+        <p class="leading-relaxed">Donate to this campaign with ETH or Ethereum tokens: <code class="select-all">{project.donationAddress}</code></p>
+      </div>
+
+      <!--<div class="max-w-3xl mx-auto my-8 text-center">
         <button
           class="h-full w-5/12 inline-block p-4 mx-2 text-white bg-blue-500
           hover:bg-blue-600 rounded shadow-xl hover:shadow-2xl
@@ -33,7 +38,7 @@
           on:click={() => dispatch('fundwithcard')}>
           Fund with card
         </button>
-      </div>
+      </div>-->
     </div>
   </div>
 
