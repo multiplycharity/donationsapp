@@ -112,9 +112,9 @@
 
     <div class="w-full md:w-1/3 p-4 mb-4 md:mb-0 mb-5 font-heading">
       <h3 class="md:text-lg text-lg">
-        <span class="md:text-3xl text-2xl font-medium">8500</span>
+        <span class="md:text-3xl text-2xl font-medium">10,000</span>
         <br />
-        registered users
+        community members
       </h3>
     </div>
 
