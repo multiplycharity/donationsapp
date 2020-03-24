@@ -30,6 +30,9 @@
             <p class="leading-relaxed">{community.descriptiontwo}</p>
           </div>
           <div class="py-2 px-6">
+            <p class="leading-relaxed">Donation address on Ethereum: <code class="select-all">{community.donationAddress}</code></p>
+          </div>
+          <div class="py-2 px-6">
 
             <div class="flex flex-wrap -mx-4 text-center ">
 
