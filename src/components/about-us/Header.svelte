@@ -1,6 +1,6 @@
 <section
   class="text-center bg-cover h-full"
-  style="background-image: url(images/tractor_dark.jpg)">
+  style="background-image: url(images/group-of-kenyans.jpg)">
 
   <div class="container mx-auto px-4">
     <div
