@@ -55,8 +55,7 @@
           Leverage your impact
         </h2>
         <p class="max-w-lg my-4 text-gray-300 text-xl leading-relaxed">
-          Stimulate resilient development, by donating money directly to people
-          in local currency economies
+          Improving charity and gaining live insights on donations and everyday blockchain payments
         </p>
 
         <!-- {#if !previouslyChosenEmail && !$emailStore} -->
