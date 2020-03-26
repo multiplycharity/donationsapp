@@ -30,6 +30,9 @@
             <p class="leading-relaxed">{community.descriptiontwo}</p>
           </div>
           <div class="py-2 px-6">
+            <p class="leading-relaxed">Donate to all Sarafu campaigns by sending ETH or Ethereum tokens to: <code class="select-all">{community.donationAddress}</code></p>
+          </div>
+          <div class="py-2 px-6">
 
             <div class="flex flex-wrap -mx-4 text-center ">
 
