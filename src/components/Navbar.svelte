@@ -10,13 +10,10 @@
 </script>
 
 <nav
-  class="flex flex-wrap items-center justify-between px-4 py-2 text-gray-800">
+  class="flex flex-wrap items-center justify-between px-4 py-6 text-gray-800">
 
   <div class="flex flex-shrink-0 mr-6">
-    <a
-      class="flex items-center align-middle"
-      href="/"
-      on:click={hideMenu}>
+    <a class="flex items-center align-middle" href="/" on:click={hideMenu}>
 
       <img class="w-8 h-8 mx-4" src="images/logo-192.png" alt="" />
       <span class="text-lg text-blue-600">multiply</span>
