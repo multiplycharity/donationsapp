@@ -16,7 +16,11 @@
   import { goto } from "@sapper/app";
 
   const DONATION_RECEIVER_ADDRESS =
-    "0x1C4B51Bc39D29FAB03838A86c05934ad42c935cE";
+    "0xAD26A73A04F0aC3BceEBD117C68Fbb391a37458D";
+
+  const TOKEN_CONTRACT_ADDRESS = "0xFab46E002BbF0b4509813474841E0716E6730136"; //FAU
+
+  //"0x6B175474E89094C44Da98b954EedeAC495271d0F"; //DAI
 
   export let id;
 
@@ -66,7 +70,7 @@
           signer.set(getSigner($provider));
 
           tokenContract = new ethers.Contract(
-            "0xFab46E002BbF0b4509813474841E0716E6730136",
+            TOKEN_CONTRACT_ADDRESS,
             [
               "function transfer(address recipient, uint256 amount) public returns (bool)",
               "function symbol() public view returns (string memory)"
@@ -143,8 +147,16 @@
       window.localStorage.setItem("email", email);
     }
 
+    let redirectURL = window.location.href;
+
+    if (redirectURL.includes("?transactionId"))
+      redirectURL = redirectURL.substring(
+        0,
+        redirectURL.indexOf("?transactionId")
+      );
+
     await goto(
-      `https://buy-staging.moonpay.io/?apiKey=pk_test_M98jboYNkUu7vni3bm1cSgHSYmc6&currencyCode=DAI&baseCurrencyCode=USD&walletAddress=${DONATION_RECEIVER_ADDRESS}&email=${$emailStore}&externalCustomerId=${$emailStore}&baseCurrencyAmount=${amount}&redirectURL=${window.location.href}`
+      `https://buy-staging.moonpay.io/?apiKey=pk_test_M98jboYNkUu7vni3bm1cSgHSYmc6&currencyCode=DAI&baseCurrencyCode=USD&walletAddress=${DONATION_RECEIVER_ADDRESS}&email=${$emailStore}&externalCustomerId=${$emailStore}&baseCurrencyAmount=${amount}&redirectURL=${redirectURL}`
     );
   };
 
