@@ -69,9 +69,17 @@
     </h1>
 
     <div class="max-w-3xl mx-auto">
-      <p class="">{project.description}</p>
+      <p class="pb-8">{project.description}</p>
 
+      <img class="w-64 pb-8 mx-auto" src={project.infoImage1} alt="">
+
+      <p class="pb-8">{project.infoText1}</p>
+
+      <img class="w-64 pb-8 mx-auto" src={project.infoImage2} alt="">
+
+      <p class="pb-8">{project.infoText2}</p>
     </div>
+
   </article>
 
 </div>
