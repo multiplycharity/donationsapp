@@ -6,7 +6,7 @@
   class="bg-cover h-full py-8 px-4 text-white"
   style="background-image: url({community.imageUrl})">-->
 <section
-  class="bg-cover h-full py-8 px-4"
+  class="bg-cover h-full py-8 px-4 text-white"
   style="background-image: url(images/Frame_99.jpg)">
 
   <div
