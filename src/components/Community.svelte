@@ -7,7 +7,7 @@
   style="background-image: url({community.imageUrl})">-->
 <section
   class="bg-cover h-full py-8 px-4 text-white"
-  style="background-image: url(images/Frame_99.jpg)">
+  style="background-image: url(images/Frame_102.png)">
 
   <div
     class="relative items-center py-10 md:py-12 lg:py-14 container mx-auto px-4">
@@ -69,7 +69,11 @@
       </div>
 
       <div class="lg:w-1/2 px-2 pt-2">
-      
+        <img	
+          src="images/kenya_mapbox.png"	
+          alt=""	
+          class="rounded-xl shadow-2xl" />	
+
       </div>
     </div>
 
