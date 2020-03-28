@@ -15,7 +15,7 @@
         class="text-3xl md:text-5xl mb-2 leading-tight font-heading text-white">
         {project.name}
       </h2>
-      <p class="px-4 mb-2 text-gray-400 font-light eading-relaxed">
+      <p class="px-4 mb-2 text-gray-400 leading-relaxed">
         {project.shortDescription}
       </p>
 
@@ -48,8 +48,14 @@
 
   <section class="p-8 lg:p-16">
     <h1 class="my-6 text-4xl text-center font-heading font-semibold">
-      Impact of this campaign over the last 30 days
+      This campaign's impact
     </h1>
+
+    <div class="flex flex-wrap text-center justify-center z-10 max-w-2xl mx-auto">
+      <p class="leading-relaxed mx-auto mb-8">
+        See how your contributions improved our community members lives over the last 30 days. Dive into more detailed data at the <a class="underline " href="http://cic-dashboard-frontend-webpage.s3-website.eu-central-1.amazonaws.com/" target="_blank">blockchain insights dashboard</a>.
+      </p>
+    </div>
 
     <div class="flex flex-wrap -mx-4 text-center justify-center">
       {#each project.stats as stat}
