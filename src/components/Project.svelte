@@ -51,7 +51,7 @@
       Impact of this campaign over the last 30 days
     </h1>
 
-    <div class="flex flex-wrap -mx-4 text-center">
+    <div class="flex flex-wrap -mx-4 text-center justify-center">
       {#each project.stats as stat}
         <div class="md:w-1/4 p-4 mb-4 md:mb-0">
           <h3 class="text-xl my-2 font-heading">{stat.num}</h3>
