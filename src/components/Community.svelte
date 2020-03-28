@@ -69,11 +69,7 @@
       </div>
 
       <div class="lg:w-1/2 px-2 pt-2">
-        <img
-          src="images/kenya_mapbox.png"
-          alt=""
-          class="rounded-xl shadow-2xl" />
-
+      
       </div>
     </div>
 
