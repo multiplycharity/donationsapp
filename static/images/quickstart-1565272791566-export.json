@@ -1,0 +1,590 @@
+{
+  "communities" : {
+    "a-kenya-nairobi-sarafu-community-currency" : {
+      "alt" : "",
+      "description" : "In Kenya’s poor communities, residents have lots to sell - from home-grown tomatoes to their labor time or teaching children - but few people have enough cash to buy the goods and services, reducing the incentive to produce more. Barter works for some exchanges, but keeping track of who owes what is an inefficient process. The same goes for village savings and loans groups where transactions are commonly recorded on slips of paper and kept in a locked box.",
+      "descriptiontwo" : "The Sarafu community currency allows Kenian individuals and businesses to freely trade on regional economic markets. Implemented by Grassroots Economics, Sarafu builds on a rich history of community programs in Africa. The team already runs programs in 6 locations across Kenya and assists with 2 in South Africa, helping more than 1,000 small businesses and 20 schools to take an active role in their own economy and development.",
+      "donationAddress" : "0xa0af3a017ed1ccf9b10a5a98cf9ec8678659682f",
+      "imageUrl" : "images/Frame_45.jpg",
+      "location" : "Kenia",
+      "name" : "The Kenian Sarafu",
+      "organization" : "Grassroots Economics",
+      "projects" : {
+        "a-covid-health-volunteers" : {
+          "alt" : "",
+          "description" : "Community Health Volunteers (CHV), Clinics and doctors are daily working tirelessly with communities to teach them to cope with COVID-19. They are, out of their own pockets, supporting needy families and themselves working othen with no pay. Health care workers using CICs have a way to help support the community and care for themselves as national currency runs out.",
+          "donationAddress" : "0xa0af3a017ed1ccf9b10a5a98cf9ec8678659682f",
+          "imageUrl" : "images/health-volunteer-1.jpg",
+          "infoImage1" : "images/health-volunteer-3-portrait.png",
+          "infoImage2" : "images/health-volunteer-2-portrait.jpg",
+          "infoText1" : "This is Bernard Okoth and Grace Hellen the chairlady of CHVs in Mukuru (right) the main purpose this week is to make sure that all food related kiosks have clean water and soap as one way of eradicating the covid-19. They are training the members of the community how to use jerricans to come up with taps like structure. This is a mandatory action taken by CHV for the good of the community. 400 Sarafu (about 4 USD) will feed a CHVs and her family for a day and enable her to support the community more. Sarafu can also be used for soap, water, women's sanitary towel, medicines and other basic needs in local clinics.",
+          "infoText2" : "Dorothy (above) has been using Sarafu for more than three years. She accepts Sarafu as payment in her clinic as a way to support all the tension in place. She is there to help people in the community with advice and medication if needed. Please leverage your support to health workers by contributing to this campaign.",
+          "location" : "Kenya",
+          "name" : "Supporting COVID community health volunteers",
+          "organization" : "Grassroots",
+          "shortDescription" : "Community Health Volunteers (CHV), Clinics and doctors are daily working tirelessly with communities to teach them to cope with COVID-19",
+          "stats" : [ {
+            "num" : "$120",
+            "text" : "total donations"
+          }, {
+            "num" : "$420",
+            "text" : "increased spending on health"
+          }, {
+            "num" : "+$50",
+            "text" : "increased healthworker earnings"
+          }, {
+            "num" : "500",
+            "text" : "health-related transactions"
+          } ],
+          "tags" : [ "health", "food", "infrastructure" ],
+          "url" : "/"
+        },
+        "a-farming-cooperative" : {
+          "alt" : "",
+          "description" : "Farming and food distribution is a serious challenge with arid lands, locusts and now COVID-19. The entire supply chain from farmer to fork needs support right now. Using CICs like Sarafu people in Kenya can develop markets and keep trading when National Currency runs out.",
+          "donationAddress" : "0xa0af3a017ed1ccf9b10a5a98cf9ec8678659682f",
+          "imageUrl" : "images/how-it-works/track.jpg",
+          "infoImage1" : "",
+          "infoImage2" : "",
+          "infoText1" : "",
+          "infoText2" : "",
+          "location" : "Nairobi",
+          "name" : "Last mile food supply",
+          "organization" : "Grassroots",
+          "shortDescription" : "Farming and food distribution is a serious challenge with arid lands",
+          "stats" : [ {
+            "num" : "$120",
+            "text" : "incoming currency"
+          }, {
+            "num" : "$420",
+            "text" : "outgoing currency"
+          }, {
+            "num" : "+$50",
+            "text" : "increase in earnings"
+          }, {
+            "num" : "500",
+            "text" : "calories produced"
+          } ],
+          "tags" : [ "farming", "food", "infrastructure" ],
+          "url" : "/"
+        },
+        "a-farming-food-infrastructure-chicken-farm" : {
+          "alt" : "",
+          "description" : "Most of the local currency community builds around food. While we see food vendors accept CC and families paying in CC, still overregional suppliers drain the community by taking currency out of the local economy. We want to build a chicken farm, to meet demand for a local food supplier.",
+          "donationAddress" : "0xa0af3a017ed1ccf9b10a5a98cf9ec8678659682f",
+          "imageUrl" : "images/Frame_51.jpg",
+          "infoImage1" : "",
+          "infoImage2" : "",
+          "infoText1" : "",
+          "infoText2" : "",
+          "location" : "Mombasa",
+          "name" : "Building a Chicken Farm",
+          "organization" : "Mary",
+          "shortDescription" : "Food suppliers are the main system stabilizer in community currencies",
+          "stats" : [ {
+            "num" : "$120",
+            "text" : "incoming currency"
+          }, {
+            "num" : "$420",
+            "text" : "outgoing currency"
+          }, {
+            "num" : "+$50",
+            "text" : "increase in earnings"
+          }, {
+            "num" : "500",
+            "text" : "calories produced"
+          } ],
+          "tags" : [ "farming", "food", "infrastructure" ],
+          "url" : "/"
+        },
+        "a-kids-education-school" : {
+          "alt" : "",
+          "description" : "Support the local education in this village. Your donation will go toward the physical safety of the teachers, lab and classrooms, operating expense, books, and supplies.",
+          "donationAddress" : "0xa0af3a017ed1ccf9b10a5a98cf9ec8678659682f",
+          "imageUrl" : "images/sarafu-school.jpg",
+          "infoImage1" : "",
+          "infoImage2" : "",
+          "infoText1" : "",
+          "infoText2" : "",
+          "location" : "Nairobi",
+          "name" : "The Lagos School",
+          "organization" : "Dzame",
+          "shortDescription" : "Fund the next year of teaching kids the basics of adult life",
+          "stats" : [ {
+            "num" : "12",
+            "text" : "classes financed"
+          }, {
+            "num" : "4",
+            "text" : "teachers yearly salary paid"
+          }, {
+            "num" : "2",
+            "text" : "buildings repaired"
+          }, {
+            "num" : "50",
+            "text" : "new sets of textbooks"
+          } ],
+          "tags" : [ "kids", "education" ],
+          "url" : "/"
+        },
+        "b-individual-recipient-mary" : {
+          "alt" : "",
+          "description" : "Mary is an Mpesa agent and in charge of the financial matters in her household. Besides her, three other family members that support her family of five by working in agriculture. Mary uses Sarafu not only for personal expenditure but to generate a source of income out of facilitating the community to exchange Sarafu and Kenyan Shillings back and forth.",
+          "disabled" : true,
+          "donationAddress" : "0xa0af3a017ed1ccf9b10a5a98cf9ec8678659682f",
+          "imageUrl" : "images/people/Mary.jpg",
+          "infoImage1" : "",
+          "infoImage2" : "",
+          "infoText1" : "",
+          "infoText2" : "",
+          "location" : "Nakuru",
+          "name" : "Mary",
+          "organization" : "38 years",
+          "shortDescription" : "Mpesa mobile money agents exchange Forex or local currency into mobile money",
+          "stats" : [ {
+            "num" : "10%",
+            "text" : "increase in nutrition"
+          }, {
+            "num" : "+4%",
+            "text" : "additional income"
+          }, {
+            "num" : "7%",
+            "text" : "food spending via Sarafu"
+          }, {
+            "num" : "$540",
+            "text" : "exchanged into Sarafu"
+          } ],
+          "tags" : [ "small business", "gender equality", "individual recipient" ],
+          "url" : "/"
+        },
+        "b-individual-recipient-ndegwa" : {
+          "alt" : "",
+          "description" : "Ndegwa supports his family of seven by selling peas and chicken to the community in Miyani. He has gained more customers since he started using the Sarafu service and expects that by charging Sarfu users only half of the amount in Kenyan Shillings (and the other half in Sarafu) he can provide greater access to his products. Sarafu, he says, assists him in saving Keyan Shillings for other investments beyond his daily consumption.",
+          "disabled" : true,
+          "donationAddress" : "0xa0af3a017ed1ccf9b10a5a98cf9ec8678659682f",
+          "imageUrl" : "images/people/Ndegwa.jpg",
+          "infoImage1" : "",
+          "infoImage2" : "",
+          "infoText1" : "",
+          "infoText2" : "",
+          "location" : "Miyani",
+          "name" : "Ndegwa",
+          "organization" : "30 years",
+          "shortDescription" : "Small businesses are key to the stability of a local economy",
+          "stats" : [ {
+            "num" : "10%",
+            "text" : "increase in nutrition"
+          }, {
+            "num" : "+4%",
+            "text" : "additional income"
+          }, {
+            "num" : "7%",
+            "text" : "food spending via Sarafu"
+          }, {
+            "num" : "$40",
+            "text" : "revenue"
+          } ],
+          "tags" : [ "small business", "individual recipient" ],
+          "url" : "/"
+        },
+        "c-give-directly" : {
+          "alt" : "",
+          "description" : "In this setup, we use GiveDirectly's way of donating cash to individuals and their impact measures, to directly compare our impact to theirs: https://www.givedirectly.org/research-at-give-directly/",
+          "disabled" : true,
+          "donationAddress" : "0xa0af3a017ed1ccf9b10a5a98cf9ec8678659682f",
+          "imageUrl" : "images/Frame_57.jpg",
+          "infoImage1" : "",
+          "infoImage2" : "",
+          "infoText1" : "",
+          "infoText2" : "",
+          "location" : "Nakuru",
+          "name" : "GiveDirectly",
+          "organization" : "Sarafu",
+          "shortDescription" : "Choosing random donees and measuring the impact",
+          "stats" : [ {
+            "num" : "+$270",
+            "text" : "increase in earnings"
+          }, {
+            "num" : "+$430",
+            "text" : "increase in assets"
+          }, {
+            "num" : "+$330",
+            "text" : "increase in nutrition spend"
+          }, {
+            "num" : "0%",
+            "text" : "effect on alcohol or tobacco spend"
+          } ],
+          "tags" : [ "research", "basic needs" ],
+          "url" : "/"
+        },
+        "c-improve-network-stability-centrality" : {
+          "alt" : "",
+          "description" : "With this campaign, we want to improve network stability, or the local economy’s ability to absorb economic recession and individual credit defaults. We first measure the centrality of individual nodes via mathematical models ‘cyclic density’ and ‘k-cycle centrality’, and issue tokens conditional to the extent of a nodes centrality. Imagine it as rewarding small banks which supported members of the community with risky loans, which turned out to be beneficial for all stakeholders.",
+          "disabled" : true,
+          "donationAddress" : "0xa0af3a017ed1ccf9b10a5a98cf9ec8678659682f",
+          "imageUrl" : "images/Frame_57.jpg",
+          "infoImage1" : "",
+          "infoImage2" : "",
+          "infoText1" : "",
+          "infoText2" : "",
+          "location" : "Nakuru",
+          "name" : "Improve network stability",
+          "organization" : "Sarafu",
+          "shortDescription" : "Imagine we could have a bank, which is paid back on each loan",
+          "stats" : [ {
+            "num" : "0",
+            "text" : "credit defaults"
+          }, {
+            "num" : "78%",
+            "text" : "network decentralisation (nodes with 10% / nodes with 90% trades)"
+          }, {
+            "num" : "24",
+            "text" : "loans outstanding"
+          }, {
+            "num" : "52",
+            "text" : "paid back secondary market loans"
+          } ],
+          "tags" : [ "research", "basic needs", "system stability" ],
+          "url" : "/"
+        },
+        "c-reward-data-cleaning" : {
+          "alt" : "",
+          "description" : "Tagged transaction data helps us to learn about user behaviour and the current structure of the local economy. Different to closed-source silicon valley data monopolists, we enable users to store their data on their devices and only send anonymized data sets to us. While users profit from data sovereignty, we need to make sure that the data is correct. Which we do in peer-to-peer fashion: Our app enables each user to tag transactions, as well as rate their confidence in other users tagged data. In a way, the system is self-supervising and self-correcting mistakes. With this campaign, we are rewarding users, who clean data.",
+          "disabled" : true,
+          "donationAddress" : "0xa0af3a017ed1ccf9b10a5a98cf9ec8678659682f",
+          "imageUrl" : "images/Frame_57.jpg",
+          "infoImage1" : "",
+          "infoImage2" : "",
+          "infoText1" : "",
+          "infoText2" : "",
+          "location" : "Nakuru",
+          "name" : "Reward peer-to-peer data cleaning",
+          "organization" : "Sarafu",
+          "shortDescription" : "This campaign's goal is to increase data quality, which we base our impact measures on",
+          "stats" : [ {
+            "num" : "9200",
+            "text" : "tagged transactions"
+          }, {
+            "num" : "4",
+            "text" : "untagged transactions"
+          }, {
+            "num" : "200",
+            "text" : "tagged businesses"
+          }, {
+            "num" : "50",
+            "text" : "untagged businesses"
+          } ],
+          "tags" : [ "research", "system stability" ],
+          "url" : "/"
+        },
+        "c-reward-network-activity" : {
+          "alt" : "",
+          "description" : "This campaign, equally to the universal basic income, distributes 1000 tokens each day, to members of the Sarafu community. Though here, we are rewarding the 100 most active network members. Which we take as each user’s percentage of unique transactions (total tx / user’s tx).",
+          "disabled" : true,
+          "donationAddress" : "0xa0af3a017ed1ccf9b10a5a98cf9ec8678659682f",
+          "imageUrl" : "images/Frame_57.jpg",
+          "infoImage1" : "",
+          "infoImage2" : "",
+          "infoText1" : "",
+          "infoText2" : "",
+          "location" : "Nakuru",
+          "name" : "Reward network activity",
+          "organization" : "Sarafu",
+          "shortDescription" : "Yang 2020",
+          "stats" : [ {
+            "num" : "20%",
+            "text" : "impact cost (tokens traded / tokens sold)"
+          }, {
+            "num" : "3x",
+            "text" : "velocity (tokens traded / tokens held)"
+          }, {
+            "num" : "30",
+            "text" : "of most active users are private persons"
+          }, {
+            "num" : "70",
+            "text" : "of most active users are businesses"
+          } ],
+          "tags" : [ "research", "basic needs" ],
+          "url" : "/"
+        },
+        "c-reward-network-connection" : {
+          "alt" : "",
+          "description" : "This campaign aims to reward the most connected network members, or those who take the most community currency as exchange for their goods and services. Connections between members are important to the local economy, as they enable larger trades and a higher number of concurrent trades for everyone. Naturally, taking community currency also has its risks. So we are rewarding the main risk takers and incentivize others to get more connected. We first calculate how many transactions individual nodes received over a certain limit (eg. 20 shillings) in a certain time frame. We then reward the 30% most connected nodes.",
+          "disabled" : true,
+          "donationAddress" : "0xa0af3a017ed1ccf9b10a5a98cf9ec8678659682f",
+          "imageUrl" : "images/Frame_57.jpg",
+          "infoImage1" : "",
+          "infoImage2" : "",
+          "infoText1" : "",
+          "infoText2" : "",
+          "location" : "Nakuru",
+          "name" : "Reward network connection",
+          "organization" : "Sarafu",
+          "shortDescription" : "Rewarding the most connected network members to increase loans for everyone",
+          "stats" : [ {
+            "num" : "1200",
+            "text" : "connections the most connected node has"
+          }, {
+            "num" : "40",
+            "text" : "average tx amount for most connected node"
+          }, {
+            "num" : "300",
+            "text" : "average connections over 30% most connected nodes"
+          }, {
+            "num" : "20",
+            "text" : "average tx amount for most connected nodes"
+          } ],
+          "tags" : [ "research", "basic needs" ],
+          "url" : "/"
+        },
+        "c-universal-basic-income" : {
+          "alt" : "",
+          "description" : "In this setup, we want to prove the effectiveness of a universal basic income for members of the Sarafu community. Each day, we give out a total of 1000 tokens and measure the impact of additional liquidity in the market.",
+          "disabled" : true,
+          "donationAddress" : "0xa0af3a017ed1ccf9b10a5a98cf9ec8678659682f",
+          "imageUrl" : "images/Frame_57.jpg",
+          "infoImage1" : "",
+          "infoImage2" : "",
+          "infoText1" : "",
+          "infoText2" : "",
+          "location" : "Nakuru",
+          "name" : "Universal basic income",
+          "organization" : "Sarafu",
+          "shortDescription" : "Daily payout for all community members",
+          "stats" : [ {
+            "num" : "12",
+            "text" : "classes financed"
+          }, {
+            "num" : "4",
+            "text" : "teachers yearly salary paid"
+          }, {
+            "num" : "2",
+            "text" : "buildings repaired"
+          }, {
+            "num" : "50",
+            "text" : "new sets of textbooks"
+          } ],
+          "tags" : [ "research", "basic needs" ],
+          "url" : "/"
+        },
+        "d-sustainable-development-goals-11-sustainable-cities" : {
+          "alt" : "",
+          "description" : "Commiting to UN Sustainable Development Goal #11, this campaign aims to give access to public transportation to the poorest members of the community and improve living standards of the locals who live in slums. We will achieve this through direct funding as well as coordinating locals to build sustainable, resilient and resource-efficient buildings utilizing local materials. To measure the impact of this program, we follow the official UN SDG indicators 11.1.1, 11.2.1, 11.c.1.",
+          "disabled" : true,
+          "donationAddress" : "0xa0af3a017ed1ccf9b10a5a98cf9ec8678659682f",
+          "imageUrl" : "images/SDG/sdg11_small.jpg",
+          "infoImage1" : "",
+          "infoImage2" : "",
+          "infoText1" : "",
+          "infoText2" : "",
+          "location" : "Nairobi",
+          "name" : "SDG 11: Sustainable cities",
+          "organization" : "United Nations",
+          "shortDescription" : "https://sdg-tracker.org/cities",
+          "stats" : [ {
+            "num" : "56% - 1%",
+            "text" : "Proportion of urban population living in slums, informal settlements or inadequate housing"
+          }, {
+            "num" : "+2%",
+            "text" : "Sarafu used for public transportation"
+          }, {
+            "num" : "+2%",
+            "text" : "Sarafu used to build sustainable buildings"
+          }, {
+            "num" : "-",
+            "text" : "-"
+          } ],
+          "tags" : [ "SDG", "basic needs" ],
+          "url" : "/"
+        },
+        "d-sustainable-development-goals-2-end-hunger" : {
+          "alt" : "",
+          "description" : "Commiting to UN Sustainable Development Goal #2, this campaign aims to reward sustainable farming, improve farming production output and support the income of small-scale food producers. We are focusing especially on small-scale farms, as they have proven to be important members of the community, strengthening the currency economy by accepting community currency. To measure the impact of this program, we follow the official UN SDG indicators 2.3.1, 2.3.2, 2.4.1, 2.5.2, 2.c.1.",
+          "disabled" : true,
+          "donationAddress" : "0xa0af3a017ed1ccf9b10a5a98cf9ec8678659682f",
+          "imageUrl" : "images/SDG/sdg2_small.jpg",
+          "infoImage1" : "",
+          "infoImage2" : "",
+          "infoText1" : "",
+          "infoText2" : "",
+          "location" : "Nairobi",
+          "name" : "SDG 2: Zero hunger",
+          "organization" : "United Nations",
+          "shortDescription" : "https://sdg-tracker.org/zero-hunger",
+          "stats" : [ {
+            "num" : "+2%",
+            "text" : "increased agriculture output, measured by incoming tx to #farming"
+          }, {
+            "num" : "+5%",
+            "text" : "increased income for small scale producers"
+          }, {
+            "num" : "+3%",
+            "text" : "increased use of local foods"
+          }, {
+            "num" : "0%",
+            "text" : "less food price anomalies. stabilized pricing for farmers and consumers"
+          } ],
+          "tags" : [ "SDG", "food" ],
+          "url" : "/"
+        },
+        "d-sustainable-development-goals-4-quality-education" : {
+          "alt" : "",
+          "description" : "Commiting to UN Sustainable Development Goal #4, this campaign aims to create equal access to education and improve education quality. We first want to incentivize new teachers to join our schools, supporting the school in community currency and making sure the teachers are able to spend them. Secondly, we reward hosting activities for young girls. Further, we support local schools with basic electric infrastructure and sanitation facilities. To measure the impact of this program, we follow the official UN SDG indicators 4.2.2, 4.3.1, 4.a.1 and 4.c.1.",
+          "disabled" : true,
+          "donationAddress" : "0xa0af3a017ed1ccf9b10a5a98cf9ec8678659682f",
+          "imageUrl" : "images/SDG/sdg4_small.jpg",
+          "infoImage1" : "",
+          "infoImage2" : "",
+          "infoText1" : "",
+          "infoText2" : "",
+          "location" : "Nairobi",
+          "name" : "SDG 4: Quality education",
+          "organization" : "United Nations",
+          "shortDescription" : "https://sdg-tracker.org/quality-education",
+          "stats" : [ {
+            "num" : "23% + 8%",
+            "text" : "share of children who go to school"
+          }, {
+            "num" : "+4%",
+            "text" : "Sarafu used to pay teachers"
+          }, {
+            "num" : "+10%",
+            "text" : "Proportion of schools with access to (a) electricity; (b) the Internet for pedagogical purposes; (c) computers for pedagogical purposes; (d) adapted infrastructure and materials for students with disabilities; (e) basic drinking water; (f) single-sex basic sanitation facilities; and (g) basic handwashing facilities"
+          }, {
+            "num" : "+5%",
+            "text" : "teachers who received organized teacher training"
+          } ],
+          "tags" : [ "SDG", "education" ],
+          "url" : "/"
+        },
+        "d-sustainable-development-goals-6-clean-water" : {
+          "alt" : "",
+          "description" : "Commiting to UN Sustainable Development Goal #6, this campaign aims to improve access to safe drinking water and access to hygiene and sanitation facilities. We are rewarding installation of safely managed drinking water services, sanitation services and hand-washing facilities. To measure the impact of this program, we follow the official UN SDG indicators 6.1.1, 6.2.1, 6.3.1, 6.a.1, 6.b.1.",
+          "disabled" : true,
+          "donationAddress" : "0xa0af3a017ed1ccf9b10a5a98cf9ec8678659682f",
+          "imageUrl" : "images/SDG/sdg6_small.jpg",
+          "infoImage1" : "",
+          "infoImage2" : "",
+          "infoText1" : "",
+          "infoText2" : "",
+          "location" : "Nairobi",
+          "name" : "SDG 4: Clean water",
+          "organization" : "United Nations",
+          "shortDescription" : "https://sdg-tracker.org/water-and-sanitation",
+          "stats" : [ {
+            "num" : "+7%",
+            "text" : "Sarafu spending on safely managed drinking water services"
+          }, {
+            "num" : "+2%",
+            "text" : "Sarafu spending on safely managed sanitation services"
+          }, {
+            "num" : "+3%",
+            "text" : "Proportion of wastewater safely treated"
+          }, {
+            "num" : "+3%",
+            "text" : "increased spending from local administration on water and sanitation infrastructure"
+          } ],
+          "tags" : [ "SDG", "basic needs" ],
+          "url" : "/"
+        },
+        "e-we-want-you" : {
+          "alt" : "",
+          "description" : "Contributions beyond money are always important! Do you want to support our research? Do you want to support our Open Source software team ? Let us know how you can help. Let's have a chat!",
+          "disabled" : true,
+          "donationAddress" : "0xa0af3a017ed1ccf9b10a5a98cf9ec8678659682f",
+          "imageUrl" : "images/Frame_56.jpg",
+          "infoImage1" : "",
+          "infoImage2" : "",
+          "infoText1" : "",
+          "infoText2" : "",
+          "location" : "Nakuru",
+          "name" : "Join us",
+          "organization" : "38 years",
+          "shortDescription" : "-",
+          "stats" : [ {
+            "num" : "-",
+            "text" : "-"
+          }, {
+            "num" : "-",
+            "text" : "-"
+          }, {
+            "num" : "-",
+            "text" : "-"
+          }, {
+            "num" : "-",
+            "text" : "-"
+          } ],
+          "tags" : [ "research", "system stability" ],
+          "url" : "/"
+        }
+      },
+      "url" : "/"
+    },
+    "jordan-zaatari-UN-refugee-camp" : {
+      "alt" : "",
+      "description" : "Zaatari is a refugee camp in Jordan, located 10 kilometres east of Mafraq, which has gradually evolved into a permanent settlement, today being the world’s largest camp for Syrian refugees. It was first opened on 28 July 2012 to host Syrians fleeing the violence in the ongoing Syrian Civil War that erupted in March 2011.",
+      "descriptiontwo" : "The UN World Food Programme is harnessing blockchain technology as an effective means to empower people to meet their essential needs. Together, we are facilitating cash transfers while protecting beneficiary data, controlling financial risks, and allowing for greater collaboration.",
+      "disabled" : true,
+      "donationAddress" : "0x",
+      "imageUrl" : "images/jordan-zaatari-refugee-camp-united-nations-blockchain.jpg",
+      "location" : "Jordan",
+      "name" : "The Zataari Refugee Camp",
+      "organization" : "United Nations",
+      "url" : "/"
+    },
+    "sahara-conservation-fund" : {
+      "alt" : "",
+      "description" : "The Sahara Conservation Fund (SCF) exists to conserve the wildlife of the Sahara and bordering Sahelian grasslands, together with the diverse landscapes required for its survival of the region’s embattled fauna and flora.",
+      "descriptiontwo" : "While maintaining a steadfast focus on species conservation, SCF wants to emphasize on the need for scaled up, landscape-level approaches, that integrate wildlife conservation with the realities of human development. The unpredictable climate and the natural sparsity of natural resources in desert ecosystems mean that both humans and wildlife require access to vast spaces to prosper, virtually excluding the possibility of viable wildlife-only areas.",
+      "disabled" : true,
+      "donationAddress" : "0x",
+      "imageUrl" : "images/Frame_48.jpg",
+      "location" : "North Africa",
+      "name" : "The Sahara Wildlife Reserve",
+      "organization" : "Wildlife Fund",
+      "url" : "/"
+    },
+    "venezuela-usd-stablecoin" : {
+      "alt" : "",
+      "description" : "In a world without money, even buying something basic as food is troublesome: You need to find someone willing to trade food against the exact goods you offer. Cryptocurrencies are often promoted as medium of exchange in developing economies. Though in the average scenario, people lack the technical support or even access to either cryptocurrency or fiat in the first place.",
+      "descriptiontwo" : "The Venezuelan Complementary Dollar",
+      "disabled" : true,
+      "donationAddress" : "0x",
+      "imageUrl" : "images/venezuela-blockchain-dollar.jpg",
+      "location" : "Venezuela",
+      "name" : "A Complementary Dollar",
+      "organization" : "Amigo.id",
+      "projects" : {
+        "a-universal-basic-income" : {
+          "alt" : "",
+          "description" : "In this setup, we want to prove the effectiveness of a universal basic income for members of the Sarafu community. Each day, we give out a total of 1000 tokens and measure the impact of additional liquidity in the market.",
+          "donationAddress" : "0xa0af3a017ed1ccf9b10a5a98cf9ec8678659682f",
+          "imageUrl" : "images/venezuela-university.jpg",
+          "infoImage1" : "images/Frame_44.jpg",
+          "infoImage2" : "images/Frame-46.jpg",
+          "infoText1" : "In a world without money, even buying something basic as food is troublesome: You need to find someone willing to trade food against the exact goods you offer. Cryptocurrencies are often promoted as medium of exchange in developing economies. Though in the average scenario, people lack the technical support or even access to either cryptocurrency or fiat in the first place.",
+          "infoText2" : "Paying friends, you can offer debt instead of money - a promise to pay back later. Blockchains now give us the opportunity to record this debt as IOUs (‘I owe you’) and exchange them with anyone willing to except them as payment. Using Amigo, you can issue IOUs and pay anyone - friend or stranger - within your trusted network. It also lets you to track any IOUs issuer, value and risk.",
+          "location" : "Caracas, Venezuela",
+          "name" : "Universal basic income for the students of Universidad Metropolitana",
+          "organization" : "Amigo.id",
+          "shortDescription" : "Students are the main drivers of a sustainable, peaceful growth of alternative financial infrastructure.",
+          "stats" : [ {
+            "num" : "$120",
+            "text" : "total donations"
+          }, {
+            "num" : "$420",
+            "text" : "increased spending on education"
+          }, {
+            "num" : "+$50",
+            "text" : "increased spending on financial development"
+          }, {
+            "num" : "500",
+            "text" : "new transactions"
+          } ],
+          "tags" : [ "health", "food", "infrastructure" ],
+          "url" : "/"
+        }
+      },
+      "url" : "/"
+    }
+  }
+}
