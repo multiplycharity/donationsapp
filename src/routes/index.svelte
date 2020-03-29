@@ -14,7 +14,7 @@
   <meta name="name" content="Donations with leverage" />
   <meta
     name="description"
-    content="Stimulate resilient development, by donating money directly to people in local currency economies." />
+    content="Improving charity and gaining live insights on donations and everyday blockchain payments." />
   <meta name="generator" content="Donations with leverage" />
   <meta
     name="keywords"
@@ -25,21 +25,21 @@
   <meta name="twitter:title" content="Donations with leverage" />
   <meta
     name="twitter:description"
-    content="Stimulate resilient development, by donating money directly to people in local currency economies." />
+    content="Improving charity and gaining live insights on donations and everyday blockchain payments." />
   <meta name="twitter:creator" content="@chriscyber2000" />
   <meta
     name="twitter:image"
-    content="https://multiply.charity/images/Frame_45.jpg" />
+    content="https://multiply.charity/images/multiply-charity-header.jpg" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://multiply.charity" />
   <meta property="og:title" content="Donations with leverage" />
   <meta
     property="og:description"
-    content="Stimulate resilient development, by donating money directly to people in local currency economies." />
-  <meta property="og:site_name" content="Abundance" />
+    content="Improving charity and gaining live insights on donations and everyday blockchain payments." />
+  <meta property="og:site_name" content="Multiply Charity" />
   <meta
     property="og:image"
-    content="https://multiply.charity/images/Frame_45.jpg" />
+    content="https://multiply.charity/images/multiply-charity-header.jpg" />
   <meta name="theme-color" content="#000000" />
 
   <meta charset="utf-8" />
