@@ -16,9 +16,9 @@
   import { goto } from "@sapper/app";
 
   const DONATION_RECEIVER_ADDRESS =
-    "0xAD26A73A04F0aC3BceEBD117C68Fbb391a37458D";
+    "0x9b5FEeE3B220eEdd3f678efa115d9a4D91D5cf0A";
 
-  const TOKEN_CONTRACT_ADDRESS = "0xFab46E002BbF0b4509813474841E0716E6730136"; //FAU
+  const TOKEN_CONTRACT_ADDRESS = "0x48b0c1d90c3058ab032c44ec52d98633587ee711"; //MOON
 
   //"0x6B175474E89094C44Da98b954EedeAC495271d0F"; //DAI
 
@@ -143,8 +143,9 @@
   const handlePaymentWithCard = async () => {
     console.log("Handling payment with card...");
 
-    if (!previouslyChosenEmail) {
+    if (!previouslyChosenEmail && !$emailStore && email) {
       window.localStorage.setItem("email", email);
+      emailStore.set(email);
     }
 
     let redirectURL = window.location.href;
@@ -155,9 +156,12 @@
         redirectURL.indexOf("?transactionId")
       );
 
-    await goto(
-      `https://buy-staging.moonpay.io/?apiKey=pk_test_M98jboYNkUu7vni3bm1cSgHSYmc6&currencyCode=DAI&baseCurrencyCode=USD&walletAddress=${DONATION_RECEIVER_ADDRESS}&email=${$emailStore}&externalCustomerId=${$emailStore}&baseCurrencyAmount=${amount}&redirectURL=${redirectURL}`
-    );
+    const url = `https://buy-staging.moonpay.io/?apiKey=pk_test_Manl6IPdLutNUCpw5LTfJl6R3OcHRDYY&currencyCode=DAI&baseCurrencyCode=USD&walletAddress=${DONATION_RECEIVER_ADDRESS}&email=${$emailStore}&externalCustomerId=${$emailStore}&baseCurrencyAmount=${amount}`;
+
+    await window.open(url, "_blank");
+    hideModal();
+
+    // await goto(`${url}&redirectURL=${redirectURL}`);
   };
 
   const handlePaymentWithCrypto = async () => {
@@ -196,7 +200,9 @@
       emitter.on("txCancel", console.log);
       emitter.on("txFailed", console.log);
 
-      setEmail();
+      if (!previouslyChosenEmail && email) {
+        window.localStorage.setItem("email", email);
+      }
     } catch (err) {
       update({
         eventCode: "txFailed",

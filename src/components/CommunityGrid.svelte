@@ -32,7 +32,7 @@
 
     <!-- if id == 1 then show CommunityGridItem, else use CommunityGridItemSmall-->
     {#each communities as community}
-      {#if community.name == 'The Kenian Sarafu'}
+      {#if community.name == 'Sarafu Inclusive Currency'}
         <div class="mb-8">
           <CommunityGridItem {...community} />
         </div>
