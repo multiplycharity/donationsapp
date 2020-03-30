@@ -56,22 +56,23 @@
         See how your contributions improved our community members lives over the last 30 days.
       </p>
 
-      <div class="flex flex-wrap -mx-4 text-center justify-center">
+      <!--<div class="flex flex-wrap -mx-4 text-center justify-center">
         {#each project.stats as stat}
           <div class="md:w-1/4 p-4 mb-4">
             <h3 class="text-xl my-2 font-heading">{stat.num}</h3>
             <p class="text-gray-500 leading-relaxed">{stat.text}</p>
           </div>
         {/each}
-      </div>
+      </div>-->
 
       <div class="border border-grey-100">
+
+        <a class="underline " href="http://cic-dashboard-frontend-webpage.s3-website.eu-central-1.amazonaws.com/" target="_blank">
+          <img class="pb-8 mx-auto " src={project.statisticsImage} alt="">
+        </a>
         <div class="px-4 py-2 mb-4">
           Dive into more detailed data at the <a class="underline " href="http://cic-dashboard-frontend-webpage.s3-website.eu-central-1.amazonaws.com/" target="_blank">blockchain insights dashboard</a>.
         </div>
-        <a class="underline " href="http://cic-dashboard-frontend-webpage.s3-website.eu-central-1.amazonaws.com/" target="_blank">
-          <img class="pb-8 mx-auto " src="/images/detailed-statistics.jpg" alt="">
-        </a>
       </div>
 
     </div>
