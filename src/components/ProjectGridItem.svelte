@@ -2,6 +2,7 @@
   export let id = 0;
   export let name = "";
   export let description = "";
+  export let sdgLogo = "";
   export let organization = "";
   export let location = "";
   export let imageUrl = "";
@@ -36,6 +37,12 @@
           await goto(`/projects/${id}`);
         }
       }}>
+
+      <div class="absolute right-0 top-0 flex flex-row">
+        <span class="px-2">
+            <img class="m-1 w-16 mx-auto" src={sdgLogo} alt="sustainable-development-goals">
+        </span>
+      </div>
 
       <img class="mb-4" src={imageUrl} {alt} />
 
