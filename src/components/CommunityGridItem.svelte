@@ -68,7 +68,7 @@
           class="bg-blue-600 hover:bg-blue-700 text-white py-2 mt-4 rounded-xl
           font-medium focus:outline-none"
           on:click={goToCommunityPage}>
-          View all
+          Donate
         </button>
 
       </div>
