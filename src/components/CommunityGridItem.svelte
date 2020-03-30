@@ -45,16 +45,40 @@
             </div>
           </div>
           <div class="flex flex-row">
-            <span class="px-2 text-gray-500 text-xs font-semibold uppercase bg-white text-center">
-              <a href="https://en.rodekors.dk/" target="_blank" class="cursor-default">
-                <img class="m-1 w-10 mx-auto" src="images/partners/red-cross.svg" alt="red-cross-denmark">
-                <div class="m-1">Red Cross<br/>Society</div>
+            <span
+              class="px-2 text-gray-500 text-xs font-semibold uppercase bg-white
+              text-center">
+              <a
+                href="https://en.rodekors.dk/"
+                target="_blank"
+                class="cursor-default">
+                <img
+                  class="m-1 w-10 mx-auto"
+                  src="images/partners/red-cross.svg"
+                  alt="red-cross-denmark" />
+                <div class="m-1">
+                  Red Cross
+                  <br />
+                  Society
+                </div>
               </a>
             </span>
-            <span class="ml-4 px-2 text-gray-500 text-xs font-semibold uppercase bg-white text-center">
-              <a href="https://www.grassrootseconomics.org/" target="_blank" class="cursor-default">
-                <img class="m-3 w-10 mx-auto" src="images/partners/grassroots-economics.jpg" alt="grassroots-economics">
-                <div class="m-1">Grassroots<br/>Economics</div>
+            <span
+              class="ml-4 px-2 text-gray-500 text-xs font-semibold uppercase
+              bg-white text-center">
+              <a
+                href="https://www.grassrootseconomics.org/"
+                target="_blank"
+                class="cursor-default">
+                <img
+                  class="m-3 w-10 mx-auto"
+                  src="images/partners/grassroots-economics.jpg"
+                  alt="grassroots-economics" />
+                <div class="m-1">
+                  Grassroots
+                  <br />
+                  Economics
+                </div>
               </a>
             </span>
           </div>

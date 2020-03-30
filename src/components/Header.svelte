@@ -55,7 +55,8 @@
           Leverage your impact
         </h2>
         <p class="max-w-lg my-4 text-gray-300 text-xl leading-relaxed">
-          Improving charity and gaining live insights on donations and everyday blockchain payments
+          Improving charity and gaining live insights on donations and everyday
+          blockchain payments
         </p>
 
         <!-- {#if !previouslyChosenEmail && !$emailStore} -->
