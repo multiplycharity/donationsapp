@@ -65,6 +65,12 @@
         on:click={hideMenu}>
         About us
       </a>
+      <!--<button
+        class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-2 rounded-md
+        font-medium focus:outline-none"
+        on:click={goToCommunityPage}>
+        Donate
+      </button>-->
 
     </div>
 
