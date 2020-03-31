@@ -83,7 +83,7 @@
   <div class="xl:flex xl:flex-row">
     <div class="container sm:w-full md:w-full lg:w-full xl:w-3/4 mx-auto px-4">
 
-      <div class="bg-gray-100 rounded-lg px-12 py-8 mt-12 shadow-lg">
+      <div class="bg-gray-100 rounded-lg px-12 py-8 mt-12">
         <h2 class="font-medium text-2xl my-4">
           Campaigns you can fund
         </h2>
@@ -108,7 +108,7 @@
     </div>
     <div class="container sm:w-full md:w-full lg:w-full xl:w-1/4 mx-auto px-4">
 
-    <div class="bg-gray-100 rounded-lg px-12 py-8 mt-12 shadow-lg">
+    <div class="bg-gray-100 rounded-lg px-12 py-8 mt-12">
       <h3 class="font-medium text-2xl my-4">Community background</h3>
       <div class="inline-flex flex-wrap w-full">
         <div class="px-2 pt-2">
@@ -156,7 +156,7 @@
       </div>
     </div>
 
-    <div class="bg-gray-100 rounded-lg px-12 py-8 mt-12 shadow-lg">
+    <div class="bg-gray-100 rounded-lg px-12 py-8 mt-12">
       <h3 class="font-medium text-2xl my-4">Impact insights</h3>
       <div class="inline-flex flex-wrap w-full">
         <div class="p-4 w-1/2">
@@ -192,7 +192,7 @@
       </div>
     </div>
 
-    <div class="bg-gray-100 rounded-lg px-12 py-8 mt-12 shadow-lg bg-cover h-64" style="background-image: url(images/kenya_mapbox.png)">
+    <div class="bg-gray-100 rounded-lg px-12 py-8 mt-12 bg-cover h-64" style="background-image: url(images/kenya_mapbox.png)">
       <h3 class="font-medium text-2xl my-4">The area</h3>
       <div class="inline-flex flex-wrap w-full">
         <div class="px-2 pt-2">
@@ -201,7 +201,7 @@
       </div>
     </div>
 
-    <div class="bg-gray-100 rounded-lg px-12 py-8 mt-12 shadow-lg">
+    <div class="bg-gray-100 rounded-lg px-12 py-8 mt-12">
       <h3 class="font-medium text-2xl my-4">FAQ</h3>
       <div class="inline-flex flex-wrap w-full">
       <p class="leading-relaxed text-sm pb-2 font-medium">Where does my donation go?</p>
