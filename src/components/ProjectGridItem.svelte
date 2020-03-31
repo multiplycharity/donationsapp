@@ -40,7 +40,10 @@
 
       <div class="absolute right-0 top-0 flex flex-row">
         <span class="px-2">
-            <img class="m-1 w-16 mx-auto" src={sdgLogo} alt="sustainable-development-goals">
+          <img
+            class="m-2 w-16 mx-auto rounded-md"
+            src={sdgLogo}
+            alt="sustainable-development-goals" />
         </span>
       </div>
 
