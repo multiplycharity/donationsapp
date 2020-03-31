@@ -1,7 +1,29 @@
 <script>
   export let project;
+  import { communities } from "../stores/communities.js";
   import { createEventDispatcher } from "svelte";
   const dispatch = createEventDispatcher();
+
+  function getCommunityProjects(community) {
+    let projectsArr = [];
+    Object.entries(community.projects).forEach(([key, value]) => {
+      projectsArr.push({ ...value, id: key });
+    });
+    return projectsArr;
+  }
+
+  const projectBelongsTo = (communityId, projectId) => {
+    for (let community of $communities) {
+      if (community.id === communityId) {
+        for (let project of getCommunityProjects(community)) {
+          if (project.id === projectId) {
+            return true;
+          }
+        }
+      }
+    }
+    return false;
+  };
 </script>
 
 <section
@@ -18,10 +40,6 @@
       <p class="px-4 mb-2 text-gray-400 leading-relaxed">
         {project.shortDescription}
       </p>
-
-    <!--  <div class="max-w-3xl mx-auto text-gray-400 mt-16 text-center">
-        <p class="leading-relaxed">Donate to this campaign with ETH or Ethereum tokens: <code class="select-all">{project.donationAddress}</code></p>
-      </div>-->
 
       <div class="max-w-3xl mx-auto my-8 text-center">
         <button
@@ -46,17 +64,20 @@
 
 <div class="container mx-auto px-4">
 
-  <section class="p-8 lg:p-16">
-    <h1 class="my-6 text-4xl text-center font-heading font-semibold">
-      This campaign's impact
-    </h1>
+  {#if projectBelongsTo('a-kenya-nairobi-sarafu-community-currency', project.id)}
+    <section class="p-8 lg:p-16">
+      <h1 class="my-6 text-4xl text-center font-heading font-semibold">
+        This campaign's impact
+      </h1>
 
-    <div class="flex flex-wrap text-center justify-center z-10 max-w-2xl mx-auto ">
-      <p class="leading-relaxed mx-auto mb-4">
-        See how your contributions improved our community members lives over the last 30 days.
-      </p>
+      <div
+        class="flex flex-wrap text-center justify-center z-10 max-w-2xl mx-auto ">
+        <p class="leading-relaxed mx-auto mb-4">
+          See how your contributions improved our community members lives over
+          the last 30 days.
+        </p>
 
-      <!--<div class="flex flex-wrap -mx-4 text-center justify-center">
+        <!--<div class="flex flex-wrap -mx-4 text-center justify-center">
         {#each project.stats as stat}
           <div class="md:w-1/4 p-4 mb-4">
             <h3 class="text-xl my-2 font-heading">{stat.num}</h3>
@@ -65,41 +86,56 @@
         {/each}
       </div>-->
 
-      <div class="border border-grey-100">
+        <div class="border border-grey-100">
 
-        <a class="underline " href="http://cic-dashboard-frontend-webpage.s3-website.eu-central-1.amazonaws.com/" target="_blank">
-          <img class="pb-8 mx-auto " src={project.statisticsImage} alt="">
-        </a>
-        <div class="px-4 py-2 mb-4">
-          Dive into more detailed data at the <a class="underline " href="http://cic-dashboard-frontend-webpage.s3-website.eu-central-1.amazonaws.com/" target="_blank">blockchain insights dashboard</a>.
+          <a
+            class="underline "
+            href="http://cic-dashboard-frontend-webpage.s3-website.eu-central-1.amazonaws.com/"
+            target="_blank">
+            <img class="pb-8 mx-auto " src={project.statisticsImage} alt="" />
+          </a>
+          <div class="px-4 py-2 mb-4">
+            Dive into more detailed data at the
+            <a
+              class="underline "
+              href="http://cic-dashboard-frontend-webpage.s3-website.eu-central-1.amazonaws.com/"
+              target="_blank">
+              blockchain insights dashboard
+            </a>
+            .
+          </div>
         </div>
+
       </div>
 
-    </div>
-
-  </section>
+    </section>
+  {/if}
 
   <article class="mb-12 p-4">
-
-    <h1 class="mb-12 text-4xl text-center font-heading font-semibold">
-      About the project
-    </h1>
+    {#if !project.descriptionHtml}
+      <h1 class="my-12 text-4xl text-center font-heading font-semibold">
+        About the project
+      </h1>
+    {/if}
 
     <div class="max-w-3xl mx-auto">
-    
-      <p class="pb-8">{project.description}</p>
+      {#if project.descriptionHtml}
+        {@html project.descriptionHtml}
+      {:else}
+        <p class="pb-8">{project.description}</p>
 
-      <img class="w-1/2 pb-8 mx-auto" src={project.infoImage0} alt="">
+        <img class="w-1/2 pb-8 mx-auto" src={project.infoImage0} alt="" />
 
-      <p class="pb-8">{project.infoText1}</p>
+        <p class="pb-8">{project.infoText1}</p>
 
-      <img class="w-1/2 pb-8 mx-auto" src={project.infoImage1} alt="">
+        <img class="w-1/2 pb-8 mx-auto" src={project.infoImage1} alt="" />
 
-      <p class="pb-8">{project.infoText2}</p>
+        <p class="pb-8">{project.infoText2}</p>
 
-      <img class="w-1/2 pb-8 mx-auto" src={project.infoImage2} alt="">
+        <img class="w-1/2 pb-8 mx-auto" src={project.infoImage2} alt="" />
 
-      <p class="pb-8">{project.infoText3}</p>
+        <p class="pb-8">{project.infoText3}</p>
+      {/if}
 
     </div>
 
