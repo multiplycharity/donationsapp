@@ -143,9 +143,9 @@
   const handlePaymentWithCard = async () => {
     console.log("Handling payment with card...");
 
-    if (!previouslyChosenEmail && !$emailStore && email) {
+    if (!previouslyChosenEmail) {
       window.localStorage.setItem("email", email);
-      emailStore.set(email);
+
     }
 
     let redirectURL = window.location.href;
@@ -156,10 +156,9 @@
         redirectURL.indexOf("?transactionId")
       );
 
-    const url = `https://buy-staging.moonpay.io/?apiKey=pk_test_Manl6IPdLutNUCpw5LTfJl6R3OcHRDYY&currencyCode=DAI&baseCurrencyCode=USD&walletAddress=${DONATION_RECEIVER_ADDRESS}&email=${$emailStore}&externalCustomerId=${$emailStore}&baseCurrencyAmount=${amount}`;
-
-    await window.open(url, "_blank");
-    hideModal();
+      await goto(
+      `https://buy-staging.moonpay.io/?apiKey=pk_test_M98jboYNkUu7vni3bm1cSgHSYmc6&currencyCode=DAI&baseCurrencyCode=USD&walletAddress=${DONATION_RECEIVER_ADDRESS}&email=${$emailStore}&externalCustomerId=${$emailStore}&baseCurrencyAmount=${amount}&redirectURL=${redirectURL}`
+        );
 
     // await goto(`${url}&redirectURL=${redirectURL}`);
   };
@@ -200,9 +199,7 @@
       emitter.on("txCancel", console.log);
       emitter.on("txFailed", console.log);
 
-      if (!previouslyChosenEmail && email) {
-        window.localStorage.setItem("email", email);
-      }
+      setEmail();
     } catch (err) {
       update({
         eventCode: "txFailed",
