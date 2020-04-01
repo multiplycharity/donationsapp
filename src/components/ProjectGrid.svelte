@@ -1,6 +1,8 @@
 <script>
   import ProjectGridItem from "../components/ProjectGridItem.svelte";
   export let projects;
+
+  projects = projects.sort((a, b) => (a.disabled ? 1 : -1));
 </script>
 
 <section class="py-12 px-4">
