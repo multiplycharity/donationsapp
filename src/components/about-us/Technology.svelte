@@ -1,5 +1,5 @@
 <section>
-  <div class="pt-32 pb-24">
+  <div class="pt-16 pb-16">
     <div class="z-10 w-full px-8 md:px-24">
     <h2 class="text-3xl mb-2 font-heading text-center">Open Source</h2>
     <p class="mb-8 text-center">Open Source technologies are essential to reach our goals</p>

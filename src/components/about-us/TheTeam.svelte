@@ -1,6 +1,6 @@
-<section class="pt-32 pb-24 text-center">
+<section class="pt-24 pb-16 text-center">
 
-  <div class="flex flex-row w-full">
+  <div class="flex flex-wrap flex-row md:flex-no-wrap lg:flex-no-wrap xl:flex-no-wrap w-full">
     <div class="flex flex-col w-full">
     <h2 class="text-3xl mb-2 leading-tight font-heading">Our team</h2>
       <p class="max-w-xl mx-auto mb-12 text-gray-500">Combining several years experience in blockchain and Open Source development and product building.</p>
@@ -29,7 +29,7 @@
       </div>
     </div>
 
-    <div class="flex flex-col w-full md:border-l">
+    <div class="flex flex-col w-full md:border-l pt-10 md:pt-0 lg:pt-0 xl:pt-0">
     <h2 class="text-3xl mb-2 leading-tight font-heading">Our advisors</h2>
       <p class="max-w-xl mx-auto mb-12 text-gray-500">Getting guidance is important in a field, as new as this. We are thankful to any guidance we get.</p>
       <div class="flex flex-wrap -mx-4">
