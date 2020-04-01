@@ -115,40 +115,26 @@
           <p class="leading-relaxed text-sm pb-4">{community.description}</p>
           <p class="leading-relaxed text-sm">{community.descriptiontwo}</p>
           <div class="flex flex-row justify-between pt-4">
-            <span
-              class="px-2 text-gray-500 text-xs font-semibold uppercase bg-white
-              text-center">
+            <span class="ml-2 px-2">
               <a
-                href="https://en.rodekors.dk/"
+                href={community.partnerLink1}
                 target="_blank"
                 class="cursor-default">
                 <img
-                  class="m-1 w-10 mx-auto"
-                  src="images/partners/red-cross.svg"
+                  class="w-20 mx-auto"
+                  src={community.partnerImage1}
                   alt="red-cross-denmark" />
-                <div class="m-1">
-                  Red Cross
-                  <br />
-                  Society
-                </div>
               </a>
             </span>
-            <span
-              class="ml-4 px-2 text-gray-500 text-xs font-semibold uppercase
-              bg-white text-center">
+            <span class="ml-2 px-2">
               <a
-                href="https://www.grassrootseconomics.org/"
+                href={community.partnerLink2}
                 target="_blank"
                 class="cursor-default">
                 <img
-                  class="m-3 w-10 mx-auto"
-                  src="images/partners/grassroots-economics.jpg"
+                  class="w-20 mx-auto"
+                  src={community.partnerImage2}
                   alt="grassroots-economics" />
-                <div class="m-1">
-                  Grassroots
-                  <br />
-                  Economics
-                </div>
               </a>
             </span>
           </div>
@@ -192,7 +178,7 @@
       </div>
     </div>
 
-    <div class="bg-gray-100 rounded-lg px-12 py-8 mt-12 bg-cover h-64" style="background-image: url(images/kenya_mapbox.png)">
+    <div class="bg-gray-100 rounded-lg px-12 py-8 mt-12 bg-cover h-64" style="background-image: url({community.mapboxImage})">
       <h3 class="font-medium text-2xl my-4">The area</h3>
       <div class="inline-flex flex-wrap w-full">
         <div class="px-2 pt-2">
