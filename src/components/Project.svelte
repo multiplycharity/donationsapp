@@ -33,10 +33,10 @@
   <div class="relative flex items-center py-12 md:py-24 lg:py-32">
     <div class="absolute bg-black opacity-50 inset-0" />
     <div class="z-10 max-w-2xl mx-auto">
-      <h2
+      <h1
         class="text-3xl md:text-5xl mb-2 leading-tight font-heading text-white">
         {project.name}
-      </h2>
+      </h1>
       <p class="px-4 mb-2 text-gray-400 leading-relaxed">
         {project.shortDescription}
       </p>
@@ -66,9 +66,9 @@
 
   {#if projectBelongsTo('a-kenya-nairobi-sarafu-community-currency', project.id)}
     <section class="p-8 lg:p-16">
-      <h1 class="my-6 text-4xl text-center font-heading font-semibold">
+      <h2 class="my-6 text-4xl text-center font-heading font-semibold">
         This campaign's impact
-      </h1>
+      </h2>
 
       <div
         class="flex flex-wrap text-center justify-center z-10 max-w-2xl mx-auto ">
@@ -113,9 +113,9 @@
 
   <article class="mb-12 p-4">
     {#if !project.descriptionHtml}
-      <h1 class="my-12 text-4xl text-center font-heading font-semibold">
+      <h2 class="my-12 text-4xl text-center font-heading font-semibold">
         About the project
-      </h1>
+      </h2>
     {/if}
 
     <div class="max-w-3xl mx-auto">
@@ -140,5 +140,35 @@
     </div>
 
   </article>
+
+  <section class="p-8 lg:p-16 mx-auto">
+    <h2 class="my-12 text-4xl text-center font-heading font-semibold">
+      Trade statistics on this campaign
+    </h2>
+    <table class="table-auto mx-auto">
+      <thead>
+        <tr>
+          <th class="px-4 py-2">xDAI address</th>
+          <th class="px-4 py-2">Current Balance</th>
+          <th class="px-4 py-2">Tx received</th>
+          <th class="px-4 py-2">Tx volume received</th>
+        </tr>
+      </thead>
+      <tbody>
+      {#each project.users as user}
+        <tr class="hover:bg-gray-100">
+          <td class="border px-4 py-2 hover:underline">
+            <a href="https://blockscout.com/poa/xdai/address/{user.xdaiAddress}" target="_blank">
+            {user.xdaiAddress}
+            </a>
+          </td>
+          <td class="border px-4 py-2">{user.balance}</td>
+          <td class="border px-4 py-2">{user.txReceived}</td>
+          <td class="border px-4 py-2">{user.volumeReceived}</td>
+        </tr>
+      {/each}
+      </tbody>
+    </table>
+  </section>
 
 </div>
