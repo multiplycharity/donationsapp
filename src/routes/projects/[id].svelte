@@ -24,7 +24,6 @@
   import { projects } from "../../stores/communities.js";
 
   const project = $projects.find(p => p.id === id);
-  console.log("project: ", project);
 
   let donationReceiverAddress =
     project.donationAddress || "0x9b5FEeE3B220eEdd3f678efa115d9a4D91D5cf0A";
@@ -32,6 +31,10 @@
   let amount = 20;
   let touched = { amount: false, email: false };
   let email = "";
+
+  $: {
+    console.log({ email });
+  }
 
   $: isValidAmount =
     chosenType === "card" ? !isNaN(amount) && amount >= 20 : !isNaN(amount);
@@ -124,16 +127,16 @@
     chosenType = "card";
   };
 
-  async function setEmail() {
-    fetch(`api/add-user/?email=${email}`)
+  async function setEmail(emailAddr) {
+    fetch(`api/add-user/?email=${emailAddr}`)
       .then(res => res.json())
       .then(res => {
         if (res.success) {
           if (!previouslyChosenEmail && !$emailStore) {
-            window.localStorage.setItem("email", email);
-            emailStore.set(email);
+            window.localStorage.setItem("email", emailAddr);
+            emailStore.set(emailAddr);
           }
-          console.log(`Subscribed user ${email} to mailchimp`);
+          console.log(`Subscribed user ${emailAddr} to mailchimp`);
         } else if (!res.success && res.error) console.error(res);
       })
       .catch(err => {
@@ -144,10 +147,7 @@
   const handlePaymentWithCard = async () => {
     console.log("Handling payment with card...");
 
-    if (!previouslyChosenEmail) {
-      window.localStorage.setItem("email", email);
-    }
-
+    await setEmail(email);
     let redirectURL = window.location.href;
 
     if (redirectURL.includes("?transactionId"))
@@ -193,13 +193,13 @@
       emitter.on("txPool", console.log);
       emitter.on("txConfirmed", () => {
         confetti();
-        console.log;
       });
       emitter.on("txSpeedUp", console.log);
       emitter.on("txCancel", console.log);
       emitter.on("txFailed", console.log);
 
-      setEmail();
+      await setEmail(email);
+      hideModal();
     } catch (err) {
       update({
         eventCode: "txFailed",
@@ -209,8 +209,6 @@
       console.error(err);
       hideModal();
     }
-
-    hideModal();
   };
 
   const hideModal = () => {
