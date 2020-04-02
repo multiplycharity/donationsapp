@@ -132,6 +132,8 @@
   };
 
   async function setEmail(emailAddr) {
+    emailAddr = emailAddr.trim();
+
     fetch(`api/add-user/?email=${emailAddr}`)
       .then(res => res.json())
       .then(res => {
