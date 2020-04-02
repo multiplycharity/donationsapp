@@ -7,7 +7,7 @@
 <script>
   import { onMount, onDestroy } from "svelte";
   import { communities } from "../../stores/communities.js";
-  import { tags } from "../../stores/communities";
+  import { communityTags } from "../../stores/communities";
 
   import Community from "../../components/Community.svelte";
   import ProjectGrid from "../../components/ProjectGrid.svelte";
@@ -89,7 +89,7 @@
             label={'all'}
             isChosen={chosenFilter === 'all'}
             on:choosefilter={applyFilter} />
-          {#each $tags as tag}
+          {#each $communityTags[community.id] as tag}
             <FilterTag
               label={tag}
               isChosen={chosenFilter === tag}
