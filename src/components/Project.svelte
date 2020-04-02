@@ -100,9 +100,7 @@
               class="underline "
               href="http://cic-dashboard-frontend-webpage.s3-website.eu-central-1.amazonaws.com/"
               target="_blank">
-              blockchain insights dashboard
-            </a>
-            .
+              blockchain insights dashboard</a>.
           </div>
         </div>
 
