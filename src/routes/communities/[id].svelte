@@ -69,9 +69,7 @@
 
   <!--<Community {community} />-->
 
-  <h2 class="text-3xl text-center pt-12 mb-4 font-heading">
-    {community.name}
-  </h2>
+  <h2 class="text-3xl text-center pt-12 mb-4 font-heading">{community.name}</h2>
 
   <!--<div class="py-4 px-24 mb-6 lg:mb-0">
     <p class="leading-relaxed">{community.description}</p>
@@ -84,9 +82,7 @@
     <div class="container sm:w-full md:w-full lg:w-full xl:w-3/4 mx-auto px-4">
 
       <div class="bg-gray-100 rounded-lg px-12 py-8 mt-12">
-        <h2 class="font-medium text-2xl my-4">
-          Campaigns you can fund
-        </h2>
+        <h2 class="font-medium text-2xl my-4">Campaigns you can fund</h2>
         <p class="font-normal text-lg my-4">Filter by impact category</p>
         <div class="inline-flex flex-wrap w-full">
           <FilterTag
@@ -108,94 +104,89 @@
     </div>
     <div class="container sm:w-full md:w-full lg:w-full xl:w-1/4 mx-auto px-4">
 
-    <div class="bg-gray-100 rounded-lg px-12 py-8 mt-12">
-      <h3 class="font-medium text-2xl my-4">Community background</h3>
-      <div class="inline-flex flex-wrap w-full">
-        <div class="px-2 pt-2">
-          <p class="leading-relaxed text-sm pb-4">{community.description}</p>
-          <p class="leading-relaxed text-sm">{community.descriptiontwo}</p>
-          <div class="flex flex-row justify-between pt-4">
-            <span class="ml-2 px-2">
-              <a
-                href={community.partnerLink1}
-                target="_blank"
-                class="cursor-default">
-                <img
-                  class="w-20 mx-auto"
-                  src={community.partnerImage1}
-                  alt="red-cross-denmark" />
-              </a>
-            </span>
-            <span class="ml-2 px-2">
-              <a
-                href={community.partnerLink2}
-                target="_blank"
-                class="cursor-default">
-                <img
-                  class="w-20 mx-auto"
-                  src={community.partnerImage2}
-                  alt="grassroots-economics" />
-              </a>
-            </span>
+      <div class="bg-gray-100 rounded-lg px-12 py-8 mt-12">
+        <h3 class="font-medium text-2xl my-4">Community background</h3>
+        <div class="inline-flex flex-wrap w-full">
+          <div class="px-2 pt-2">
+            <p class="leading-relaxed text-sm pb-4">{community.description}</p>
+            <p class="leading-relaxed text-sm">{community.descriptiontwo}</p>
+            <div class="flex flex-row justify-between pt-4">
+              <span class="ml-2 px-2">
+                <a
+                  href={community.partnerLink1}
+                  target="_blank"
+                  class="cursor-default">
+                  <img
+                    class="w-20 mx-auto"
+                    src={community.partnerImage1}
+                    alt="red-cross-denmark" />
+                </a>
+              </span>
+              <span class="ml-2 px-2">
+                <a
+                  href={community.partnerLink2}
+                  target="_blank"
+                  class="cursor-default">
+                  <img
+                    class="w-20 mx-auto"
+                    src={community.partnerImage2}
+                    alt="grassroots-economics" />
+                </a>
+              </span>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="bg-gray-100 rounded-lg px-12 py-8 mt-12">
-      <h3 class="font-medium text-2xl my-4">Impact insights</h3>
-      <div class="inline-flex flex-wrap w-full">
-        <div class="p-4 w-1/2">
-          <h3 class="md:text-lg text-lg">
-            <span class="md:text-xl text-xl font-medium">$23,000</span>
-            <br />
-            traded
-          </h3>
-        </div>
-        <div class="p-4 w-1/2">
-          <h3 class="md:text-lg text-lg">
-            <span class="md:text-xl text-xl font-medium">
-              3x velocity
-            </span>
-            <br />
-            vs the USD
-          </h3>
-        </div>
-        <div class="p-4 w-1/2">
-          <h3 class="md:text-lg text-lg">
-            <span class="md:text-xl text-xl font-medium">10,000</span>
-            <br />
-            community members
-          </h3>
-        </div>
-        <div class="p-4 w-1/2">
-          <h3 class="md:text-lg text-lg">
-            <span class="md:text-xl text-xl font-medium">2x+ impact</span>
-            <br />
-            vs GiveDirectly
-          </h3>
+      <div class="bg-gray-100 rounded-lg px-12 py-8 mt-12">
+        <h3 class="font-medium text-2xl my-4">Impact insights</h3>
+        <div class="inline-flex flex-wrap w-full">
+          <div class="p-4 w-1/2">
+            <h3 class="md:text-lg text-lg">
+              <span class="md:text-xl text-xl font-medium">$23,000</span>
+              <br />
+              traded
+            </h3>
+          </div>
+          <div class="p-4 w-1/2">
+            <h3 class="md:text-lg text-lg">
+              <span class="md:text-xl text-xl font-medium">3x velocity</span>
+              <br />
+              vs the USD
+            </h3>
+          </div>
+          <div class="p-4 w-1/2">
+            <h3 class="md:text-lg text-lg">
+              <span class="md:text-xl text-xl font-medium">10,000</span>
+              <br />
+              community members
+            </h3>
+          </div>
+          <div class="p-4 w-1/2">
+            <h3 class="md:text-lg text-lg">
+              <span class="md:text-xl text-xl font-medium">2x+ impact</span>
+              <br />
+              vs GiveDirectly
+            </h3>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="bg-gray-100 rounded-lg px-12 py-8 mt-12 bg-cover h-64" style="background-image: url({community.mapboxImage})">
-      <h3 class="font-medium text-2xl my-4">The area</h3>
-      <div class="inline-flex flex-wrap w-full">
-        <div class="px-2 pt-2">
-
+      <div
+        class="bg-gray-100 rounded-lg px-12 py-8 mt-12 bg-cover h-64"
+        style="background-image: url({community.mapboxImage})">
+        <h3 class="font-medium text-2xl my-4">The area</h3>
+        <div class="inline-flex flex-wrap w-full">
+          <div class="px-2 pt-2" />
         </div>
       </div>
-    </div>
 
-    <div class="bg-gray-100 rounded-lg px-12 py-8 mt-12">
-      <h3 class="font-medium text-2xl my-4">FAQ</h3>
-      <div class="inline-flex flex-wrap w-full">
-      <p class="leading-relaxed text-sm pb-2 font-medium">Where does my donation go?</p>
-      <p class="leading-relaxed text-sm pb-4">Your donation is converted into cryptocurrency and securely stored in a smart contract on the Ethereum blockchain. This storage is the community currencies reserve, backing the credit tokens created to give to your donee. After a few minutes, your donee receives the currency tokens in their blockchain wallet and is able to spend them. Meanwhile you can track your donation’s impact in your impact dashboard.</p>
-      <p class="leading-relaxed text-sm pb-2 font-medium">How much does a donee receive?</p>
-      <p class="leading-relaxed text-sm pb-4">Similar to how a central bank aims to keep a steady interest rate, Sarafu targets a reserve ratio of 25% reserve currency / community credit tokens. This means that there is a variable exchange rate between USD and the community currency. You can view the exchange rate in our exchange panel.</p>
-    </div>
-    </div>
+      <div class="bg-gray-100 rounded-lg px-12 py-8 mt-12">
+        <h3 class="font-medium text-2xl my-4">FAQ</h3>
+
+        {@html community.faqHTML}
+
+      </div>
 
     </div>
   </div>

@@ -77,15 +77,6 @@
           the last 30 days.
         </p>
 
-        <!--<div class="flex flex-wrap -mx-4 text-center justify-center">
-        {#each project.stats as stat}
-          <div class="md:w-1/4 p-4 mb-4">
-            <h3 class="text-xl my-2 font-heading">{stat.num}</h3>
-            <p class="text-gray-500 leading-relaxed">{stat.text}</p>
-          </div>
-        {/each}
-      </div>-->
-
         <div class="border border-grey-100">
 
           <a
@@ -100,7 +91,9 @@
               class="underline "
               href="http://cic-dashboard-frontend-webpage.s3-website.eu-central-1.amazonaws.com/"
               target="_blank">
-              blockchain insights dashboard</a>.
+              blockchain insights dashboard
+            </a>
+            .
           </div>
         </div>
 
@@ -109,17 +102,13 @@
     </section>
   {/if}
 
-  <article class="mb-12 p-4">
-    {#if !project.descriptionHtml}
+  {#if !project.descriptionHtml}
+    <article class="mb-12 p-4">
       <h2 class="my-12 text-4xl text-center font-heading font-semibold">
         About the project
       </h2>
-    {/if}
 
-    <div class="max-w-3xl mx-auto">
-      {#if project.descriptionHtml}
-        {@html project.descriptionHtml}
-      {:else}
+      <div class="max-w-3xl mx-auto">
         <p class="pb-8">{project.description}</p>
 
         <img class="w-1/2 pb-8 mx-auto" src={project.infoImage0} alt="" />
@@ -133,50 +122,86 @@
         <img class="w-1/2 pb-8 mx-auto" src={project.infoImage2} alt="" />
 
         <p class="pb-8">{project.infoText3}</p>
-      {/if}
+      </div>
+    </article>
 
-    </div>
-
-  </article>
-
-  <section class="p-1 md:p-8 lg:p-16 xl:p-16 mx-auto">
-    <h2 class="my-12 text-4xl text-center font-heading font-semibold">
-      Transaction insights for this campaign
-    </h2>
-    <table class="table-auto mx-auto">
-      <thead>
-        <tr>
-          <th class="px-4 py-2 hidden lg:table-cell">xDAI address</th>
-          <th class="px-4 py-2 hidden lg:table-cell">Current Balance</th>
-          <th class="px-4 py-2 hidden lg:table-cell">Tx received</th>
-          <th class="px-4 py-2 hidden lg:table-cell">Tx volume received</th>
-        </tr>
-      </thead>
-      <tbody>
-      {#each project.users as user}
-        <tr class="hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row flex-wrap lg:flex-no-wrap">
-          <td class="w-full bg-gray-700 text-white text-xs md:bg-white md:text-black md:text-base lg:bg-white lg:text-black lg:text-base xl:bg-white xl:text-black xl:text-base hover:underline lg:w-auto py-6 px-3 md:p-3 lg:p-3 xl:p-3 text-center border border-b block lg:table-cell relative lg:static">
-            <a href="https://blockscout.com/poa/xdai/address/{user.xdaiAddress}" target="_blank">
-            <span class="lg:hidden absolute top-0 left-0  px-2 py-1 text-xs font-bold uppercase">Address</span>
-            {user.xdaiAddress}
-            </a>
-          </td>
-          <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
-            <span class="lg:hidden absolute top-0 left-0  px-2 py-1 text-xs font-bold uppercase">Current Balance</span>
-            {user.balance}
-          </td>
-          <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
-            <span class="lg:hidden absolute top-0 left-0  px-2 py-1 text-xs font-bold uppercase">Tx received</span>
-            {user.txReceived}
-          </td>
-          <td class="w-full lg:w-auto p-3 text-gray-800 text-center border border-b block lg:table-cell relative lg:static">
-            <span class="lg:hidden absolute top-0 left-0  px-2 py-1 text-xs font-bold uppercase">Tx volume received</span>
-            {user.volumeReceived}
-          </td>
-        </tr>
-      {/each}
-      </tbody>
-    </table>
-  </section>
+    <section class="p-1 md:p-8 lg:p-16 xl:p-16 mx-auto">
+      <h2 class="my-12 text-4xl text-center font-heading font-semibold">
+        Transaction insights for this campaign
+      </h2>
+      <table class="table-auto mx-auto">
+        <thead>
+          <tr>
+            <th class="px-4 py-2 hidden lg:table-cell">xDAI address</th>
+            <th class="px-4 py-2 hidden lg:table-cell">Current Balance</th>
+            <th class="px-4 py-2 hidden lg:table-cell">Tx received</th>
+            <th class="px-4 py-2 hidden lg:table-cell">Tx volume received</th>
+          </tr>
+        </thead>
+        <tbody>
+          {#each project.users as user}
+            <tr
+              class="hover:bg-gray-100 flex lg:table-row flex-row lg:flex-row
+              flex-wrap lg:flex-no-wrap">
+              <td
+                class="w-full bg-gray-700 text-white text-xs md:bg-white
+                md:text-black md:text-base lg:bg-white lg:text-black
+                lg:text-base xl:bg-white xl:text-black xl:text-base
+                hover:underline lg:w-auto py-6 px-3 md:p-3 lg:p-3 xl:p-3
+                text-center border border-b block lg:table-cell relative
+                lg:static">
+                <a
+                  href="https://blockscout.com/poa/xdai/address/{user.xdaiAddress}"
+                  target="_blank">
+                  <span
+                    class="lg:hidden absolute top-0 left-0 px-2 py-1 text-xs
+                    font-bold uppercase">
+                    Address
+                  </span>
+                  {user.xdaiAddress}
+                </a>
+              </td>
+              <td
+                class="w-full lg:w-auto p-3 text-gray-800 text-center border
+                border-b block lg:table-cell relative lg:static">
+                <span
+                  class="lg:hidden absolute top-0 left-0 px-2 py-1 text-xs
+                  font-bold uppercase">
+                  Current Balance
+                </span>
+                {user.balance}
+              </td>
+              <td
+                class="w-full lg:w-auto p-3 text-gray-800 text-center border
+                border-b block lg:table-cell relative lg:static">
+                <span
+                  class="lg:hidden absolute top-0 left-0 px-2 py-1 text-xs
+                  font-bold uppercase">
+                  Tx received
+                </span>
+                {user.txReceived}
+              </td>
+              <td
+                class="w-full lg:w-auto p-3 text-gray-800 text-center border
+                border-b block lg:table-cell relative lg:static">
+                <span
+                  class="lg:hidden absolute top-0 left-0 px-2 py-1 text-xs
+                  font-bold uppercase">
+                  Tx volume received
+                </span>
+                {user.volumeReceived}
+              </td>
+            </tr>
+          {/each}
+        </tbody>
+      </table>
+    </section>
+  {:else}
+    <article class="mb-12 p-4">
+      <div class="max-w-3xl mx-auto">
+        {@html project.descriptionHtml}
+      </div>
+    </article>
+  {/if}
 
 </div>
