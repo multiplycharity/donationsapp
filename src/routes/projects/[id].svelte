@@ -14,6 +14,7 @@
   import confetti from "../../services/confetti.js";
   import axios from "axios";
   import { goto } from "@sapper/app";
+  import { onMount } from "svelte";
 
   const TOKEN_CONTRACT_ADDRESS = "0x48b0c1d90c3058ab032c44ec52d98633587ee711"; //MOON
 
@@ -67,43 +68,47 @@
     if (previouslyChosenEmail) emailStore.set(previouslyChosenEmail);
   }
 
-  onboard.set(
-    initOnboard({
-      wallet: async w => {
-        provider.set(new ethers.providers.Web3Provider(w.provider));
-        wallet.set(w);
-        if (typeof window !== "undefined") {
-          window.localStorage.setItem("selectedWallet", $wallet.name);
+  onMount(async () => {
+    onboard.set(
+      initOnboard({
+        wallet: async w => {
+          provider.set(new ethers.providers.Web3Provider(w.provider));
+          wallet.set(w);
+          if (typeof window !== "undefined") {
+            window.localStorage.setItem("selectedWallet", $wallet.name);
+            console.log("Persisting selected wallet to local storage");
+          }
+          signer.set(getSigner($provider));
+
+          tokenContract = new ethers.Contract(
+            TOKEN_CONTRACT_ADDRESS,
+            [
+              "function transfer(address recipient, uint256 amount) public returns (bool)",
+              "function symbol() public view returns (string memory)"
+            ],
+            $signer
+          );
+
+          tokenSymbol = await tokenContract.symbol();
+          console.log("tokenSymbol: ", tokenSymbol);
+        },
+        address: a => {
+          address.set(a);
+          console.log({ address: a });
+        },
+        balance: b => {
+          balance.set(b);
+          console.log({ balance: b });
+        },
+        network: n => {
+          network.set(n);
+          console.log({ network: n });
         }
-        signer.set(getSigner($provider));
+      })
+    );
 
-        tokenContract = new ethers.Contract(
-          TOKEN_CONTRACT_ADDRESS,
-          [
-            "function transfer(address recipient, uint256 amount) public returns (bool)",
-            "function symbol() public view returns (string memory)"
-          ],
-          $signer
-        );
-
-        tokenSymbol = await tokenContract.symbol();
-      },
-      address: a => {
-        address.set(a);
-        console.log({ address: a });
-      },
-      balance: b => {
-        balance.set(b);
-        console.log({ balance: b });
-      },
-      network: n => {
-        network.set(n);
-        console.log({ network: n });
-      }
-    })
-  );
-
-  notify.set(initNotify());
+    notify.set(initNotify());
+  });
 
   const fundWithCrypto = async () => {
     console.log("Funding with crypto..");
