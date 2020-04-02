@@ -105,19 +105,20 @@
 
   const fundWithCrypto = async () => {
     console.log("Funding with crypto..");
+    if (typeof window !== "undefined") {
+      let previouslySelectedWallet = window.localStorage.getItem(
+        "selectedWallet"
+      );
+      console.log("here");
 
-    const previouslySelectedWallet = window.localStorage.getItem(
-      "selectedWallet"
-    );
-    console.log("here");
+      if (previouslySelectedWallet && $onboard) {
+        await $onboard.walletSelect(previouslySelectedWallet);
+        console.log("here2");
+      } else await $onboard.walletSelect();
+      console.log("here3");
+    }
 
-    if (previouslySelectedWallet && $onboard) {
-      await $onboard.walletSelect(previouslySelectedWallet);
-      console.log("here2");
-    } else await $onboard.walletSelect();
-    console.log("here3");
-
-    const isWalletCheckPassed = await $onboard.walletCheck();
+    let isWalletCheckPassed = await $onboard.walletCheck();
     console.log("here4");
     if (isWalletCheckPassed) chosenType = "crypto";
     console.log("here5");
