@@ -36,7 +36,7 @@
     chosenType === "card" ? !isNaN(amount) && amount >= 20 : !isNaN(amount);
 
   function validateEmail(email) {
-    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
   }
 
@@ -65,41 +65,43 @@
   if (typeof window !== "undefined") {
     previouslyChosenEmail = window.localStorage.getItem("email");
     if (previouslyChosenEmail) emailStore.set(previouslyChosenEmail);
-
-    onboard.set(
-      initOnboard({
-        wallet: async w => {
-          provider.set(new ethers.providers.Web3Provider(w.provider));
-          wallet.set(w);
-          window.localStorage.setItem("selectedWallet", $wallet.name);
-          signer.set(getSigner($provider));
-
-          tokenContract = new ethers.Contract(
-            TOKEN_CONTRACT_ADDRESS,
-            [
-              "function transfer(address recipient, uint256 amount) public returns (bool)",
-              "function symbol() public view returns (string memory)"
-            ],
-            $signer
-          );
-
-          tokenSymbol = await tokenContract.symbol();
-        },
-        address: a => {
-          address.set(a);
-          console.log({ address: a });
-        },
-        balance: b => {
-          balance.set(b);
-          console.log({ balance: b });
-        },
-        network: n => {
-          network.set(n);
-          console.log({ network: n });
-        }
-      })
-    );
   }
+
+  onboard.set(
+    initOnboard({
+      wallet: async w => {
+        provider.set(new ethers.providers.Web3Provider(w.provider));
+        wallet.set(w);
+        if (typeof window !== "undefined") {
+          window.localStorage.setItem("selectedWallet", $wallet.name);
+        }
+        signer.set(getSigner($provider));
+
+        tokenContract = new ethers.Contract(
+          TOKEN_CONTRACT_ADDRESS,
+          [
+            "function transfer(address recipient, uint256 amount) public returns (bool)",
+            "function symbol() public view returns (string memory)"
+          ],
+          $signer
+        );
+
+        tokenSymbol = await tokenContract.symbol();
+      },
+      address: a => {
+        address.set(a);
+        console.log({ address: a });
+      },
+      balance: b => {
+        balance.set(b);
+        console.log({ balance: b });
+      },
+      network: n => {
+        network.set(n);
+        console.log({ network: n });
+      }
+    })
+  );
 
   notify.set(initNotify());
 
