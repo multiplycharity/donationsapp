@@ -4,7 +4,7 @@ import Web3 from 'web3'
 
 const INFURA_KEY = '16dfd66c4a1a4a9da5724254c97c93e6'
 const BLOCKNATIVE_KEY = 'ac2e16a1-29ee-4bd1-be1e-9f2ecf668c24'
-const NETWORK_ID = 4 //1
+const NETWORK_ID = 3 //1
 
 const wallets = [
   { walletName: 'metamask', preferred: true },

@@ -24,6 +24,7 @@
   import { projects } from "../../stores/communities.js";
 
   const project = $projects.find(p => p.id === id);
+  console.log("project: ", project);
 
   let donationReceiverAddress =
     project.donationAddress || "0x9b5FEeE3B220eEdd3f678efa115d9a4D91D5cf0A";
