@@ -32,10 +32,6 @@
   let touched = { amount: false, email: false };
   let email = "";
 
-  $: {
-    console.log({ email });
-  }
-
   $: isValidAmount =
     chosenType === "card" ? !isNaN(amount) && amount >= 20 : !isNaN(amount);
 
