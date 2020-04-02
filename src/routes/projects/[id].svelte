@@ -15,9 +15,6 @@
   import axios from "axios";
   import { goto } from "@sapper/app";
 
-  const DONATION_RECEIVER_ADDRESS =
-    "0x9b5FEeE3B220eEdd3f678efa115d9a4D91D5cf0A";
-
   const TOKEN_CONTRACT_ADDRESS = "0x48b0c1d90c3058ab032c44ec52d98633587ee711"; //MOON
 
   //"0x6B175474E89094C44Da98b954EedeAC495271d0F"; //DAI
@@ -27,6 +24,9 @@
   import { projects } from "../../stores/communities.js";
 
   const project = $projects.find(p => p.id === id);
+
+  let donationReceiverAddress =
+    project.donationAddress || "0x9b5FEeE3B220eEdd3f678efa115d9a4D91D5cf0A";
 
   let amount = 20;
   let touched = { amount: false, email: false };
@@ -156,14 +156,14 @@
       );
 
     await goto(
-      `https://buy-staging.moonpay.io/?apiKey=pk_test_M98jboYNkUu7vni3bm1cSgHSYmc6&currencyCode=DAI&baseCurrencyCode=USD&walletAddress=${DONATION_RECEIVER_ADDRESS}&email=${$emailStore}&externalCustomerId=${$emailStore}&baseCurrencyAmount=${amount}&redirectURL=${redirectURL}`
+      `https://buy-staging.moonpay.io/?apiKey=pk_test_M98jboYNkUu7vni3bm1cSgHSYmc6&currencyCode=DAI&baseCurrencyCode=USD&walletAddress=${donationReceiverAddress}&email=${$emailStore}&externalCustomerId=${$emailStore}&baseCurrencyAmount=${amount}&redirectURL=${redirectURL}`
     );
 
     // await goto(`${url}&redirectURL=${redirectURL}`);
   };
 
   const handlePaymentWithCrypto = async () => {
-    const to = DONATION_RECEIVER_ADDRESS;
+    const to = donationReceiverAddress;
 
     let tx;
     console.log(`Sending ${amount} ${tokenSymbol} to ${to}`);
