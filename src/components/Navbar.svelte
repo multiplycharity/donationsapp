@@ -10,7 +10,7 @@
 </script>
 
 <nav
-  class="flex flex-wrap items-center justify-between px-4 py-6 text-gray-800">
+  class="flex flex-wrap items-center justify-between px-4 py-2 text-gray-800">
 
   <div class="flex flex-shrink-0 mr-6">
     <a class="flex items-center align-middle" href="/" on:click={hideMenu}>
