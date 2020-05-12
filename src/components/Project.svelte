@@ -110,7 +110,7 @@
 
             <div class="flex flex-col w-1/2">
               <a
-                href="http://cic-dashboard-frontend-webpage.s3-website.eu-central-1.amazonaws.com/"
+                href="https://dashboard.sarafu.network/"
                 target="_blank">
                 <img class="pb-8 mx-auto zoom" src="images/statistics-dashboard.svg" alt="" />
 
