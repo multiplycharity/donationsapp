@@ -75,9 +75,9 @@
 </div>
 
 <main>
-  <section>
-    <slot />
-  </section>
+  <p>
+    under maintenance
+  </p>
 </main>
 
 <div class="container mx-auto px-4">
