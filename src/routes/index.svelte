@@ -54,7 +54,5 @@
 
   <Header />
 <div class="container mx-auto px-4">
-  <CommunityGrid />
-  <HowItWorks />
-  <FAQ />
+  <p> currently upgrading the site </p>
 </div>
